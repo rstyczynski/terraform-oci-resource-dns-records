@@ -1,8 +1,4 @@
-module "dns_records" {
-  source = "../"
-
-  zone_name_or_id = var.zone_name_or_id
-  rrsets = {
+{
     # 1. Multiple records in rrset, all fields set, same rtype
     "multi-a.acme.org" = {
       rtype   = "A"
@@ -156,4 +152,3 @@ module "dns_records" {
       ]
     }
   }
-}
