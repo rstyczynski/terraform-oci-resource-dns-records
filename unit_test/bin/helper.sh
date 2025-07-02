@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#
+# test preparation and cleaning
+#
+
 test_prepare() {
     local test_type=${1:-regular}
     local test_action=${2:-destroy}
@@ -23,21 +27,35 @@ test_cleanup() {
      test_prepare serialized destroy
 }
 
-test_apply() {
-    local thrds=${1:-20}
+#
+# actual tests
+#
 
-    terraform apply -parallelism=$thrds -auto-approve 2>&1 | tee test_apply.log
+test_apply() {
+    local test_name=${1:-apply}
+    local thrds=${2:-20}
+
+    local logfile="test_${test_name}.log"
+
+    terraform apply -parallelism="$thrds" -auto-approve 2>&1 | tee "$logfile"
     exit_code=${PIPESTATUS[0]}
-    check_errors apply $thrds $exit_code test_apply.log
+    check_errors apply "$thrds" "$exit_code" "$logfile"
 }
 
 test_destroy() {
-    local thrds=${1:-20}
+    local test_name=${1:-apply}
+    local thrds=${2:-20}
 
-    terraform destroy -parallelism=$thrds -auto-approve 2>&1 | tee test_destroy.log
+    local logfile="test_${test_name}.log"
+
+    terraform destroy -parallelism="$thrds" -auto-approve 2>&1 | tee "$logfile"
     exit_code=${PIPESTATUS[0]}
-    check_errors destroy $thrds $exit_code test_destroy.log
+    check_errors destroy "$thrds" "$exit_code" "$logfile"
 }
+
+#
+# error status check / alerting
+#
 
 function check_errors() {
     local operation="$1"

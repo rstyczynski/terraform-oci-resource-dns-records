@@ -8,7 +8,7 @@ This test set demonstrates how to validate the serialization of OCI DNS RRSet re
 > - copy/paste each section to terminal session to execute tests
 
 
-## ❌ Negative test: Crash on 409 during apply due to parallelism enabled but no serialization
+## ❌ Negative test. Test 1: Crash on 409 during apply due to parallelism enabled but no serialization
 
 Parallel execution without depends_on causes race condition and conflict.
 
@@ -16,7 +16,7 @@ Parallel execution without depends_on causes race condition and conflict.
 . bin/helper.sh
 test_prepare regular
 
-test_apply 20
+test_apply test_1 20
 
 test_cleanup
 ```
@@ -29,7 +29,7 @@ Parallel execution without depends_on causes race condition and conflict.
 . bin/helper.sh
 test_prepare regular apply
 
-test_destroy 20
+test_destroy test_2 20
 
 test_cleanup
 ```
@@ -42,8 +42,8 @@ Parallel execution with depends_on serializes zone update, what eliminates confl
 . bin/helper.sh
 test_prepare serialized
 
-test_apply 20
-test_destroy 20
+test_apply test_3a 20
+test_destroy test_3b 20
 
 test_cleanup
 ```
@@ -56,8 +56,8 @@ Single threaded execution without depends_on does not create conflicts, but infl
 . bin/helper.sh
 test_prepare regular
 
-test_apply 1
-test_destroy 1
+test_apply test_4a 1
+test_destroy test_4b 1
 
 test_cleanup
 ```
