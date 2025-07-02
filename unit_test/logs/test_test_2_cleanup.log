@@ -361,3 +361,19 @@ module.dns_records.oci_dns_rrset.no_4[0]: Destruction complete after 0s
 module.dns_records.oci_dns_rrset.no_3[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_3[0]: Destruction complete after 0s
 module.dns_records.oci_dns_rrset.no_2[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_2[0]: Destruction complete after 2s
+module.dns_records.oci_dns_rrset.no_1[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/conflict-type.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_1[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_0[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/cname1.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_0[0]: Destruction complete after 0s
+
+Destroy complete! Resources: 14 destroyed.
+
+--------------------------------
+Cleanup status for test_name=test_2
+
+operation=destroy
+parallelism=1
+status=0 ✅
+--------------------------------
+
