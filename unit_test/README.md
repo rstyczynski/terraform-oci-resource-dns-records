@@ -27,7 +27,7 @@ test_apply 20 negative
 test_cleanup
 ```
 
-## ❌ Negative test: Crash on 409 during destroy due to parallelism enabled but no serialization
+## ❌ Negative test. Test 2: Crash on 409 during destroy due to parallelism enabled but no serialization
 
 Parallel execution without depends_on causes race condition and conflict.
 
@@ -40,7 +40,7 @@ test_destroy 20 negative
 test_cleanup
 ```
 
-## ✅ Positive test: Run in 20 threads with `depends_on` enabled
+## ✅ Positive test. Test 3: Run in 20 threads with `depends_on` enabled
 
 Parallel execution with depends_on serializes zone update, what eliminates conflicts. Both apply and destroy will run.
 
@@ -55,7 +55,7 @@ test_destroy 20
 test_cleanup
 ```
 
-## ✅ Positive test: Run with 1 thread (serialization not needed)
+## ✅ Positive test. Test 4: Run with 1 thread (serialization not needed)
 
 Single threaded execution without depends_on does not create conflicts, but influences whole TF processing, no only rrsets. **This test is added just for informative purposes, as it's not realistic use case in the real production deployment**.
 
