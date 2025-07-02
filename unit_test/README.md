@@ -50,7 +50,7 @@ test_cleanup
 
 ## ✅ Positive test: Run with 1 thread (serialization not needed)
 
-Single threaded execution without depends_on does not create conflicts, but influences whole TF processing, no only rrsets.
+Single threaded execution without depends_on does not create conflicts, but influences whole TF processing, no only rrsets. This test is added just for informative purposes, as it's not realistic use case in the real production deployment.
 
 ```bash
 . bin/helper.sh
