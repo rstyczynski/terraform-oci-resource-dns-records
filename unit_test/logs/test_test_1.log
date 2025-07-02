@@ -452,27 +452,27 @@ Changes to Outputs:
       + "txt1.acme.org",
       + "txt2.acme.org",
     ]
-module.dns_records.oci_dns_rrset.no_2[0]: Creating...
-module.dns_records.oci_dns_rrset.no_14[0]: Creating...
-module.dns_records.oci_dns_rrset.no_1[0]: Creating...
-module.dns_records.oci_dns_rrset.no_7[0]: Creating...
-module.dns_records.oci_dns_rrset.no_4[0]: Creating...
-module.dns_records.oci_dns_rrset.no_5[0]: Creating...
-module.dns_records.oci_dns_rrset.no_15[0]: Creating...
-module.dns_records.oci_dns_rrset.no_8[0]: Creating...
-module.dns_records.oci_dns_rrset.no_11[0]: Creating...
-module.dns_records.oci_dns_rrset.no_16[0]: Creating...
-module.dns_records.oci_dns_rrset.no_0[0]: Creating...
 module.dns_records.oci_dns_rrset.no_6[0]: Creating...
-module.dns_records.oci_dns_rrset.no_3[0]: Creating...
-module.dns_records.oci_dns_rrset.no_13[0]: Creating...
+module.dns_records.oci_dns_rrset.no_8[0]: Creating...
+module.dns_records.oci_dns_rrset.no_7[0]: Creating...
+module.dns_records.oci_dns_rrset.no_1[0]: Creating...
+module.dns_records.oci_dns_rrset.no_14[0]: Creating...
 module.dns_records.oci_dns_rrset.no_12[0]: Creating...
+module.dns_records.oci_dns_rrset.no_3[0]: Creating...
 module.dns_records.oci_dns_rrset.no_17[0]: Creating...
+module.dns_records.oci_dns_rrset.no_0[0]: Creating...
+module.dns_records.oci_dns_rrset.no_16[0]: Creating...
+module.dns_records.oci_dns_rrset.no_15[0]: Creating...
 module.dns_records.oci_dns_rrset.no_9[0]: Creating...
 module.dns_records.oci_dns_rrset.no_10[0]: Creating...
-module.dns_records.oci_dns_rrset.no_9[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mixed-fields.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_2[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_3[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_2[0]: Creating...
+module.dns_records.oci_dns_rrset.no_4[0]: Creating...
+module.dns_records.oci_dns_rrset.no_11[0]: Creating...
+module.dns_records.oci_dns_rrset.no_13[0]: Creating...
+module.dns_records.oci_dns_rrset.no_5[0]: Creating...
+module.dns_records.oci_dns_rrset.no_17[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt2.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_10[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_12[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/override-rrset-type.acme.org/rtype/CNAME]
 
 Error: circuit breaker is open, so this request was not sent to the Dns service.
 
@@ -485,25 +485,25 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
@@ -523,31 +523,107 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
   with module.dns_records.oci_dns_rrset.no_1[0],
   on ../main.tf line 27, in resource "oci_dns_rrset" "no_1":
   27: resource "oci_dns_rrset" "no_1" {
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/default-type.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_2[0],
+  on ../main.tf line 47, in resource "oci_dns_rrset" "no_2":
+  47: resource "oci_dns_rrset" "no_2" {
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/empty.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_3[0],
+  on ../main.tf line 67, in resource "oci_dns_rrset" "no_3":
+  67: resource "oci_dns_rrset" "no_3" {
 
 
 Error: circuit breaker is open, so this request was not sent to the Dns service.
@@ -561,25 +637,25 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
@@ -599,25 +675,25 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
@@ -637,25 +713,25 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
@@ -675,25 +751,25 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
@@ -713,25 +789,25 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
@@ -744,38 +820,38 @@ Error: circuit breaker is open, so this request was not sent to the Dns service.
 
  The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
 
-URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/multi-a.acme.org/A 
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/mixed-fields.acme.org/A 
  Circuit Breaker Info 
  Name - DefaultCircuitBreaker 
  State - open 
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
-  with module.dns_records.oci_dns_rrset.no_10[0],
-  on ../main.tf line 207, in resource "oci_dns_rrset" "no_10":
- 207: resource "oci_dns_rrset" "no_10" {
+  with module.dns_records.oci_dns_rrset.no_9[0],
+  on ../main.tf line 187, in resource "oci_dns_rrset" "no_9":
+ 187: resource "oci_dns_rrset" "no_9" {
 
 
 Error: circuit breaker is open, so this request was not sent to the Dns service.
@@ -789,69 +865,31 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
   with module.dns_records.oci_dns_rrset.no_11[0],
   on ../main.tf line 227, in resource "oci_dns_rrset" "no_11":
  227: resource "oci_dns_rrset" "no_11" {
-
-
-Error: circuit breaker is open, so this request was not sent to the Dns service.
-
- The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
-
-URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/override-rrset-type.acme.org/CNAME 
- Circuit Breaker Info 
- Name - DefaultCircuitBreaker 
- State - open 
-
- Errors from Dns service which opened the circuit breaker:
-
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-
-
-  with module.dns_records.oci_dns_rrset.no_12[0],
-  on ../main.tf line 247, in resource "oci_dns_rrset" "no_12":
- 247: resource "oci_dns_rrset" "no_12" {
 
 
 Error: circuit breaker is open, so this request was not sent to the Dns service.
@@ -865,25 +903,25 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
@@ -903,25 +941,25 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
@@ -941,25 +979,25 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
@@ -979,25 +1017,25 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 8d35a5258cd2922be74e48a968b082ba/C6491220683B7D89D88810A5A54F27EF/48B6A516440A5E6EF7E25B5222160C4F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - ef9eec9905c189e29fa43415520b026c/F219F14A96269855D1C95C6343EA778E/094F9DF3BD01B4B4996D02F9E92F6505
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b27ed64ff631037e95cb6321e8a77a4e/0216567BD7EA19F4546A2F91F8F3682F/0D02A7E60CD91E9F4C40E3F0DF16A684
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - b1ae0c35da1e79a9b4f79f5612b4712a/AED50633A59F793F3B09FD43F8438B11/01395AFCEE05496A5F4BAE133DD42E09
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+Opc-Req-id - 6e5d67f292bf08e3a8ae2cf0232a91f6/CDF1ED721773E5A31F80CE661DC2E850/E4E1DFB0D8A0598D87069A676677838B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
 
 
 
@@ -1006,50 +1044,12 @@ ErrorMessage - Unable to save record changes as the zone was modified by another
  327: resource "oci_dns_rrset" "no_16" {
 
 
-Error: circuit breaker is open, so this request was not sent to the Dns service.
-
- The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
-
-URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/txt2.acme.org/TXT 
- Circuit Breaker Info 
- Name - DefaultCircuitBreaker 
- State - open 
-
- Errors from Dns service which opened the circuit breaker:
-
-Opc-Req-id - 364f76ae7b5ea672bb80443eae32c53b/B59F0F02AD50C7C5E4FE8F68156FF7A6/B5DD57EF721A988A49517F54D23BB536
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-Opc-Req-id - 8d6718519b2468273c0e7d946ac8c5f1/ED581B82A97C8F73046C98D9452E3EF0/117ECB3C710D26A0280681092FC25025
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-Opc-Req-id - 721ae662bbbfb97d2eca6f36d70e260e/92305D3293F06050F30AF4871BF43D36/3E45612DFE7D7C095410699BD7F70DC4
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-Opc-Req-id - c7a3f9b66ba581fb36c6aa748cb59162/2929BCF512B604383E64FDB14FE48A0D/E8ECDF56A8F52750A05AB0202FA55E35
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-Opc-Req-id - c25b6297e4318992e1bf99d399b081c8/EBC5BD7AAF4C5AC6ADE645667F0808D1/E79735064143D8A787EBAAEDC9EA7F29
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-
-
-  with module.dns_records.oci_dns_rrset.no_17[0],
-  on ../main.tf line 347, in resource "oci_dns_rrset" "no_17":
- 347: resource "oci_dns_rrset" "no_17" {
-
-
 --------------------------------
 Test status for test_name=test_1
 
 operation=apply
 parallelism=20
 status=1 ✅ (expected failure in negative test)
-info=409 Conflict detected! 🚨
+info=Check above for error details.
 --------------------------------
 

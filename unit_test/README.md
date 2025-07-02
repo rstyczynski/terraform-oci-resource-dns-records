@@ -12,6 +12,7 @@ Test data coded in dataset1.acme handles acme.org domain. Adjust it to your need
 ```bash
 export TF_VAR_rrsets=$(sed 's/acme.org/acme.org/' dataset1.acme)
 export TF_VAR_zone_name_or_id="ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
 ```
 
 ## ❌ Negative test. Test 1: Crash on 409 during apply due to parallelism enabled but no serialization
@@ -25,6 +26,7 @@ test_prepare test_1 regular destroy
 test_apply 20 negative
 
 test_cleanup
+
 ```
 
 ## ❌ Negative test. Test 2: Crash on 409 during destroy due to parallelism enabled but no serialization
@@ -38,6 +40,7 @@ test_prepare test_2 regular apply
 test_destroy 20 negative
 
 test_cleanup
+
 ```
 
 ## ✅ Positive test. Test 3: Run in 20 threads with `depends_on` enabled
@@ -53,6 +56,7 @@ test_cleanup
 test_prepare test_3b serialized apply
 test_destroy 20
 test_cleanup
+
 ```
 
 ## ✅ Positive test. Test 4: Run with 1 thread (serialization not needed)
@@ -68,10 +72,12 @@ test_cleanup
 test_prepare test_4b regular apply
 test_destroy 1
 test_cleanup
+
 ```
 
 ## Look for test status
 
 ```bash
 grep "status=" logs/*
+
 ```
