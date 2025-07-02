@@ -1,55 +1,41 @@
+output "domains" {
+  description = "RRSet Keys."
+  value = local.domains
+}
+
 output "dns_record_details" {
   description = "Created DNS Record Details."
-  value = flatten([
-    try(oci_dns_rrset.no_0[0].items, []),
-    try(oci_dns_rrset.no_1[0].items, []),
-    try(oci_dns_rrset.no_2[0].items, []),
-    try(oci_dns_rrset.no_3[0].items, []),
-    try(oci_dns_rrset.no_4[0].items, []),
-    try(oci_dns_rrset.no_5[0].items, []),
-    try(oci_dns_rrset.no_6[0].items, []),
-    try(oci_dns_rrset.no_7[0].items, []),
-    try(oci_dns_rrset.no_8[0].items, []),
-    try(oci_dns_rrset.no_9[0].items, []),
-    try(oci_dns_rrset.no_10[0].items, []),
-    try(oci_dns_rrset.no_11[0].items, []),
-    try(oci_dns_rrset.no_12[0].items, []),
-    try(oci_dns_rrset.no_13[0].items, []),
-    try(oci_dns_rrset.no_14[0].items, []),
-    try(oci_dns_rrset.no_15[0].items, []),
-    try(oci_dns_rrset.no_16[0].items, []),
-    try(oci_dns_rrset.no_17[0].items, []),
-    try(oci_dns_rrset.no_18[0].items, []),
-    try(oci_dns_rrset.no_19[0].items, []),
-    try(oci_dns_rrset.no_20[0].items, []),
-    try(oci_dns_rrset.no_21[0].items, []),
-    try(oci_dns_rrset.no_22[0].items, []),
-    try(oci_dns_rrset.no_23[0].items, []),
-    try(oci_dns_rrset.no_24[0].items, []),
-    try(oci_dns_rrset.no_25[0].items, []),
-    try(oci_dns_rrset.no_26[0].items, []),
-    try(oci_dns_rrset.no_27[0].items, []),
-    try(oci_dns_rrset.no_28[0].items, []),
-    try(oci_dns_rrset.no_29[0].items, []),
-    try(oci_dns_rrset.no_30[0].items, []),
-    try(oci_dns_rrset.no_31[0].items, []),
-    try(oci_dns_rrset.no_32[0].items, []),
-    try(oci_dns_rrset.no_33[0].items, []),
-    try(oci_dns_rrset.no_34[0].items, []),
-    try(oci_dns_rrset.no_35[0].items, []),
-    try(oci_dns_rrset.no_36[0].items, []),
-    try(oci_dns_rrset.no_37[0].items, []),
-    try(oci_dns_rrset.no_38[0].items, []),
-    try(oci_dns_rrset.no_39[0].items, []),
-    try(oci_dns_rrset.no_40[0].items, []),
-    try(oci_dns_rrset.no_41[0].items, []),
-    try(oci_dns_rrset.no_42[0].items, []),
-    try(oci_dns_rrset.no_43[0].items, []),
-    try(oci_dns_rrset.no_44[0].items, []),
-    try(oci_dns_rrset.no_45[0].items, []),
-    try(oci_dns_rrset.no_46[0].items, []),
-    try(oci_dns_rrset.no_47[0].items, []),
-    try(oci_dns_rrset.no_48[0].items, []),
-    try(oci_dns_rrset.no_49[0].items, [])
-  ])
+  value = {
+    for idx, key in local.domains :
+      key => try(
+        lookup(
+          {
+            0  = oci_dns_rrset.no_0
+            1  = oci_dns_rrset.no_1
+            2  = oci_dns_rrset.no_2
+            3  = oci_dns_rrset.no_3
+            4  = oci_dns_rrset.no_4
+            5  = oci_dns_rrset.no_5
+            6  = oci_dns_rrset.no_6
+            7  = oci_dns_rrset.no_7
+            8  = oci_dns_rrset.no_8
+            9  = oci_dns_rrset.no_9
+            10 = oci_dns_rrset.no_10
+            11 = oci_dns_rrset.no_11
+            12 = oci_dns_rrset.no_12
+            13 = oci_dns_rrset.no_13
+            14 = oci_dns_rrset.no_14
+            15 = oci_dns_rrset.no_15
+            16 = oci_dns_rrset.no_16
+            17 = oci_dns_rrset.no_17
+            18 = oci_dns_rrset.no_18
+            19 = oci_dns_rrset.no_19
+          },
+          idx,
+          []
+        )[0].items,
+        []
+      )
+  }
+   
 }

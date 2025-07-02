@@ -1,0 +1,598 @@
+module.dns_records.oci_dns_rrset.no_0[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/cname1.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_6[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/max-ttl.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_16[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt1.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_13[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/record-type-only.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_15[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/srv1.acme.org/rtype/SRV]
+module.dns_records.oci_dns_rrset.no_7[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/min-ttl.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_5[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mail1.acme.org/rtype/MX]
+module.dns_records.oci_dns_rrset.no_10[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_12[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/override-rrset-type.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_2[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_9[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mixed-fields.acme.org/rtype/A]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # module.dns_records.oci_dns_rrset.no_0[0] will be destroyed
+  - resource "oci_dns_rrset" "no_0" {
+      - domain          = "cname1.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/cname1.acme.org/rtype/CNAME" -> null
+      - rtype           = "CNAME" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "cname1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "target1.acme.corp." -> null
+          - record_hash   = "0f3e4233c500ef6d3464bb1117ba4ff6" -> null
+          - rrset_version = "1423" -> null
+          - rtype         = "CNAME" -> null
+          - ttl           = 300 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_10[0] will be destroyed
+  - resource "oci_dns_rrset" "no_10" {
+      - domain          = "multi-a.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A" -> null
+      - rtype           = "A" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "multi-a.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "192.0.2.1" -> null
+          - record_hash   = "4ae71f28dbb3310e1dbf608817b754b9" -> null
+          - rrset_version = "1424" -> null
+          - rtype         = "A" -> null
+          - ttl           = 60 -> null
+        }
+      - items {
+          - domain        = "multi-a.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "192.0.2.2" -> null
+          - record_hash   = "7136b1c92051daca8272412cbf7126cb" -> null
+          - rrset_version = "1424" -> null
+          - rtype         = "A" -> null
+          - ttl           = 60 -> null
+        }
+      - items {
+          - domain        = "multi-a.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "192.0.2.3" -> null
+          - record_hash   = "2b133c829a6ddbfa699784d44fa53b7a" -> null
+          - rrset_version = "1424" -> null
+          - rtype         = "A" -> null
+          - ttl           = 60 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_12[0] will be destroyed
+  - resource "oci_dns_rrset" "no_12" {
+      - domain          = "override-rrset-type.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/override-rrset-type.acme.org/rtype/CNAME" -> null
+      - rtype           = "CNAME" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "override-rrset-type.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "mail.target.com." -> null
+          - record_hash   = "85fa4f2594a2d99ede402706c0d4a5b9" -> null
+          - rrset_version = "1422" -> null
+          - rtype         = "CNAME" -> null
+          - ttl           = 3600 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_13[0] will be destroyed
+  - resource "oci_dns_rrset" "no_13" {
+      - domain          = "record-type-only.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/record-type-only.acme.org/rtype/A" -> null
+      - rtype           = "A" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "record-type-only.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "203.0.113.3" -> null
+          - record_hash   = "f5b798b9ce4faedfc32741dae6142f5c" -> null
+          - rrset_version = "1412" -> null
+          - rtype         = "A" -> null
+          - ttl           = 300 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_15[0] will be destroyed
+  - resource "oci_dns_rrset" "no_15" {
+      - domain          = "srv1.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/srv1.acme.org/rtype/SRV" -> null
+      - rtype           = "SRV" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "srv1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "10 20 80 server1.acme.org." -> null
+          - record_hash   = "3773d395013357dfa8c3292656935c03" -> null
+          - rrset_version = "1411" -> null
+          - rtype         = "SRV" -> null
+          - ttl           = 400 -> null
+        }
+      - items {
+          - domain        = "srv1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "20 10 443 server2.acme.org." -> null
+          - record_hash   = "63704bef547e718af06c8286ea283334" -> null
+          - rrset_version = "1411" -> null
+          - rtype         = "SRV" -> null
+          - ttl           = 400 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_16[0] will be destroyed
+  - resource "oci_dns_rrset" "no_16" {
+      - domain          = "txt1.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt1.acme.org/rtype/TXT" -> null
+      - rtype           = "TXT" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "txt1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "\"some text with spaces and !@#$%^&*()_+\"" -> null
+          - record_hash   = "64383b96ea47aa09e873bf8ea8f2e041" -> null
+          - rrset_version = "1417" -> null
+          - rtype         = "TXT" -> null
+          - ttl           = 600 -> null
+        }
+      - items {
+          - domain        = "txt1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "\"v=spf1 include:acme.org ~all\"" -> null
+          - record_hash   = "0f172af552dc4226b01e8f78fa7ab126" -> null
+          - rrset_version = "1417" -> null
+          - rtype         = "TXT" -> null
+          - ttl           = 600 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_2[0] will be destroyed
+  - resource "oci_dns_rrset" "no_2" {
+      - domain          = "default-type.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A" -> null
+      - rtype           = "A" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "default-type.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "203.0.113.2" -> null
+          - record_hash   = "ab8d8d6bdf386cf202065ce564bbcd1c" -> null
+          - rrset_version = "1425" -> null
+          - rtype         = "A" -> null
+          - ttl           = 300 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_5[0] will be destroyed
+  - resource "oci_dns_rrset" "no_5" {
+      - domain          = "mail1.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mail1.acme.org/rtype/MX" -> null
+      - rtype           = "MX" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "mail1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "10 mail1.acme.org." -> null
+          - record_hash   = "39f95dd9fce55c03bae28343baf889c6" -> null
+          - rrset_version = "1421" -> null
+          - rtype         = "MX" -> null
+          - ttl           = 300 -> null
+        }
+      - items {
+          - domain        = "mail1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "20 mail2.acme.org." -> null
+          - record_hash   = "643103dd7cbb834718d6a3977b8ef960" -> null
+          - rrset_version = "1421" -> null
+          - rtype         = "MX" -> null
+          - ttl           = 300 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_6[0] will be destroyed
+  - resource "oci_dns_rrset" "no_6" {
+      - domain          = "max-ttl.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/max-ttl.acme.org/rtype/A" -> null
+      - rtype           = "A" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "max-ttl.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "198.51.100.2" -> null
+          - record_hash   = "2ca17ee8ffa90832097c4cac1ff07ff7" -> null
+          - rrset_version = "1413" -> null
+          - rtype         = "A" -> null
+          - ttl           = 604800 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_7[0] will be destroyed
+  - resource "oci_dns_rrset" "no_7" {
+      - domain          = "min-ttl.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/min-ttl.acme.org/rtype/A" -> null
+      - rtype           = "A" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "min-ttl.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "198.51.100.1" -> null
+          - record_hash   = "fc0051dd11863d6161fba6fc35f62239" -> null
+          - rrset_version = "1426" -> null
+          - rtype         = "A" -> null
+          - ttl           = 1 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_9[0] will be destroyed
+  - resource "oci_dns_rrset" "no_9" {
+      - domain          = "mixed-fields.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mixed-fields.acme.org/rtype/A" -> null
+      - rtype           = "A" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "mixed-fields.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "203.0.113.4" -> null
+          - record_hash   = "cc1a6e162d51624df5e4d316f6c7b7f9" -> null
+          - rrset_version = "1416" -> null
+          - rtype         = "A" -> null
+          - ttl           = 123 -> null
+        }
+      - items {
+          - domain        = "mixed-fields.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "203.0.113.5" -> null
+          - record_hash   = "7cf38391e5d461f7ba102791de21824b" -> null
+          - rrset_version = "1416" -> null
+          - rtype         = "A" -> null
+          - ttl           = 123 -> null
+        }
+      - items {
+          - domain        = "mixed-fields.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "203.0.113.6" -> null
+          - record_hash   = "9f86e68db988d4f9ca8793ac2f3b6a22" -> null
+          - rrset_version = "1416" -> null
+          - rtype         = "A" -> null
+          - ttl           = 123 -> null
+        }
+    }
+
+Plan: 0 to add, 0 to change, 11 to destroy.
+
+Changes to Outputs:
+  - domains = [
+      - "cname1.acme.org",
+      - "conflict-type.acme.org",
+      - "default-type.acme.org",
+      - "empty.acme.org",
+      - "ipv6.acme.org",
+      - "mail1.acme.org",
+      - "max-ttl.acme.org",
+      - "min-ttl.acme.org",
+      - "minimal.acme.org",
+      - "mixed-fields.acme.org",
+      - "multi-a.acme.org",
+      - "multi-mixed.acme.org",
+      - "override-rrset-type.acme.org",
+      - "record-type-only.acme.org",
+      - "redundant-type.acme.org",
+      - "srv1.acme.org",
+      - "txt1.acme.org",
+      - "txt2.acme.org",
+    ] -> null
+module.dns_records.oci_dns_rrset.no_15[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/srv1.acme.org/rtype/SRV]
+module.dns_records.oci_dns_rrset.no_2[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_9[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mixed-fields.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_12[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/override-rrset-type.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_0[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/cname1.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_10[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_16[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt1.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_7[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/min-ttl.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_5[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mail1.acme.org/rtype/MX]
+module.dns_records.oci_dns_rrset.no_6[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/max-ttl.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_13[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/record-type-only.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_16[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_9[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_15[0]: Destruction complete after 0s
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/multi-a.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 108c22c35481ebf8d052f5a6c44a3fe0/1E589355E5733B699FB73B380EB6E409/31D8351A6ED76D85C3C82ECAEB2F7665
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 350a16935896210529c8cf05456f882c/F48EF23B97E93B9A824946F14FC81890/E6B5D69D39E1AF183880A9922ED2607F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b565f468a81261bcf21ca3ad020dfee6/277A58500F337BF06D8C950C6D850064/C996C725DE37FB4927DBA7400404D357
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 76d2592656a178354cf818bbf45a6a58/49A8B5E3E81B0D4BB6A6944C0CF2A731/E3F1E4ABE48A725E3D4348C66F75659E
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - f25d5ae0aec9523f76014968bccda92e/6E5F762F5ECFF5A54FC6A56991F7903D/4E8D629AC06185F206FE687F49F9594B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/default-type.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 108c22c35481ebf8d052f5a6c44a3fe0/1E589355E5733B699FB73B380EB6E409/31D8351A6ED76D85C3C82ECAEB2F7665
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 350a16935896210529c8cf05456f882c/F48EF23B97E93B9A824946F14FC81890/E6B5D69D39E1AF183880A9922ED2607F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b565f468a81261bcf21ca3ad020dfee6/277A58500F337BF06D8C950C6D850064/C996C725DE37FB4927DBA7400404D357
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 76d2592656a178354cf818bbf45a6a58/49A8B5E3E81B0D4BB6A6944C0CF2A731/E3F1E4ABE48A725E3D4348C66F75659E
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - f25d5ae0aec9523f76014968bccda92e/6E5F762F5ECFF5A54FC6A56991F7903D/4E8D629AC06185F206FE687F49F9594B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/min-ttl.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 108c22c35481ebf8d052f5a6c44a3fe0/1E589355E5733B699FB73B380EB6E409/31D8351A6ED76D85C3C82ECAEB2F7665
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 350a16935896210529c8cf05456f882c/F48EF23B97E93B9A824946F14FC81890/E6B5D69D39E1AF183880A9922ED2607F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b565f468a81261bcf21ca3ad020dfee6/277A58500F337BF06D8C950C6D850064/C996C725DE37FB4927DBA7400404D357
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 76d2592656a178354cf818bbf45a6a58/49A8B5E3E81B0D4BB6A6944C0CF2A731/E3F1E4ABE48A725E3D4348C66F75659E
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - f25d5ae0aec9523f76014968bccda92e/6E5F762F5ECFF5A54FC6A56991F7903D/4E8D629AC06185F206FE687F49F9594B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/max-ttl.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 108c22c35481ebf8d052f5a6c44a3fe0/1E589355E5733B699FB73B380EB6E409/31D8351A6ED76D85C3C82ECAEB2F7665
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 350a16935896210529c8cf05456f882c/F48EF23B97E93B9A824946F14FC81890/E6B5D69D39E1AF183880A9922ED2607F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b565f468a81261bcf21ca3ad020dfee6/277A58500F337BF06D8C950C6D850064/C996C725DE37FB4927DBA7400404D357
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 76d2592656a178354cf818bbf45a6a58/49A8B5E3E81B0D4BB6A6944C0CF2A731/E3F1E4ABE48A725E3D4348C66F75659E
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - f25d5ae0aec9523f76014968bccda92e/6E5F762F5ECFF5A54FC6A56991F7903D/4E8D629AC06185F206FE687F49F9594B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/cname1.acme.org/CNAME 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 108c22c35481ebf8d052f5a6c44a3fe0/1E589355E5733B699FB73B380EB6E409/31D8351A6ED76D85C3C82ECAEB2F7665
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 350a16935896210529c8cf05456f882c/F48EF23B97E93B9A824946F14FC81890/E6B5D69D39E1AF183880A9922ED2607F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b565f468a81261bcf21ca3ad020dfee6/277A58500F337BF06D8C950C6D850064/C996C725DE37FB4927DBA7400404D357
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 76d2592656a178354cf818bbf45a6a58/49A8B5E3E81B0D4BB6A6944C0CF2A731/E3F1E4ABE48A725E3D4348C66F75659E
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - f25d5ae0aec9523f76014968bccda92e/6E5F762F5ECFF5A54FC6A56991F7903D/4E8D629AC06185F206FE687F49F9594B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/record-type-only.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 108c22c35481ebf8d052f5a6c44a3fe0/1E589355E5733B699FB73B380EB6E409/31D8351A6ED76D85C3C82ECAEB2F7665
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 350a16935896210529c8cf05456f882c/F48EF23B97E93B9A824946F14FC81890/E6B5D69D39E1AF183880A9922ED2607F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b565f468a81261bcf21ca3ad020dfee6/277A58500F337BF06D8C950C6D850064/C996C725DE37FB4927DBA7400404D357
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 76d2592656a178354cf818bbf45a6a58/49A8B5E3E81B0D4BB6A6944C0CF2A731/E3F1E4ABE48A725E3D4348C66F75659E
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - f25d5ae0aec9523f76014968bccda92e/6E5F762F5ECFF5A54FC6A56991F7903D/4E8D629AC06185F206FE687F49F9594B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/override-rrset-type.acme.org/CNAME 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 108c22c35481ebf8d052f5a6c44a3fe0/1E589355E5733B699FB73B380EB6E409/31D8351A6ED76D85C3C82ECAEB2F7665
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 350a16935896210529c8cf05456f882c/F48EF23B97E93B9A824946F14FC81890/E6B5D69D39E1AF183880A9922ED2607F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b565f468a81261bcf21ca3ad020dfee6/277A58500F337BF06D8C950C6D850064/C996C725DE37FB4927DBA7400404D357
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 76d2592656a178354cf818bbf45a6a58/49A8B5E3E81B0D4BB6A6944C0CF2A731/E3F1E4ABE48A725E3D4348C66F75659E
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - f25d5ae0aec9523f76014968bccda92e/6E5F762F5ECFF5A54FC6A56991F7903D/4E8D629AC06185F206FE687F49F9594B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/mail1.acme.org/MX 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 108c22c35481ebf8d052f5a6c44a3fe0/1E589355E5733B699FB73B380EB6E409/31D8351A6ED76D85C3C82ECAEB2F7665
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 350a16935896210529c8cf05456f882c/F48EF23B97E93B9A824946F14FC81890/E6B5D69D39E1AF183880A9922ED2607F
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b565f468a81261bcf21ca3ad020dfee6/277A58500F337BF06D8C950C6D850064/C996C725DE37FB4927DBA7400404D357
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 76d2592656a178354cf818bbf45a6a58/49A8B5E3E81B0D4BB6A6944C0CF2A731/E3F1E4ABE48A725E3D4348C66F75659E
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - f25d5ae0aec9523f76014968bccda92e/6E5F762F5ECFF5A54FC6A56991F7903D/4E8D629AC06185F206FE687F49F9594B
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+
+--------------------------------
+Test status for test_name=test_2
+
+operation=destroy
+parallelism=20
+status=1 ✅ (expected failure in negative test)
+info=409 Conflict detected! 🚨
+--------------------------------
+

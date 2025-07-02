@@ -1,0 +1,16 @@
+
+No changes. No objects need to be destroyed.
+
+Either you have not created any objects yet or the existing objects were
+already deleted outside of Terraform.
+
+Destroy complete! Resources: 0 destroyed.
+
+--------------------------------
+Cleanup status for test_name=test_3b
+
+operation=destroy
+parallelism=1
+status=0 ✅
+--------------------------------
+
