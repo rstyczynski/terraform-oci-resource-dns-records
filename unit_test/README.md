@@ -10,7 +10,7 @@ This test set demonstrates how to validate the serialization of OCI DNS RRSet re
 Test data coded in dataset1.acme handles acme.org domain. Adjust it to your needs i.e. domain managed by the zone, and set value of the zone OCID.
 
 ```bash
-export TF_VAR_rrsets=$(sed 's/acme.org/acme.org/' dataset1.acme)
+export TF_VAR_rrsets=$(sed 's/acme.org/acme.org/' data/dataset1.acme)
 export TF_VAR_zone_name_or_id="ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
 
 ```
@@ -20,7 +20,7 @@ export TF_VAR_zone_name_or_id="ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2
 Parallel execution without depends_on causes race condition and conflict.
 
 ```bash
-. unit_tests.sh
+. tests/unit_tests.sh
 test_prepare test_1 regular destroy
 
 test_apply 20 negative
@@ -34,7 +34,7 @@ test_cleanup
 Parallel execution without depends_on causes race condition and conflict.
 
 ```bash
-. unit_tests.sh
+. tests/unit_tests.sh
 test_prepare test_2 regular apply 
 
 test_destroy 20 negative
@@ -48,7 +48,7 @@ test_cleanup
 Parallel execution with depends_on serializes zone update, what eliminates conflicts. Both apply and destroy will run.
 
 ```bash
-. unit_tests.sh
+. tests/unit_tests.sh
 test_prepare test_3a serialized destroy
 test_apply 20
 test_cleanup
@@ -64,7 +64,7 @@ test_cleanup
 Single threaded execution without depends_on does not create conflicts, but influences whole TF processing, no only rrsets. **This test is added just for informative purposes, as it's not realistic use case in the real production deployment**.
 
 ```bash
-. unit_tests.sh
+. tests/unit_tests.sh
 test_prepare test_4a regular destroy 
 test_apply 1
 test_cleanup
@@ -81,3 +81,9 @@ test_cleanup
 grep "status=" logs/*
 
 ```
+
+## Further tests
+
+[] different ttl in records
+[] mixed rtypes in records
+[] protected rrsets

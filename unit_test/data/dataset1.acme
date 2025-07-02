@@ -15,6 +15,7 @@
       records = [
         { rdata = "192.0.2.10", rtype = "A", ttl = 600 },
         { rdata = "192.0.2.11", rtype = "A", ttl = 600  },
+        #Error: 422-UnprocessableEntity, UpdateRRSet only supports updating a single rrset at once
         #{ rdata = "alias.target.com.", rtype = "CNAME", ttl = 600 }
       ]
     }
