@@ -52,13 +52,6 @@ test_apply() {
     check_errors apply $thrds $exit_code test_apply.log
 }
 test_apply
-
-test_destroy() {
-    terraform destroy -parallelism=$thrds -auto-approve 2>&1 | tee test_destroy.log
-    exit_code=${PIPESTATUS[0]}
-    check_errors destroy $thrds $exit_code test_destroy.log
-}
-test_destroy
 ```
 
 ## ❌ Negative test: Crash on 409 during destroy due to parallelism enabled but no serialization
