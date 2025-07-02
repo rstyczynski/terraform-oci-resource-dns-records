@@ -338,3 +338,26 @@ Changes to Outputs:
       - "txt1.acme.org",
       - "txt2.acme.org",
     ] -> null
+module.dns_records.oci_dns_rrset.no_17[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt2.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_17[0]: Destruction complete after 1s
+module.dns_records.oci_dns_rrset.no_16[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt1.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_16[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_15[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/srv1.acme.org/rtype/SRV]
+module.dns_records.oci_dns_rrset.no_15[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_13[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/record-type-only.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_13[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_12[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/override-rrset-type.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_12[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_11[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-mixed.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_11[0]: Destruction complete after 2s
+module.dns_records.oci_dns_rrset.no_10[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_10[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_8[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/minimal.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_8[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_5[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mail1.acme.org/rtype/MX]
+module.dns_records.oci_dns_rrset.no_5[0]: Destruction complete after 1s
+module.dns_records.oci_dns_rrset.no_4[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/ipv6.acme.org/rtype/AAAA]
+module.dns_records.oci_dns_rrset.no_4[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_3[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_3[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_2[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
