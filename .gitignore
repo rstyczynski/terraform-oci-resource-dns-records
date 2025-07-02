@@ -1,7 +1,8 @@
 /.terraform
 /.terraform.lock.hcl
-example/.terraform/**/*
-example/.terraform.lock.hcl
-example/*.tfstate
-example/*.tfstate.backup
-.gitignore
+unit_test/.terraform/**/*
+unit_test/.terraform.lock.hcl
+unit_test/*.tfstate
+unit_test/*.tfstate.backup
+unit_test/*.log
+
