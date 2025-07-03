@@ -8,3 +8,4 @@ unit_test/*.tfstate.backup
 unit_test/*.log
 unit_test/.terraform.tfstate.lock.info
 unit_test/.state
+unit_test/.module
