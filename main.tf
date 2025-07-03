@@ -7,7 +7,7 @@ locals {
 }
 
 resource "oci_dns_rrset" "no_0" {
-  count           = length(local.domains) > 0 ? 1 : 0
+  count = length(local.domains) > 0 ? 1 : 0
 
   domain          = local.domains[0]
   rtype           = local.rrsets[local.domains[0]].rtype
@@ -25,13 +25,13 @@ resource "oci_dns_rrset" "no_0" {
 }
 
 resource "oci_dns_rrset" "no_1" {
-  count           = length(local.domains) > 1 ? 1 : 0
+  count = length(local.domains) > 1 ? 1 : 0
 
   domain          = local.domains[1]
   rtype           = local.rrsets[local.domains[1]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_0]
+  #depends_on = [oci_dns_rrset.no_0]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[1]].records
@@ -45,13 +45,13 @@ depends_on = [oci_dns_rrset.no_0]
 }
 
 resource "oci_dns_rrset" "no_2" {
-  count           = length(local.domains) > 2 ? 1 : 0
+  count = length(local.domains) > 2 ? 1 : 0
 
   domain          = local.domains[2]
   rtype           = local.rrsets[local.domains[2]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_1]
+  #depends_on = [oci_dns_rrset.no_1]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[2]].records
@@ -65,13 +65,13 @@ depends_on = [oci_dns_rrset.no_1]
 }
 
 resource "oci_dns_rrset" "no_3" {
-  count           = length(local.domains) > 3 ? 1 : 0
+  count = length(local.domains) > 3 ? 1 : 0
 
   domain          = local.domains[3]
   rtype           = local.rrsets[local.domains[3]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_2]
+  #depends_on = [oci_dns_rrset.no_2]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[3]].records
@@ -85,13 +85,13 @@ depends_on = [oci_dns_rrset.no_2]
 }
 
 resource "oci_dns_rrset" "no_4" {
-  count           = length(local.domains) > 4 ? 1 : 0
+  count = length(local.domains) > 4 ? 1 : 0
 
   domain          = local.domains[4]
   rtype           = local.rrsets[local.domains[4]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_3]
+  #depends_on = [oci_dns_rrset.no_3]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[4]].records
@@ -105,13 +105,13 @@ depends_on = [oci_dns_rrset.no_3]
 }
 
 resource "oci_dns_rrset" "no_5" {
-  count           = length(local.domains) > 5 ? 1 : 0
+  count = length(local.domains) > 5 ? 1 : 0
 
   domain          = local.domains[5]
   rtype           = local.rrsets[local.domains[5]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_4]
+  #depends_on = [oci_dns_rrset.no_4]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[5]].records
@@ -125,13 +125,13 @@ depends_on = [oci_dns_rrset.no_4]
 }
 
 resource "oci_dns_rrset" "no_6" {
-  count           = length(local.domains) > 6 ? 1 : 0
+  count = length(local.domains) > 6 ? 1 : 0
 
   domain          = local.domains[6]
   rtype           = local.rrsets[local.domains[6]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_5]
+  #depends_on = [oci_dns_rrset.no_5]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[6]].records
@@ -145,13 +145,13 @@ depends_on = [oci_dns_rrset.no_5]
 }
 
 resource "oci_dns_rrset" "no_7" {
-  count           = length(local.domains) > 7 ? 1 : 0
+  count = length(local.domains) > 7 ? 1 : 0
 
   domain          = local.domains[7]
   rtype           = local.rrsets[local.domains[7]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_6]
+  #depends_on = [oci_dns_rrset.no_6]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[7]].records
@@ -165,13 +165,13 @@ depends_on = [oci_dns_rrset.no_6]
 }
 
 resource "oci_dns_rrset" "no_8" {
-  count           = length(local.domains) > 8 ? 1 : 0
+  count = length(local.domains) > 8 ? 1 : 0
 
   domain          = local.domains[8]
   rtype           = local.rrsets[local.domains[8]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_7]
+  #depends_on = [oci_dns_rrset.no_7]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[8]].records
@@ -185,13 +185,13 @@ depends_on = [oci_dns_rrset.no_7]
 }
 
 resource "oci_dns_rrset" "no_9" {
-  count           = length(local.domains) > 9 ? 1 : 0
+  count = length(local.domains) > 9 ? 1 : 0
 
   domain          = local.domains[9]
   rtype           = local.rrsets[local.domains[9]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_8]
+  #depends_on = [oci_dns_rrset.no_8]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[9]].records
@@ -205,13 +205,13 @@ depends_on = [oci_dns_rrset.no_8]
 }
 
 resource "oci_dns_rrset" "no_10" {
-  count           = length(local.domains) > 10 ? 1 : 0
+  count = length(local.domains) > 10 ? 1 : 0
 
   domain          = local.domains[10]
   rtype           = local.rrsets[local.domains[10]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_9]
+  #depends_on = [oci_dns_rrset.no_9]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[10]].records
@@ -225,13 +225,13 @@ depends_on = [oci_dns_rrset.no_9]
 }
 
 resource "oci_dns_rrset" "no_11" {
-  count           = length(local.domains) > 11 ? 1 : 0
+  count = length(local.domains) > 11 ? 1 : 0
 
   domain          = local.domains[11]
   rtype           = local.rrsets[local.domains[11]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_10]
+  #depends_on = [oci_dns_rrset.no_10]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[11]].records
@@ -245,13 +245,13 @@ depends_on = [oci_dns_rrset.no_10]
 }
 
 resource "oci_dns_rrset" "no_12" {
-  count           = length(local.domains) > 12 ? 1 : 0
+  count = length(local.domains) > 12 ? 1 : 0
 
   domain          = local.domains[12]
   rtype           = local.rrsets[local.domains[12]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_11]
+  #depends_on = [oci_dns_rrset.no_11]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[12]].records
@@ -265,13 +265,13 @@ depends_on = [oci_dns_rrset.no_11]
 }
 
 resource "oci_dns_rrset" "no_13" {
-  count           = length(local.domains) > 13 ? 1 : 0
+  count = length(local.domains) > 13 ? 1 : 0
 
   domain          = local.domains[13]
   rtype           = local.rrsets[local.domains[13]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_12]
+  #depends_on = [oci_dns_rrset.no_12]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[13]].records
@@ -285,13 +285,13 @@ depends_on = [oci_dns_rrset.no_12]
 }
 
 resource "oci_dns_rrset" "no_14" {
-  count           = length(local.domains) > 14 ? 1 : 0
+  count = length(local.domains) > 14 ? 1 : 0
 
   domain          = local.domains[14]
   rtype           = local.rrsets[local.domains[14]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_13]
+  #depends_on = [oci_dns_rrset.no_13]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[14]].records
@@ -305,13 +305,13 @@ depends_on = [oci_dns_rrset.no_13]
 }
 
 resource "oci_dns_rrset" "no_15" {
-  count           = length(local.domains) > 15 ? 1 : 0
+  count = length(local.domains) > 15 ? 1 : 0
 
   domain          = local.domains[15]
   rtype           = local.rrsets[local.domains[15]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_14]
+  #depends_on = [oci_dns_rrset.no_14]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[15]].records
@@ -325,13 +325,13 @@ depends_on = [oci_dns_rrset.no_14]
 }
 
 resource "oci_dns_rrset" "no_16" {
-  count           = length(local.domains) > 16 ? 1 : 0
+  count = length(local.domains) > 16 ? 1 : 0
 
   domain          = local.domains[16]
   rtype           = local.rrsets[local.domains[16]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_15]
+  #depends_on = [oci_dns_rrset.no_15]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[16]].records
@@ -345,13 +345,13 @@ depends_on = [oci_dns_rrset.no_15]
 }
 
 resource "oci_dns_rrset" "no_17" {
-  count           = length(local.domains) > 17 ? 1 : 0
+  count = length(local.domains) > 17 ? 1 : 0
 
   domain          = local.domains[17]
   rtype           = local.rrsets[local.domains[17]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_16]
+  #depends_on = [oci_dns_rrset.no_16]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[17]].records
@@ -365,13 +365,13 @@ depends_on = [oci_dns_rrset.no_16]
 }
 
 resource "oci_dns_rrset" "no_18" {
-  count           = length(local.domains) > 18 ? 1 : 0
+  count = length(local.domains) > 18 ? 1 : 0
 
   domain          = local.domains[18]
   rtype           = local.rrsets[local.domains[18]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_17]
+  #depends_on = [oci_dns_rrset.no_17]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[18]].records
@@ -385,13 +385,13 @@ depends_on = [oci_dns_rrset.no_17]
 }
 
 resource "oci_dns_rrset" "no_19" {
-  count           = length(local.domains) > 19 ? 1 : 0
+  count = length(local.domains) > 19 ? 1 : 0
 
   domain          = local.domains[19]
   rtype           = local.rrsets[local.domains[19]].rtype
   zone_name_or_id = local.zone_name_or_id
 
-depends_on = [oci_dns_rrset.no_18]
+  #depends_on = [oci_dns_rrset.no_18]
 
   dynamic "items" {
     for_each = local.rrsets[local.domains[19]].records

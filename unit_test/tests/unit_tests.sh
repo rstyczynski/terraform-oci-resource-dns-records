@@ -19,6 +19,7 @@ test_prepare() {
         sed -i '' 's/^\([[:space:]]*\)#depends_on/depends_on/' ../main.tf
         ;;
     esac
+    terraform fmt ../main.tf
 
     mkdir -p logs
     case "$test_state" in
