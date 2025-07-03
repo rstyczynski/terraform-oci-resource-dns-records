@@ -105,6 +105,7 @@ function check_errors() {
     echo "" | tee -a "$logfile"
     echo "operation=$operation" | tee -a "$logfile"
     echo "parallelism=$parallelism" | tee -a "$logfile"
+    echo "test_type=$test_type" | tee -a "$logfile"
 
     if [ "$test_type" = "negative" ]; then
         if [ "$status" -eq 0 ]; then
