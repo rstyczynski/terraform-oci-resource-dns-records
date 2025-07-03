@@ -17,6 +17,9 @@ test_prepare() {
     mkdir -p .module
     cp ../*.tf .module/ 
 
+    #
+    # edit TF code to turn on/off serialization
+    #
     case $test_type in
     regular)
         sed -i '' 's/^\([[:space:]]*\)depends_on/#depends_on/' .module/main.tf
@@ -27,7 +30,9 @@ test_prepare() {
     esac
     terraform fmt .module/main.tf >/dev/null 2>&1
 
-
+    #
+    # prepare test environment
+    #
     mkdir -p logs
     mkdir -p .state
     case "$test_state" in
@@ -152,7 +157,7 @@ function test_report() {
     local report_log="logs/report-${timestamp}.log"
     local symlink="logs/report.log"
     local current_dir
-    upper_dir=$(basename "$(cd $PWD; cd ..; pwd)")
+    upper_dir=$(basename "$(cd ..; pwd)")
     current_dir=$(basename "$PWD")
 
     # Remove old symlink if exists and create new one
