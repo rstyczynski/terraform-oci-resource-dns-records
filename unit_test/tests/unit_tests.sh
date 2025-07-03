@@ -22,6 +22,7 @@ test_prepare() {
     terraform fmt ../main.tf
 
     mkdir -p logs
+    mkdir -p .state
     case "$test_state" in
     prepare)
         local logfile="test_${test_name}_prepare.log"
