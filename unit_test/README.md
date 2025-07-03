@@ -78,12 +78,24 @@ test_cleanup
 ## Look for test status
 
 ```bash
-grep "status=" logs/*
+. tests/unit_tests.sh
+test_report all
 
 ```
 
 ## Further tests
 
-[] different ttl in records
-[] mixed rtypes in records
-[] protected rrsets
+- different ttl in records
+- mixed rtypes in records
+- protected rrsets
+
+## Test approach extension
+
+- all good
+
+## Features
+
+(...)
+
+* Module code is copied to a temporary location, to prevent directly edit of the source code in repository
+* summary test report in place

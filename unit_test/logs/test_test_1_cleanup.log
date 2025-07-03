@@ -1,6 +1,7 @@
-module.dns_records.oci_dns_rrset.no_2[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_3[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_17[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt2.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_10[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_12[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/override-rrset-type.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_14[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/redundant-type.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_15[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/srv1.acme.org/rtype/SRV]
 
 Terraform used the selected providers to generate the following execution
 plan. Resource actions are indicated with the following symbols:
@@ -8,81 +9,138 @@ plan. Resource actions are indicated with the following symbols:
 
 Terraform will perform the following actions:
 
-  # module.dns_records.oci_dns_rrset.no_17[0] will be destroyed
-  - resource "oci_dns_rrset" "no_17" {
-      - domain          = "txt2.acme.org" -> null
-      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt2.acme.org/rtype/TXT" -> null
-      - rtype           = "TXT" -> null
-      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
-
-      - items {
-          - domain        = "txt2.acme.org" -> null
-          - is_protected  = false -> null
-          - rdata         = "\"example text value\"" -> null
-          - record_hash   = "679d0be8081a789347527d22177464da" -> null
-          - rrset_version = "1901" -> null
-          - rtype         = "TXT" -> null
-          - ttl           = 7200 -> null
-        }
-    }
-
-  # module.dns_records.oci_dns_rrset.no_2[0] will be destroyed
-  - resource "oci_dns_rrset" "no_2" {
-      - domain          = "default-type.acme.org" -> null
-      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A" -> null
+  # module.dns_records.oci_dns_rrset.no_10[0] will be destroyed
+  - resource "oci_dns_rrset" "no_10" {
+      - domain          = "multi-a.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A" -> null
       - rtype           = "A" -> null
       - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
 
       - items {
-          - domain        = "default-type.acme.org" -> null
+          - domain        = "multi-a.acme.org" -> null
           - is_protected  = false -> null
-          - rdata         = "203.0.113.2" -> null
-          - record_hash   = "ab8d8d6bdf386cf202065ce564bbcd1c" -> null
-          - rrset_version = "1902" -> null
+          - rdata         = "192.0.2.1" -> null
+          - record_hash   = "4ae71f28dbb3310e1dbf608817b754b9" -> null
+          - rrset_version = "2301" -> null
+          - rtype         = "A" -> null
+          - ttl           = 60 -> null
+        }
+      - items {
+          - domain        = "multi-a.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "192.0.2.2" -> null
+          - record_hash   = "7136b1c92051daca8272412cbf7126cb" -> null
+          - rrset_version = "2301" -> null
+          - rtype         = "A" -> null
+          - ttl           = 60 -> null
+        }
+      - items {
+          - domain        = "multi-a.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "192.0.2.3" -> null
+          - record_hash   = "2b133c829a6ddbfa699784d44fa53b7a" -> null
+          - rrset_version = "2301" -> null
+          - rtype         = "A" -> null
+          - ttl           = 60 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_12[0] will be destroyed
+  - resource "oci_dns_rrset" "no_12" {
+      - domain          = "override-rrset-type.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/override-rrset-type.acme.org/rtype/CNAME" -> null
+      - rtype           = "CNAME" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "override-rrset-type.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "mail.target.com." -> null
+          - record_hash   = "85fa4f2594a2d99ede402706c0d4a5b9" -> null
+          - rrset_version = "2303" -> null
+          - rtype         = "CNAME" -> null
+          - ttl           = 3600 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_14[0] will be destroyed
+  - resource "oci_dns_rrset" "no_14" {
+      - domain          = "redundant-type.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/redundant-type.acme.org/rtype/A" -> null
+      - rtype           = "A" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "redundant-type.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "203.0.113.7" -> null
+          - record_hash   = "956ce436ac750db2e2ea5460654b4836" -> null
+          - rrset_version = "2302" -> null
           - rtype         = "A" -> null
           - ttl           = 300 -> null
         }
     }
 
-  # module.dns_records.oci_dns_rrset.no_3[0] will be destroyed
-  - resource "oci_dns_rrset" "no_3" {
-      - domain          = "empty.acme.org" -> null
-      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A" -> null
-      - rtype           = "A" -> null
+  # module.dns_records.oci_dns_rrset.no_15[0] will be destroyed
+  - resource "oci_dns_rrset" "no_15" {
+      - domain          = "srv1.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/srv1.acme.org/rtype/SRV" -> null
+      - rtype           = "SRV" -> null
       - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "srv1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "10 20 80 server1.acme.org." -> null
+          - record_hash   = "3773d395013357dfa8c3292656935c03" -> null
+          - rrset_version = "2304" -> null
+          - rtype         = "SRV" -> null
+          - ttl           = 400 -> null
+        }
+      - items {
+          - domain        = "srv1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "20 10 443 server2.acme.org." -> null
+          - record_hash   = "63704bef547e718af06c8286ea283334" -> null
+          - rrset_version = "2304" -> null
+          - rtype         = "SRV" -> null
+          - ttl           = 400 -> null
+        }
     }
 
-Plan: 0 to add, 0 to change, 3 to destroy.
+Plan: 0 to add, 0 to change, 4 to destroy.
 
 Changes to Outputs:
   - domains = [
-      - "cname1.acme.org",
-      - "conflict-type.acme.org",
-      - "default-type.acme.org",
-      - "empty.acme.org",
-      - "ipv6.acme.org",
-      - "mail1.acme.org",
-      - "max-ttl.acme.org",
-      - "min-ttl.acme.org",
-      - "minimal.acme.org",
-      - "mixed-fields.acme.org",
-      - "multi-a.acme.org",
-      - "multi-mixed.acme.org",
-      - "override-rrset-type.acme.org",
-      - "record-type-only.acme.org",
-      - "redundant-type.acme.org",
-      - "srv1.acme.org",
-      - "txt1.acme.org",
-      - "txt2.acme.org",
+      - "0: cname1.acme.org",
+      - "1: conflict-type.acme.org",
+      - "2: default-type.acme.org",
+      - "3: empty.acme.org",
+      - "4: ipv6.acme.org",
+      - "5: mail1.acme.org",
+      - "6: max-ttl.acme.org",
+      - "7: min-ttl.acme.org",
+      - "8: minimal.acme.org",
+      - "9: mixed-fields.acme.org",
+      - "10: multi-a.acme.org",
+      - "11: multi-mixed.acme.org",
+      - "12: override-rrset-type.acme.org",
+      - "13: record-type-only.acme.org",
+      - "14: redundant-type.acme.org",
+      - "15: srv1.acme.org",
+      - "16: txt1.acme.org",
+      - "17: txt2.acme.org",
     ] -> null
-module.dns_records.oci_dns_rrset.no_17[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt2.acme.org/rtype/TXT]
-module.dns_records.oci_dns_rrset.no_17[0]: Destruction complete after 0s
-module.dns_records.oci_dns_rrset.no_3[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_3[0]: Destruction complete after 0s
-module.dns_records.oci_dns_rrset.no_2[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_2[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_15[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/srv1.acme.org/rtype/SRV]
+module.dns_records.oci_dns_rrset.no_15[0]: Destruction complete after 1s
+module.dns_records.oci_dns_rrset.no_14[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/redundant-type.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_14[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_12[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/override-rrset-type.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_12[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_10[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_10[0]: Destruction complete after 0s
 
-Destroy complete! Resources: 3 destroyed.
+Destroy complete! Resources: 4 destroyed.
 
 --------------------------------
 Cleanup status for test_name=test_1
@@ -90,6 +148,6 @@ Cleanup status for test_name=test_1
 operation=destroy
 parallelism=1
 test_type=regular
-status=0 ✅
+status=0 PASSED ✅
 --------------------------------
 

@@ -453,9 +453,9 @@ Changes to Outputs:
       + "17: txt2.acme.org",
     ]
 module.dns_records.oci_dns_rrset.no_0[0]: Creating...
-module.dns_records.oci_dns_rrset.no_0[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/cname1.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_0[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/cname1.acme.org/rtype/CNAME]
 module.dns_records.oci_dns_rrset.no_1[0]: Creating...
-module.dns_records.oci_dns_rrset.no_1[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/conflict-type.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_1[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/conflict-type.acme.org/rtype/CNAME]
 module.dns_records.oci_dns_rrset.no_2[0]: Creating...
 module.dns_records.oci_dns_rrset.no_2[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_3[0]: Creating...
@@ -463,31 +463,31 @@ module.dns_records.oci_dns_rrset.no_3[0]: Creation complete after 0s [id=zoneNam
 module.dns_records.oci_dns_rrset.no_4[0]: Creating...
 module.dns_records.oci_dns_rrset.no_4[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/ipv6.acme.org/rtype/AAAA]
 module.dns_records.oci_dns_rrset.no_5[0]: Creating...
-module.dns_records.oci_dns_rrset.no_5[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mail1.acme.org/rtype/MX]
+module.dns_records.oci_dns_rrset.no_5[0]: Creation complete after 2s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mail1.acme.org/rtype/MX]
 module.dns_records.oci_dns_rrset.no_6[0]: Creating...
-module.dns_records.oci_dns_rrset.no_6[0]: Creation complete after 2s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/max-ttl.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_6[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/max-ttl.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_7[0]: Creating...
 module.dns_records.oci_dns_rrset.no_7[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/min-ttl.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_8[0]: Creating...
-module.dns_records.oci_dns_rrset.no_8[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/minimal.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_8[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/minimal.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_9[0]: Creating...
-module.dns_records.oci_dns_rrset.no_9[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mixed-fields.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_9[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mixed-fields.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_10[0]: Creating...
-module.dns_records.oci_dns_rrset.no_10[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_10[0]: Creation complete after 2s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_11[0]: Creating...
-module.dns_records.oci_dns_rrset.no_11[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-mixed.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_11[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-mixed.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_12[0]: Creating...
 module.dns_records.oci_dns_rrset.no_12[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/override-rrset-type.acme.org/rtype/CNAME]
 module.dns_records.oci_dns_rrset.no_13[0]: Creating...
 module.dns_records.oci_dns_rrset.no_13[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/record-type-only.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_14[0]: Creating...
-module.dns_records.oci_dns_rrset.no_14[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/redundant-type.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_14[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/redundant-type.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_15[0]: Creating...
 module.dns_records.oci_dns_rrset.no_15[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/srv1.acme.org/rtype/SRV]
 module.dns_records.oci_dns_rrset.no_16[0]: Creating...
 module.dns_records.oci_dns_rrset.no_16[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt1.acme.org/rtype/TXT]
 module.dns_records.oci_dns_rrset.no_17[0]: Creating...
-module.dns_records.oci_dns_rrset.no_17[0]: Creation complete after 2s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt2.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_17[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt2.acme.org/rtype/TXT]
 
 Apply complete! Resources: 18 added, 0 changed, 0 destroyed.
 
@@ -500,7 +500,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "target1.acme.corp."
       "record_hash" = "0f3e4233c500ef6d3464bb1117ba4ff6"
-      "rrset_version" = "1973"
+      "rrset_version" = "2377"
       "rtype" = "CNAME"
       "ttl" = 300
     },
@@ -511,7 +511,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "alias.acme.org."
       "record_hash" = "a943206e6809c7923a13f4c954a5200d"
-      "rrset_version" = "1974"
+      "rrset_version" = "2378"
       "rtype" = "CNAME"
       "ttl" = 300
     },
@@ -522,7 +522,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "203.0.113.2"
       "record_hash" = "ab8d8d6bdf386cf202065ce564bbcd1c"
-      "rrset_version" = "1975"
+      "rrset_version" = "2379"
       "rtype" = "A"
       "ttl" = 300
     },
@@ -534,7 +534,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "2001:db8::1"
       "record_hash" = "7a36b0509ed6d790c93866228c2b9f05"
-      "rrset_version" = "1976"
+      "rrset_version" = "2380"
       "rtype" = "AAAA"
       "ttl" = 300
     },
@@ -545,7 +545,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "10 mail1.acme.org."
       "record_hash" = "39f95dd9fce55c03bae28343baf889c6"
-      "rrset_version" = "1977"
+      "rrset_version" = "2381"
       "rtype" = "MX"
       "ttl" = 300
     },
@@ -554,7 +554,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "20 mail2.acme.org."
       "record_hash" = "643103dd7cbb834718d6a3977b8ef960"
-      "rrset_version" = "1977"
+      "rrset_version" = "2381"
       "rtype" = "MX"
       "ttl" = 300
     },
@@ -565,7 +565,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "198.51.100.2"
       "record_hash" = "2ca17ee8ffa90832097c4cac1ff07ff7"
-      "rrset_version" = "1978"
+      "rrset_version" = "2382"
       "rtype" = "A"
       "ttl" = 604800
     },
@@ -576,7 +576,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "198.51.100.1"
       "record_hash" = "fc0051dd11863d6161fba6fc35f62239"
-      "rrset_version" = "1979"
+      "rrset_version" = "2383"
       "rtype" = "A"
       "ttl" = 1
     },
@@ -587,7 +587,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "203.0.113.1"
       "record_hash" = "52c8708f2001a9b4fc0992ddcc230eb2"
-      "rrset_version" = "1980"
+      "rrset_version" = "2384"
       "rtype" = "A"
       "ttl" = 300
     },
@@ -598,7 +598,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "203.0.113.4"
       "record_hash" = "cc1a6e162d51624df5e4d316f6c7b7f9"
-      "rrset_version" = "1981"
+      "rrset_version" = "2385"
       "rtype" = "A"
       "ttl" = 123
     },
@@ -607,7 +607,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "203.0.113.5"
       "record_hash" = "7cf38391e5d461f7ba102791de21824b"
-      "rrset_version" = "1981"
+      "rrset_version" = "2385"
       "rtype" = "A"
       "ttl" = 123
     },
@@ -616,7 +616,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "203.0.113.6"
       "record_hash" = "9f86e68db988d4f9ca8793ac2f3b6a22"
-      "rrset_version" = "1981"
+      "rrset_version" = "2385"
       "rtype" = "A"
       "ttl" = 123
     },
@@ -627,7 +627,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "192.0.2.1"
       "record_hash" = "4ae71f28dbb3310e1dbf608817b754b9"
-      "rrset_version" = "1982"
+      "rrset_version" = "2386"
       "rtype" = "A"
       "ttl" = 60
     },
@@ -636,7 +636,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "192.0.2.2"
       "record_hash" = "7136b1c92051daca8272412cbf7126cb"
-      "rrset_version" = "1982"
+      "rrset_version" = "2386"
       "rtype" = "A"
       "ttl" = 60
     },
@@ -645,7 +645,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "192.0.2.3"
       "record_hash" = "2b133c829a6ddbfa699784d44fa53b7a"
-      "rrset_version" = "1982"
+      "rrset_version" = "2386"
       "rtype" = "A"
       "ttl" = 60
     },
@@ -656,7 +656,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "192.0.2.10"
       "record_hash" = "0985ffabbca5075a9c41b2bd8467caf8"
-      "rrset_version" = "1983"
+      "rrset_version" = "2387"
       "rtype" = "A"
       "ttl" = 600
     },
@@ -665,7 +665,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "192.0.2.11"
       "record_hash" = "8d507408a46cbebc1b7d3cfd037e8b16"
-      "rrset_version" = "1983"
+      "rrset_version" = "2387"
       "rtype" = "A"
       "ttl" = 600
     },
@@ -676,7 +676,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "mail.target.com."
       "record_hash" = "85fa4f2594a2d99ede402706c0d4a5b9"
-      "rrset_version" = "1984"
+      "rrset_version" = "2388"
       "rtype" = "CNAME"
       "ttl" = 3600
     },
@@ -687,7 +687,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "203.0.113.3"
       "record_hash" = "f5b798b9ce4faedfc32741dae6142f5c"
-      "rrset_version" = "1985"
+      "rrset_version" = "2389"
       "rtype" = "A"
       "ttl" = 300
     },
@@ -698,7 +698,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "203.0.113.7"
       "record_hash" = "956ce436ac750db2e2ea5460654b4836"
-      "rrset_version" = "1986"
+      "rrset_version" = "2390"
       "rtype" = "A"
       "ttl" = 300
     },
@@ -709,7 +709,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "10 20 80 server1.acme.org."
       "record_hash" = "3773d395013357dfa8c3292656935c03"
-      "rrset_version" = "1987"
+      "rrset_version" = "2391"
       "rtype" = "SRV"
       "ttl" = 400
     },
@@ -718,7 +718,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "20 10 443 server2.acme.org."
       "record_hash" = "63704bef547e718af06c8286ea283334"
-      "rrset_version" = "1987"
+      "rrset_version" = "2391"
       "rtype" = "SRV"
       "ttl" = 400
     },
@@ -729,7 +729,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "\"some text with spaces and !@#$%^&*()_+\""
       "record_hash" = "64383b96ea47aa09e873bf8ea8f2e041"
-      "rrset_version" = "1988"
+      "rrset_version" = "2392"
       "rtype" = "TXT"
       "ttl" = 600
     },
@@ -738,7 +738,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "\"v=spf1 include:acme.org ~all\""
       "record_hash" = "0f172af552dc4226b01e8f78fa7ab126"
-      "rrset_version" = "1988"
+      "rrset_version" = "2392"
       "rtype" = "TXT"
       "ttl" = 600
     },
@@ -749,7 +749,7 @@ dns_record_details = {
       "is_protected" = false
       "rdata" = "\"example text value\""
       "record_hash" = "679d0be8081a789347527d22177464da"
-      "rrset_version" = "1989"
+      "rrset_version" = "2393"
       "rtype" = "TXT"
       "ttl" = 7200
     },
@@ -782,6 +782,6 @@ Preparation status for test_name=test_3b
 operation=apply
 parallelism=1
 test_type=regular
-status=0 ✅
+status=0 PASSED ✅
 --------------------------------
 

@@ -11,15 +11,22 @@ test_prepare() {
     local test_action=${3:-destroy}
     local test_state=${4:-prepare}
 
+    #
+    # copy module code to temporary module directory
+    #
+    mkdir -p module
+    cp ../*.tf module/ 
+
     case $test_type in
     regular)
-        sed -i '' 's/^\([[:space:]]*\)depends_on/#depends_on/' ../main.tf
+        sed -i '' 's/^\([[:space:]]*\)depends_on/#depends_on/' module/main.tf
         ;;
     serialized)
-        sed -i '' 's/^\([[:space:]]*\)#depends_on/depends_on/' ../main.tf
+        sed -i '' 's/^\([[:space:]]*\)#depends_on/depends_on/' module/main.tf
         ;;
     esac
-    terraform fmt ../main.tf >/dev/null 2>&1
+    terraform fmt module/main.tf >/dev/null 2>&1
+
 
     mkdir -p logs
     mkdir -p .state
@@ -109,10 +116,10 @@ function check_errors() {
 
     if [ "$test_type" = "negative" ]; then
         if [ "$status" -eq 0 ]; then
-            echo "status=$status ❌ (unexpected success in negative test)" | tee -a "$logfile"
+            echo "status=$status FAILED ❌ (unexpected success in negative test)" | tee -a "$logfile"
             echo "info=Error was expected but operation succeeded." | tee -a "$logfile"
         else
-            echo "status=$status ✅ (expected failure in negative test)" | tee -a "$logfile"
+            echo "status=$status PASSED ✅ (expected failure in negative test)" | tee -a "$logfile"
             if grep -q "409" "$logfile" 2>/dev/null; then
                 echo "info=409 Conflict detected! 🚨" | tee -a "$logfile"
             else
@@ -121,9 +128,9 @@ function check_errors() {
         fi
     else
         if [ "$status" -eq 0 ]; then
-            echo "status=$status ✅" | tee -a "$logfile"
+            echo "status=$status PASSED ✅" | tee -a "$logfile"
         else
-            echo "status=$status ❌" | tee -a "$logfile"
+            echo "status=$status FAILED ❌" | tee -a "$logfile"
             if grep -q "409" "$logfile" 2>/dev/null; then
                 echo "info=409 Conflict detected! 🚨" | tee -a "$logfile"
             else
@@ -133,4 +140,95 @@ function check_errors() {
     fi
     echo "--------------------------------" | tee -a "$logfile"
     echo "" | tee -a "$logfile"
+}
+
+function test_report() {
+    local filter_state="${1:-all}"  # "SUCCESS", "FAILED", or "all"
+    local show_all="${2:-test}"      # "all" to show all, "test" to filter out prepare/cleanup
+
+    # Echo test report with timestamp and current directory basename
+    local timestamp
+    timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
+    local report_log="logs/report-${timestamp}.log"
+    local symlink="logs/report.log"
+    local current_dir
+    upper_dir=$(basename "$(cd $PWD; cd ..; pwd)")
+    current_dir=$(basename "$PWD")
+
+    # Remove old symlink if exists and create new one
+    ln -sf "$(basename "$report_log")" "$symlink"
+
+    echo "TEST REPORT" | tee -a "$report_log"
+    echo "--------------------------------" | tee -a "$report_log"
+    echo "Terraform module: $upper_dir" | tee -a "$report_log"
+    echo "Test suite:       $current_dir" | tee -a "$report_log"
+    echo "Test date:        $timestamp" | tee -a "$report_log"
+    echo | tee -a "$report_log"
+
+    # Print table header
+    printf "%-30s | %-40s\n" "name" "status" | tee -a "$report_log"
+    printf "%-30s-+-%-40s\n" "$(printf '%.0s-' {1..30})" "$(printf '%.0s-' {1..40})" | tee -a "$report_log"
+
+    # Extract and print name and status columns
+    grep "status=" logs/* | while IFS=: read -r logfile rest; do
+        # logfile is logs/test_3a_apply.log, extract test_3a_apply
+        name=$(basename "$logfile" .log)
+        # Optionally filter out prepare/cleanup unless show_all is set
+        if [[ "$show_all" != "all" ]]; then
+            if [[ "$name" == *prepare* || "$name" == *cleanup* ]]; then
+                continue
+            fi
+        fi
+        # rest is status=0 PASSED ✅, extract everything after first '='
+        status=$(echo "$rest" | sed 's/^[^=]*=//')
+
+        # Determine test state by Unicode mark
+        # Success: contains "✅"
+        # Failure: contains "❌"
+        if echo "$status" | grep -q "✅"; then
+            test_state="SUCCESS"
+        elif echo "$status" | grep -q "❌"; then
+            test_state="FAILED"
+        else
+            test_state="UNKNOWN"
+        fi
+
+        # Filter by test state if requested
+        if [[ "$filter_state" == "all" || "$filter_state" == "$test_state" ]]; then
+            printf "%-30s | %-40s\n" "$name" "$status" | tee -a "$report_log"
+        fi
+    done
+
+    #
+    # Summary report
+    #
+    total_tests=0
+    failed_tests=0
+
+    # Re-scan logs for status lines
+    while IFS=: read -r logfile rest; do
+        name=$(basename "$logfile" .log)
+        if [[ "$show_all" != "all" ]]; then
+            if [[ "$name" == *prepare* || "$name" == *cleanup* ]]; then
+                continue
+            fi
+        fi
+        status=$(echo "$rest" | sed 's/^[^=]*=//')
+        ((total_tests++))
+        if ! echo "$status" | grep -q "✅"; then
+            ((failed_tests++))
+        fi
+    done < <(grep "status=" logs/*)
+
+    echo | tee -a "$report_log"
+    echo "--------------------------------" | tee -a "$report_log"
+    if [[ $total_tests -eq 0 ]]; then
+        echo "No tests found." | tee -a "$report_log"
+    elif [[ $failed_tests -eq 0 ]]; then
+        echo "ALL TESTS SUCCEEDED 🎉" | tee -a "$report_log"
+        return 0
+    else
+        echo "SOME TESTS FAILED ($failed_tests of $total_tests) ❌" | tee -a "$report_log"
+        return 1
+    fi
 }
