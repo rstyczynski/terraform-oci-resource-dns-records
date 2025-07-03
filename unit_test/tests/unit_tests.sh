@@ -14,18 +14,18 @@ test_prepare() {
     #
     # copy module code to temporary module directory
     #
-    mkdir -p module
-    cp ../*.tf module/ 
+    mkdir -p .module
+    cp ../*.tf .module/ 
 
     case $test_type in
     regular)
-        sed -i '' 's/^\([[:space:]]*\)depends_on/#depends_on/' module/main.tf
+        sed -i '' 's/^\([[:space:]]*\)depends_on/#depends_on/' .module/main.tf
         ;;
     serialized)
-        sed -i '' 's/^\([[:space:]]*\)#depends_on/depends_on/' module/main.tf
+        sed -i '' 's/^\([[:space:]]*\)#depends_on/depends_on/' .module/main.tf
         ;;
     esac
-    terraform fmt module/main.tf >/dev/null 2>&1
+    terraform fmt .module/main.tf >/dev/null 2>&1
 
 
     mkdir -p logs
