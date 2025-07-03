@@ -11,6 +11,7 @@ Preparation status for test_name=test_4a
 
 operation=destroy
 parallelism=1
+test_type=regular
 status=0 ✅
 --------------------------------
 

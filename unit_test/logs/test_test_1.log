@@ -452,27 +452,27 @@ Changes to Outputs:
       + "txt1.acme.org",
       + "txt2.acme.org",
     ]
-module.dns_records.oci_dns_rrset.no_17[0]: Creating...
+module.dns_records.oci_dns_rrset.no_14[0]: Creating...
+module.dns_records.oci_dns_rrset.no_0[0]: Creating...
+module.dns_records.oci_dns_rrset.no_3[0]: Creating...
+module.dns_records.oci_dns_rrset.no_8[0]: Creating...
 module.dns_records.oci_dns_rrset.no_6[0]: Creating...
 module.dns_records.oci_dns_rrset.no_13[0]: Creating...
 module.dns_records.oci_dns_rrset.no_4[0]: Creating...
-module.dns_records.oci_dns_rrset.no_9[0]: Creating...
-module.dns_records.oci_dns_rrset.no_11[0]: Creating...
-module.dns_records.oci_dns_rrset.no_2[0]: Creating...
-module.dns_records.oci_dns_rrset.no_8[0]: Creating...
-module.dns_records.oci_dns_rrset.no_5[0]: Creating...
-module.dns_records.oci_dns_rrset.no_15[0]: Creating...
-module.dns_records.oci_dns_rrset.no_1[0]: Creating...
-module.dns_records.oci_dns_rrset.no_7[0]: Creating...
 module.dns_records.oci_dns_rrset.no_16[0]: Creating...
-module.dns_records.oci_dns_rrset.no_14[0]: Creating...
-module.dns_records.oci_dns_rrset.no_3[0]: Creating...
-module.dns_records.oci_dns_rrset.no_0[0]: Creating...
+module.dns_records.oci_dns_rrset.no_1[0]: Creating...
+module.dns_records.oci_dns_rrset.no_17[0]: Creating...
 module.dns_records.oci_dns_rrset.no_10[0]: Creating...
+module.dns_records.oci_dns_rrset.no_11[0]: Creating...
+module.dns_records.oci_dns_rrset.no_5[0]: Creating...
+module.dns_records.oci_dns_rrset.no_2[0]: Creating...
 module.dns_records.oci_dns_rrset.no_12[0]: Creating...
-module.dns_records.oci_dns_rrset.no_3[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_2[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_8[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/minimal.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_7[0]: Creating...
+module.dns_records.oci_dns_rrset.no_15[0]: Creating...
+module.dns_records.oci_dns_rrset.no_9[0]: Creating...
+module.dns_records.oci_dns_rrset.no_17[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt2.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_3[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_2[0]: Creation complete after 0s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
 
 Error: circuit breaker is open, so this request was not sent to the Dns service.
 
@@ -485,23 +485,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -523,23 +523,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -561,23 +561,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -599,23 +599,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -637,23 +637,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -675,23 +675,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -706,6 +706,44 @@ Error: circuit breaker is open, so this request was not sent to the Dns service.
 
  The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
 
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/minimal.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+
+
+  with module.dns_records.oci_dns_rrset.no_8[0],
+  on ../main.tf line 167, in resource "oci_dns_rrset" "no_8":
+ 167: resource "oci_dns_rrset" "no_8" {
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
 URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/mixed-fields.acme.org/A 
  Circuit Breaker Info 
  Name - DefaultCircuitBreaker 
@@ -713,23 +751,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -751,23 +789,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -789,23 +827,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -827,23 +865,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -865,23 +903,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -903,23 +941,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -941,23 +979,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -979,23 +1017,23 @@ URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud
 
  Errors from Dns service which opened the circuit breaker:
 
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
+Opc-Req-id - 4619e4c0951295c0ed27de70b5e7462a/7E2670AAD2B85B7B794C319D2EB4B04C/FC637F50D090FECF7380561F656F4F65
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
+Opc-Req-id - a1194c1ee39c9e84519c39227ff5e24c/CE321DCC51DFC6ABE0953A6BE4844D97/E77401D05262C313F4859E2FDFA9D39B
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
+Opc-Req-id - 0ba638235891221a4933a4b3c8a11841/D55A28ACC1674E45329E8B2ECBFCFAF7/D6731E15431817F0254529A755262540
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
+Opc-Req-id - 4cfe31c4a25585b2d0f1bf5d067c9e49/765A1272EA44E312886AC25E444A828E/05488293795A019490D9E4D953D52F74
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
+Opc-Req-id - 27557a15361add1003d075dcd3e23119/354A1611B707FBEC9AA78161CBCE12B8/CD2ECE4B50943868D7FD895B77E8B56E
 ErrorCode - 409 - IncorrectState
 ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
 
@@ -1006,49 +1044,12 @@ ErrorMessage - Unable to save record changes as the zone was modified by another
  327: resource "oci_dns_rrset" "no_16" {
 
 
-Error: circuit breaker is open, so this request was not sent to the Dns service.
-
- The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
-
-URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/txt2.acme.org/TXT 
- Circuit Breaker Info 
- Name - DefaultCircuitBreaker 
- State - open 
-
- Errors from Dns service which opened the circuit breaker:
-
-Opc-Req-id - cbbdd9251d34dc4b6772c2db18940591/5468E3712D5E38E79B8D913E916802DB/8D03E6FC8A5DB49253C9C89243CDA126
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-Opc-Req-id - 4e73e98924750fad55a1b67d9fbf7b06/007235CD4B0163C2A936F40E90605D0C/D580C98074CA66F961ABA46A73505259
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-Opc-Req-id - 493eac64fa265268dea1add334dc8f31/78BB234236EBD0BD4813114F6ED5B98C/6F8241B34E95FB479DC50F186821A69E
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-Opc-Req-id - f33dd384068b1c7247124058db5fe53b/A0730396878C75798DAA9292A7DE4464/87C8020A278684DEAB0897FC3C0E16DC
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-Opc-Req-id - 139129878f92883d3cf28a083058589b/A7769C88DCDA0C47CEC951F5AB6EA69B/568F46B34E59EE33A3156FC46D76DB13
-ErrorCode - 409 - IncorrectState
-ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
-
-
-
-  with module.dns_records.oci_dns_rrset.no_17[0],
-  on ../main.tf line 347, in resource "oci_dns_rrset" "no_17":
- 347: resource "oci_dns_rrset" "no_17" {
-
-
 --------------------------------
 Test status for test_name=test_1
 
 operation=apply
 parallelism=20
+test_type=negative
 status=1 ✅ (expected failure in negative test)
 info=409 Conflict detected! 🚨
 --------------------------------

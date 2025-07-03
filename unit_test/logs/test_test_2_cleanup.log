@@ -1,16 +1,15 @@
-module.dns_records.oci_dns_rrset.no_1[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/conflict-type.acme.org/rtype/CNAME]
-module.dns_records.oci_dns_rrset.no_2[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_3[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_4[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/ipv6.acme.org/rtype/AAAA]
 module.dns_records.oci_dns_rrset.no_5[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mail1.acme.org/rtype/MX]
 module.dns_records.oci_dns_rrset.no_6[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/max-ttl.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_7[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/min-ttl.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_8[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/minimal.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_9[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mixed-fields.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_10[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_11[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-mixed.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_12[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/override-rrset-type.acme.org/rtype/CNAME]
 module.dns_records.oci_dns_rrset.no_13[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/record-type-only.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_14[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/redundant-type.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_15[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/srv1.acme.org/rtype/SRV]
 module.dns_records.oci_dns_rrset.no_16[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt1.acme.org/rtype/TXT]
 module.dns_records.oci_dns_rrset.no_17[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt2.acme.org/rtype/TXT]
 
@@ -19,24 +18,6 @@ plan. Resource actions are indicated with the following symbols:
   - destroy
 
 Terraform will perform the following actions:
-
-  # module.dns_records.oci_dns_rrset.no_1[0] will be destroyed
-  - resource "oci_dns_rrset" "no_1" {
-      - domain          = "conflict-type.acme.org" -> null
-      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/conflict-type.acme.org/rtype/CNAME" -> null
-      - rtype           = "CNAME" -> null
-      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
-
-      - items {
-          - domain        = "conflict-type.acme.org" -> null
-          - is_protected  = false -> null
-          - rdata         = "alias.acme.org." -> null
-          - record_hash   = "a943206e6809c7923a13f4c954a5200d" -> null
-          - rrset_version = "1848" -> null
-          - rtype         = "CNAME" -> null
-          - ttl           = 300 -> null
-        }
-    }
 
   # module.dns_records.oci_dns_rrset.no_10[0] will be destroyed
   - resource "oci_dns_rrset" "no_10" {
@@ -50,7 +31,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "192.0.2.1" -> null
           - record_hash   = "4ae71f28dbb3310e1dbf608817b754b9" -> null
-          - rrset_version = "1846" -> null
+          - rrset_version = "1916" -> null
           - rtype         = "A" -> null
           - ttl           = 60 -> null
         }
@@ -59,7 +40,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "192.0.2.2" -> null
           - record_hash   = "7136b1c92051daca8272412cbf7126cb" -> null
-          - rrset_version = "1846" -> null
+          - rrset_version = "1916" -> null
           - rtype         = "A" -> null
           - ttl           = 60 -> null
         }
@@ -68,7 +49,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "192.0.2.3" -> null
           - record_hash   = "2b133c829a6ddbfa699784d44fa53b7a" -> null
-          - rrset_version = "1846" -> null
+          - rrset_version = "1916" -> null
           - rtype         = "A" -> null
           - ttl           = 60 -> null
         }
@@ -86,7 +67,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "192.0.2.10" -> null
           - record_hash   = "0985ffabbca5075a9c41b2bd8467caf8" -> null
-          - rrset_version = "1844" -> null
+          - rrset_version = "1914" -> null
           - rtype         = "A" -> null
           - ttl           = 600 -> null
         }
@@ -95,7 +76,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "192.0.2.11" -> null
           - record_hash   = "8d507408a46cbebc1b7d3cfd037e8b16" -> null
-          - rrset_version = "1844" -> null
+          - rrset_version = "1914" -> null
           - rtype         = "A" -> null
           - ttl           = 600 -> null
         }
@@ -113,7 +94,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "mail.target.com." -> null
           - record_hash   = "85fa4f2594a2d99ede402706c0d4a5b9" -> null
-          - rrset_version = "1840" -> null
+          - rrset_version = "1913" -> null
           - rtype         = "CNAME" -> null
           - ttl           = 3600 -> null
         }
@@ -131,7 +112,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "203.0.113.3" -> null
           - record_hash   = "f5b798b9ce4faedfc32741dae6142f5c" -> null
-          - rrset_version = "1835" -> null
+          - rrset_version = "1910" -> null
           - rtype         = "A" -> null
           - ttl           = 300 -> null
         }
@@ -149,9 +130,36 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "203.0.113.7" -> null
           - record_hash   = "956ce436ac750db2e2ea5460654b4836" -> null
-          - rrset_version = "1849" -> null
+          - rrset_version = "1917" -> null
           - rtype         = "A" -> null
           - ttl           = 300 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_15[0] will be destroyed
+  - resource "oci_dns_rrset" "no_15" {
+      - domain          = "srv1.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/srv1.acme.org/rtype/SRV" -> null
+      - rtype           = "SRV" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "srv1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "10 20 80 server1.acme.org." -> null
+          - record_hash   = "3773d395013357dfa8c3292656935c03" -> null
+          - rrset_version = "1918" -> null
+          - rtype         = "SRV" -> null
+          - ttl           = 400 -> null
+        }
+      - items {
+          - domain        = "srv1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "20 10 443 server2.acme.org." -> null
+          - record_hash   = "63704bef547e718af06c8286ea283334" -> null
+          - rrset_version = "1918" -> null
+          - rtype         = "SRV" -> null
+          - ttl           = 400 -> null
         }
     }
 
@@ -167,7 +175,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "\"some text with spaces and !@#$%^&*()_+\"" -> null
           - record_hash   = "64383b96ea47aa09e873bf8ea8f2e041" -> null
-          - rrset_version = "1838" -> null
+          - rrset_version = "1906" -> null
           - rtype         = "TXT" -> null
           - ttl           = 600 -> null
         }
@@ -176,7 +184,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "\"v=spf1 include:acme.org ~all\"" -> null
           - record_hash   = "0f172af552dc4226b01e8f78fa7ab126" -> null
-          - rrset_version = "1838" -> null
+          - rrset_version = "1906" -> null
           - rtype         = "TXT" -> null
           - ttl           = 600 -> null
         }
@@ -194,28 +202,18 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "\"example text value\"" -> null
           - record_hash   = "679d0be8081a789347527d22177464da" -> null
-          - rrset_version = "1841" -> null
+          - rrset_version = "1919" -> null
           - rtype         = "TXT" -> null
           - ttl           = 7200 -> null
         }
     }
 
-  # module.dns_records.oci_dns_rrset.no_2[0] will be destroyed
-  - resource "oci_dns_rrset" "no_2" {
-      - domain          = "default-type.acme.org" -> null
-      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A" -> null
+  # module.dns_records.oci_dns_rrset.no_3[0] will be destroyed
+  - resource "oci_dns_rrset" "no_3" {
+      - domain          = "empty.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A" -> null
       - rtype           = "A" -> null
       - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
-
-      - items {
-          - domain        = "default-type.acme.org" -> null
-          - is_protected  = false -> null
-          - rdata         = "203.0.113.2" -> null
-          - record_hash   = "ab8d8d6bdf386cf202065ce564bbcd1c" -> null
-          - rrset_version = "1843" -> null
-          - rtype         = "A" -> null
-          - ttl           = 300 -> null
-        }
     }
 
   # module.dns_records.oci_dns_rrset.no_4[0] will be destroyed
@@ -230,7 +228,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "2001:db8::1" -> null
           - record_hash   = "7a36b0509ed6d790c93866228c2b9f05" -> null
-          - rrset_version = "1837" -> null
+          - rrset_version = "1909" -> null
           - rtype         = "AAAA" -> null
           - ttl           = 300 -> null
         }
@@ -248,7 +246,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "10 mail1.acme.org." -> null
           - record_hash   = "39f95dd9fce55c03bae28343baf889c6" -> null
-          - rrset_version = "1833" -> null
+          - rrset_version = "1915" -> null
           - rtype         = "MX" -> null
           - ttl           = 300 -> null
         }
@@ -257,7 +255,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "20 mail2.acme.org." -> null
           - record_hash   = "643103dd7cbb834718d6a3977b8ef960" -> null
-          - rrset_version = "1833" -> null
+          - rrset_version = "1915" -> null
           - rtype         = "MX" -> null
           - ttl           = 300 -> null
         }
@@ -275,7 +273,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "198.51.100.2" -> null
           - record_hash   = "2ca17ee8ffa90832097c4cac1ff07ff7" -> null
-          - rrset_version = "1845" -> null
+          - rrset_version = "1921" -> null
           - rtype         = "A" -> null
           - ttl           = 604800 -> null
         }
@@ -293,27 +291,9 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "198.51.100.1" -> null
           - record_hash   = "fc0051dd11863d6161fba6fc35f62239" -> null
-          - rrset_version = "1842" -> null
+          - rrset_version = "1912" -> null
           - rtype         = "A" -> null
           - ttl           = 1 -> null
-        }
-    }
-
-  # module.dns_records.oci_dns_rrset.no_8[0] will be destroyed
-  - resource "oci_dns_rrset" "no_8" {
-      - domain          = "minimal.acme.org" -> null
-      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/minimal.acme.org/rtype/A" -> null
-      - rtype           = "A" -> null
-      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
-
-      - items {
-          - domain        = "minimal.acme.org" -> null
-          - is_protected  = false -> null
-          - rdata         = "203.0.113.1" -> null
-          - record_hash   = "52c8708f2001a9b4fc0992ddcc230eb2" -> null
-          - rrset_version = "1839" -> null
-          - rtype         = "A" -> null
-          - ttl           = 300 -> null
         }
     }
 
@@ -329,7 +309,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "203.0.113.4" -> null
           - record_hash   = "cc1a6e162d51624df5e4d316f6c7b7f9" -> null
-          - rrset_version = "1847" -> null
+          - rrset_version = "1911" -> null
           - rtype         = "A" -> null
           - ttl           = 123 -> null
         }
@@ -338,7 +318,7 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "203.0.113.5" -> null
           - record_hash   = "7cf38391e5d461f7ba102791de21824b" -> null
-          - rrset_version = "1847" -> null
+          - rrset_version = "1911" -> null
           - rtype         = "A" -> null
           - ttl           = 123 -> null
         }
@@ -347,13 +327,13 @@ Terraform will perform the following actions:
           - is_protected  = false -> null
           - rdata         = "203.0.113.6" -> null
           - record_hash   = "9f86e68db988d4f9ca8793ac2f3b6a22" -> null
-          - rrset_version = "1847" -> null
+          - rrset_version = "1911" -> null
           - rtype         = "A" -> null
           - ttl           = 123 -> null
         }
     }
 
-Plan: 0 to add, 0 to change, 15 to destroy.
+Plan: 0 to add, 0 to change, 14 to destroy.
 
 Changes to Outputs:
   - domains = [
@@ -380,8 +360,10 @@ module.dns_records.oci_dns_rrset.no_17[0]: Destroying... [id=zoneNameOrId/ocid1.
 module.dns_records.oci_dns_rrset.no_17[0]: Destruction complete after 0s
 module.dns_records.oci_dns_rrset.no_16[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt1.acme.org/rtype/TXT]
 module.dns_records.oci_dns_rrset.no_16[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_15[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/srv1.acme.org/rtype/SRV]
+module.dns_records.oci_dns_rrset.no_15[0]: Destruction complete after 0s
 module.dns_records.oci_dns_rrset.no_14[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/redundant-type.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_14[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_14[0]: Destruction complete after 1s
 module.dns_records.oci_dns_rrset.no_13[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/record-type-only.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_13[0]: Destruction complete after 0s
 module.dns_records.oci_dns_rrset.no_12[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/override-rrset-type.acme.org/rtype/CNAME]
@@ -389,31 +371,28 @@ module.dns_records.oci_dns_rrset.no_12[0]: Destruction complete after 0s
 module.dns_records.oci_dns_rrset.no_11[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-mixed.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_11[0]: Destruction complete after 1s
 module.dns_records.oci_dns_rrset.no_10[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_10[0]: Destruction complete after 1s
+module.dns_records.oci_dns_rrset.no_10[0]: Destruction complete after 0s
 module.dns_records.oci_dns_rrset.no_9[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mixed-fields.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_9[0]: Destruction complete after 0s
-module.dns_records.oci_dns_rrset.no_8[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/minimal.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_8[0]: Destruction complete after 0s
 module.dns_records.oci_dns_rrset.no_7[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/min-ttl.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_7[0]: Destruction complete after 1s
 module.dns_records.oci_dns_rrset.no_6[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/max-ttl.acme.org/rtype/A]
 module.dns_records.oci_dns_rrset.no_6[0]: Destruction complete after 0s
 module.dns_records.oci_dns_rrset.no_5[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mail1.acme.org/rtype/MX]
-module.dns_records.oci_dns_rrset.no_5[0]: Destruction complete after 2s
+module.dns_records.oci_dns_rrset.no_5[0]: Destruction complete after 1s
 module.dns_records.oci_dns_rrset.no_4[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/ipv6.acme.org/rtype/AAAA]
 module.dns_records.oci_dns_rrset.no_4[0]: Destruction complete after 0s
-module.dns_records.oci_dns_rrset.no_2[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
-module.dns_records.oci_dns_rrset.no_2[0]: Destruction complete after 0s
-module.dns_records.oci_dns_rrset.no_1[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/conflict-type.acme.org/rtype/CNAME]
-module.dns_records.oci_dns_rrset.no_1[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_3[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_3[0]: Destruction complete after 0s
 
-Destroy complete! Resources: 15 destroyed.
+Destroy complete! Resources: 14 destroyed.
 
 --------------------------------
 Cleanup status for test_name=test_2
 
 operation=destroy
 parallelism=1
+test_type=regular
 status=0 ✅
 --------------------------------
 
