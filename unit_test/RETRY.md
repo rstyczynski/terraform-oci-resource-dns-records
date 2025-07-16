@@ -1,4 +1,5 @@
 # OCI DNS rrset concurrent operation failures
+https://github.com/rstyczynski/terraform-oci-resource-dns-records/blob/main/unit_test/RETRY.md
 
 ## Zone update conflict, retry, and the circuit breaker
 
@@ -133,3 +134,4 @@ References
 2. https://docs.oracle.com/en-us/iaas/Content/dev/terraform/troubleshooting.htm#backoffandjitter
 3. Circuit breaker, https://docs.oracle.com/en-us/iaas/tools/go/65.95.2/
 4. https://docs.oracle.com/en-us/iaas/tools/python/2.155.2/sdk_behaviors/circuit_breakers.html
+
