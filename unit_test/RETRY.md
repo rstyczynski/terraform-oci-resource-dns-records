@@ -41,7 +41,7 @@ The conducted tests execute same identical rrset creation flow in four condition
 
 ## TESTS
 
-To run the test set proper value of domain and zone id at the end of tests_retry.sh 
+To run the test set proper value of domain and zone id at the end of tests_retry.sh and have properly configured OCI client to connect to the proper tenancy.
 
 ```bash
 cd unit_test
