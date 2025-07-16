@@ -1,5 +1,5 @@
 # OCI DNS rrset concurrent operation failures
-https://github.com/rstyczynski/terraform-oci-resource-dns-records/blob/main/unit_test/RETRY.md
+https://github.com/rstyczynski/terraform-oci-resource-dns-records/blob/main/unit_test/FAILURE_ANALYSIS.md
 
 ## Zone update conflict, retry, and the circuit breaker
 
