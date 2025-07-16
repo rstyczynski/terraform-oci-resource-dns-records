@@ -38,7 +38,10 @@ The conducted tests execute same identical rrset creation flow in four condition
 
 , in mode with and without SDK debug flags.
 
-
+```bash
+cd unit_test
+./test_retry.sh
+```
 
 ## CONCLUSIONS
 
