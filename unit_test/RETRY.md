@@ -65,6 +65,7 @@ OCI_SDK_DEFAULT_CIRCUITBREAKER_ENABLED=false
 
 All the problems arise because of the externalisation of the rrset resource from the zone. rrset management may be simplified extending current zone resource with clear mapping to the API. The proposed change makes it possible to utilise a simple PATCH call to the zone object, which eliminates all issues related to parallelism. It's the target state—not required now, but most welcome in the future. This model mimics the OCI CLI, which I guess is closer to the DNS API. The externalisation of rrset looks very synthetic and may probably be applied to some special cases to utilise IAM access control, but typical use cases are fully covered by the Zone API.
 
+```
 resource "oci_dns_zone" "zone_idea" {
     compartment_id = var.compartment_id
     name = var.zone_name
@@ -88,6 +89,7 @@ resource "oci_dns_zone" "zone_idea" {
 
   (...)
 }
+```
 
 References
 1. https://docs.oracle.com/en-us/iaas/tools/python/2.155.1/sdk_behaviors/retries.html
