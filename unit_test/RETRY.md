@@ -8,7 +8,7 @@ According to the documentation, the 409 error is explicitly eliminated from the 
 
 "Note that the retry_duration_seconds field only affects retry duration in response to HTTP 429 and 500 errors; as these errors are more likely to result in success after a long retry duration. Other HTTP errors (such as 400, 401, 403, 404, and 409) are unlikely to succeed on retry. The retry_duration_seconds field does not affect the retry behavior for such errors."
 
-Oracle promises that the 429 error is recoverable through the retry mechanism, which is not confirmed by the DNS rrset resource Terraform provider behaviour. 
+Oracle promises that the 429 error is recoverable through the retry mechanism, which is not confirmed by the DNS rrset resource Terraform provider behaviour.
 
 ## ANALYSIS
 
@@ -65,7 +65,7 @@ OCI_SDK_DEFAULT_CIRCUITBREAKER_ENABLED=false
 
 All the problems arise because of the externalisation of the rrset resource from the zone. rrset management may be simplified extending current zone resource with clear mapping to the API. The proposed change makes it possible to utilise a simple PATCH call to the zone object, which eliminates all issues related to parallelism. It's the target state—not required now, but most welcome in the future. This model mimics the OCI CLI, which I guess is closer to the DNS API. The externalisation of rrset looks very synthetic and may probably be applied to some special cases to utilise IAM access control, but typical use cases are fully covered by the Zone API.
 
-```
+```hcl
 resource "oci_dns_zone" "zone_idea" {
     compartment_id = var.compartment_id
     name = var.zone_name
