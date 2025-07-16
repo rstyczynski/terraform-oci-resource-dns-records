@@ -20,7 +20,7 @@ export TF_VAR_zone_name_or_id="ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2
 Parallel execution without depends_on causes race condition and conflict.
 
 ```bash
-. tests/unit_tests.sh
+. bin/unit_tests.sh
 test_prepare test_1 regular destroy
 
 test_apply 20 negative
@@ -34,7 +34,7 @@ test_cleanup
 Parallel execution without depends_on causes race condition and conflict.
 
 ```bash
-. tests/unit_tests.sh
+. bin/unit_tests.sh
 test_prepare test_2 regular apply 
 
 test_destroy 20 negative
@@ -48,7 +48,7 @@ test_cleanup
 Parallel execution with depends_on serializes zone update, what eliminates conflicts. Both apply and destroy will run.
 
 ```bash
-. tests/unit_tests.sh
+. bin/unit_tests.sh
 test_prepare test_3a serialized destroy
 test_apply 20
 test_cleanup
@@ -64,7 +64,7 @@ test_cleanup
 Single threaded execution without depends_on does not create conflicts, but influences whole TF processing, no only rrsets. **This test is added just for informative purposes, as it's not realistic use case in the real production deployment**.
 
 ```bash
-. tests/unit_tests.sh
+. bin/unit_tests.sh
 test_prepare test_4a regular destroy 
 test_apply 1
 test_cleanup
@@ -78,7 +78,7 @@ test_cleanup
 ## Look for test status
 
 ```bash
-. tests/unit_tests.sh
+. bin/unit_tests.sh
 test_report all
 
 ```
