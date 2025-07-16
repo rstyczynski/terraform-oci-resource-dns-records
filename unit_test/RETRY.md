@@ -45,7 +45,33 @@ cd unit_test
 ./tests_retry.sh
 ```
 
-Note that logs are collected in logs directory.
+Note that logs are collected in unit_test/logs directory, where you will find log files collected for each test.
+
+Expected current state of tests is the following:
+
+```
+TEST REPORT
+--------------------------------
+Terraform module: terraform-oci-resource-dns-records
+Test suite:       unit_test
+Test date:        2025-07-16_15-47-30
+
+name                           | status                                  
+-------------------------------+-----------------------------------------
+test_test_1_vanilla_debug      | 1 FAILED ❌                            
+test_test_1_vanilla            | 1 FAILED ❌                            
+test_test_2_vanilla_no_cb_debug | 0 PASSED ✅                            
+test_test_2_vanilla_no_cb      | 0 PASSED ✅                            
+test_test_3_retry_debug        | 1 FAILED ❌                            
+test_test_3_retry              | 1 FAILED ❌                            
+test_test_4_retry_no_cb_debug  | 0 PASSED ✅                            
+test_test_4_retry_no_cb        | 0 PASSED ✅                            
+test_test_5_no_retry_debug     | 1 PASSED ✅ (expected failure in negative test)
+test_test_5_no_retry           | 1 PASSED ✅ (expected failure in negative test)
+
+--------------------------------
+SOME TESTS FAILED (4 of 10) ❌
+```
 
 ## CONCLUSIONS
 
