@@ -40,12 +40,12 @@ The conducted tests execute same identical rrset creation flow in four condition
 
 ## TESTS
 
+To run the test set proper value of domain and zone id at the end of tests_retry.sh 
+
 ```bash
 cd unit_test
 ./tests_retry.sh
 ```
-
-Note that logs are collected in unit_test/logs directory, where you will find log files collected for each test.
 
 Expected current state of tests is the following:
 
@@ -72,6 +72,10 @@ test_test_5_no_retry           | 1 PASSED ✅ (expected failure in negative test
 --------------------------------
 SOME TESTS FAILED (4 of 10) ❌
 ```
+
+Note that logs are collected in unit_test/logs directory, where you will find log files collected for each test.
+
+Target state is all green.
 
 ## CONCLUSIONS
 
