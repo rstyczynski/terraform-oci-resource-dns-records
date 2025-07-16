@@ -36,12 +36,16 @@ The conducted tests execute same identical rrset creation flow in four condition
 4. retry_duration_seconds set to 1800 seconds with disabled circuit breaker
 5. retry disabled by Terraform OCI Provider arguments
 
-, in mode with and without SDK debug flags.
+, in modes with and without SDK debug flags.
+
+## TESTS
 
 ```bash
 cd unit_test
-./test_retry.sh
+./tests_retry.sh
 ```
+
+Note that logs are collected in logs directory.
 
 ## CONCLUSIONS
 
