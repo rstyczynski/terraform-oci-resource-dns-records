@@ -1,41 +1,15 @@
 #!/bin/bash
 
 #
-# tools
-# 
-function log() {
-    awk 'BEGIN { spinner="|/-\\"; i=0 } { print >> "'"$logfile"'"; printf "\r%c", substr(spinner, i%4+1, 1); fflush(); i++ } END { print "" }'
-}
-#
 # test preparation and cleaning
 #
 
-test_session() {
-    test_session=$1
-}
-
-test_register() {
-    test_name=${1:-default}
-    test_type=${2:-regular}
-
-    #
-    # prepare test environment
-    #
-    logdir="logs/$test_session"
-    mkdir -p $logdir
-    logfile="$logdir/test_${test_name}.log"
-
-    echo "" | tee -a "$logfile"
-    echo "--------------------------------" | tee -a "$logfile"
-    echo "Performing test $test_name (please wait...)" | tee -a "$logfile"
-    echo "" | tee -a "$logfile"
-}
-
 test_prepare() {
     test_name=${1:-default}
-    test_type=${2:-regular}
-    test_action=${3:-destroy}
-    test_state=${4:-prepare}
+
+    local test_type=${2:-regular}
+    local test_action=${3:-destroy}
+    local test_state=${4:-prepare}
 
     #
     # copy module code to temporary module directory
@@ -43,36 +17,40 @@ test_prepare() {
     mkdir -p .module
     cp ../*.tf .module/ 
 
-    test_register "$test_name" "$test_type"
-
-    if declare -f test_prepare_support > /dev/null; then
-        echo "Preparing test environment for $test_name with action $test_action and state $test_state of type $test_type"
-        test_prepare_support "$test_name" "$test_action" "$test_state" "$test_type"
-    fi
+    #
+    # edit TF code to turn on/off serialization
+    #
+    case $test_type in
+    regular)
+        sed -i '' 's/^\([[:space:]]*\)depends_on/#depends_on/' .module/main.tf
+        ;;
+    serialized)
+        sed -i '' 's/^\([[:space:]]*\)#depends_on/depends_on/' .module/main.tf
+        ;;
+    esac
+    terraform fmt .module/main.tf >/dev/null 2>&1
 
     #
     # prepare test environment
     #
-
+    mkdir -p logs
     mkdir -p .state
     case "$test_state" in
     prepare)
-        # env > "$logdir/test_${test_name}_env.log"
-        local logfile="$logdir/test_${test_name}_prepare.log"
-        terraform init --upgrade -no-color 2>&1 | log
-        terraform $test_action -no-color -parallelism=1 -auto-approve 2>&1 | log
+        local logfile="test_${test_name}_prepare.log"
+        terraform init -no-color 
+        terraform $test_action -no-color -parallelism=1 -auto-approve 2>&1 | tee "logs/$logfile"
         exit_code=${PIPESTATUS[0]}
-        #check_errors $test_action 1 $exit_code "$logfile" Preparation 
+        check_errors $test_action 1 $exit_code "logs/$logfile" Preparation
         ;;
     cleanup)
-        set -x
-        local logfile="$logdir/test_${test_name}_cleanup.log"
-        terraform $test_action -no-color -parallelism=1 -auto-approve 2>&1 | log
+        local logfile="test_${test_name}_cleanup.log"
+        terraform $test_action -no-color -parallelism=1 -auto-approve 2>&1 | tee "logs/$logfile"
         exit_code=${PIPESTATUS[0]}
-        #check_errors $test_action 1 $exit_code "$logfile" Cleanup
-        set +x
+        check_errors $test_action 1 $exit_code "logs/$logfile" Cleanup
         ;;
     esac
+
 }
 
 test_cleanup() {
@@ -82,8 +60,43 @@ test_cleanup() {
         return 1
     fi
 
-    test_type=serialized
-    test_prepare destroy cleanup
+    test_prepare "$test_name" serialized destroy cleanup
+}
+
+#
+# actual tests
+#
+
+test_apply() {
+    local thrds=${1:-20}
+    local test_type=${2:-regular}
+
+    local logfile="test_${test_name}.log"
+
+    if [ -z "$test_name" ]; then
+        echo "Error: test_prepare was not run => test_name is not set."
+        return 1
+    fi
+
+    terraform apply -no-color -parallelism="$thrds" -auto-approve 2>&1 | tee "logs/$logfile"
+    exit_code=${PIPESTATUS[0]}
+    check_errors apply "$thrds" "$exit_code" "logs/$logfile" Test "$test_type"
+}
+
+test_destroy() {
+    local thrds=${1:-20}
+    local test_type=${2:-regular}
+
+    local logfile="test_${test_name}.log"
+
+    if [ -z "$test_name" ]; then
+        echo "Error: test_prepare was not run => test_name is not set."
+        return 1
+    fi
+
+    terraform  destroy -no-color -parallelism="$thrds" -auto-approve 2>&1 | tee "logs/$logfile"
+    exit_code=${PIPESTATUS[0]}
+    check_errors destroy "$thrds" "$exit_code" "logs/$logfile" Test "$test_type"
 }
 
 #
@@ -105,19 +118,29 @@ function check_errors() {
     echo "operation=$operation" | tee -a "$logfile"
     echo "parallelism=$parallelism" | tee -a "$logfile"
     echo "test_type=$test_type" | tee -a "$logfile"
-    echo "log file=$logfile" | tee -a "$logfile"
 
     if [ "$test_type" = "negative" ]; then
         if [ "$status" -eq 0 ]; then
             echo "status=$status FAILED ❌ (unexpected success in negative test)" | tee -a "$logfile"
+            echo "info=Error was expected but operation succeeded." | tee -a "$logfile"
         else
             echo "status=$status PASSED ✅ (expected failure in negative test)" | tee -a "$logfile"
+            if grep -q "409" "$logfile" 2>/dev/null; then
+                echo "info=409 Conflict detected! 🚨" | tee -a "$logfile"
+            else
+                echo "info=Check above for error details." | tee -a "$logfile"
+            fi
         fi
     else
         if [ "$status" -eq 0 ]; then
             echo "status=$status PASSED ✅" | tee -a "$logfile"
         else
             echo "status=$status FAILED ❌" | tee -a "$logfile"
+            if grep -q "409" "$logfile" 2>/dev/null; then
+                echo "info=409 Conflict detected! 🚨" | tee -a "$logfile"
+            else
+                echo "info=Check above for error details." | tee -a "$logfile"
+            fi
         fi
     fi
     echo "--------------------------------" | tee -a "$logfile"
@@ -131,16 +154,15 @@ function test_report() {
     # Echo test report with timestamp and current directory basename
     local timestamp
     timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
-    local report_log="$logdir/report.log"
-    local symlink="report.log"
+    local report_log="logs/report-${timestamp}.log"
+    local symlink="logs/report.log"
     local current_dir
     upper_dir=$(basename "$(cd ..; pwd)")
     current_dir=$(basename "$PWD")
 
     # Remove old symlink if exists and create new one
-    ln -sf "$report_log" "$symlink"
+    ln -sf "$(basename "$report_log")" "$symlink"
 
-    echo
     echo "TEST REPORT" | tee -a "$report_log"
     echo "--------------------------------" | tee -a "$report_log"
     echo "Terraform module: $upper_dir" | tee -a "$report_log"
@@ -153,7 +175,7 @@ function test_report() {
     printf "%-30s-+-%-40s\n" "$(printf '%.0s-' {1..30})" "$(printf '%.0s-' {1..40})" | tee -a "$report_log"
 
     # Extract and print name and status columns
-    grep "status=" $logdir/* | while IFS=: read -r logfile rest; do
+    grep "status=" logs/* | while IFS=: read -r logfile rest; do
         # logfile is logs/test_3a_apply.log, extract test_3a_apply
         name=$(basename "$logfile" .log)
         # Optionally filter out prepare/cleanup unless show_all is set
@@ -201,7 +223,7 @@ function test_report() {
         if ! echo "$status" | grep -q "✅"; then
             ((failed_tests++))
         fi
-    done < <(grep "status=" $logdir/*)
+    done < <(grep "status=" logs/*)
 
     echo | tee -a "$report_log"
     echo "--------------------------------" | tee -a "$report_log"
@@ -214,67 +236,4 @@ function test_report() {
         echo "SOME TESTS FAILED ($failed_tests of $total_tests) ❌" | tee -a "$report_log"
         return 1
     fi
-}
-
-#
-# asserts
-#
-
-# Assert that a file contains a given pattern
-assert_file_contains() {
-    local file="$1"
-    local pattern="$2"
-    local message="${3:-Expected pattern not found: $pattern}"
-    local show="$4"
-
-    if grep -q "$pattern" "$file"; then
-        echo "✅ pattern '$pattern' found as expected"
-        if [[ "$show" == "show" ]]; then
-            grep "$pattern" "$file"
-        fi
-    else
-        echo "❌ $message"
-    fi
-}
-
-# Assert that a file does not contain a given pattern
-function assert_file_lacks() {
-    local file="$1"
-    local pattern="$2"
-    local message="${3:-Unexpected pattern found: $pattern}"
-    local show="$4"
-
-    if grep -q "$pattern" "$file"; then
-        echo "❌ $message"
-        if [[ "$show" == "show" ]]; then
-            grep "$pattern" "$file"
-        fi
-    else
-        echo "✅ pattern '$pattern' not found as expected"
-    fi
-}
-
-#
-# waiting
-#
-
-
-wait_with_progress() {
-    local duration=$1
-    local i=0
-    local increment=$((100 / duration))
-    local progress=0
-
-    echo -n "Waiting for $duration seconds (press any key to cancel): ["
-    while [ $i -lt $duration ]; do
-        # Check for key press with a 1-second timeout
-        if read -t 1 -n 1 key; then
-            echo "] Canceled by user"
-            return
-        fi
-        i=$((i + 1))
-        progress=$((progress + increment))
-        printf "#"
-    done
-    echo "] 100%"
 }
