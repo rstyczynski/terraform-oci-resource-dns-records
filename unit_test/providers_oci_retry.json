@@ -2,9 +2,5 @@
 	"409": {
 		"retry_max_duration": 1800,
         "first_retry_sleep_duration": 120
-	},
-	"429": {
-		"retry_max_duration": 1800,
-        "first_retry_sleep_duration": 45
 	}
 }

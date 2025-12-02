@@ -10,6 +10,7 @@ This test set demonstrates how to validate the serialization of OCI DNS RRSet re
 Test data coded in dataset1.acme handles acme.org domain. Adjust it to your needs i.e. domain managed by the zone, and set value of the zone OCID.
 
 ```bash
+cd unit_test
 export TF_VAR_rrsets=$(sed 's/acme.org/acme.org/' data/dataset1.acme)
 export TF_VAR_zone_name_or_id="ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
 

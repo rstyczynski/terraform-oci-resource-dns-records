@@ -1,8 +1,3 @@
-
-provider "oci" {
-  retries_config_file = "/Users/rstyczynski/projects/avaloq/terraform-oci-resource-dns-records/providers_oci_retry.json"
-}
-
 locals {
   zone_name_or_id = var.zone_name_or_id
   rrsets          = var.rrsets
