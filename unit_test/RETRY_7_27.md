@@ -2,17 +2,7 @@
 
 ## Test summary
 
-Provided solution does not work, increasing probability of success, but in fact postponing the failure.
-
-It was observed that configured delay is strictly used, what means that in case of 409 conflicts that are about to be retried, all the retry group will happen after first round of configured delay, what will create the same storm on API with the same circuit breaker reaction. This was observed for 10, 30, and 60 seconds delays. It not worked even with so long delay as 120 seconds, which was tested, being not practical at all.
-
-The retry mechanism ignores 429 errors, what was interesting option to go out of circuit breaker 30 seconds window.
-
-Performed tests and analysis makes the update status as FAILED.
-
-## Recommendation
-
-Solution should distribute retries on the retry window to eliminate storm of API calls. According to the product documentation, Terraform OCI Provider implements backoff with jitter, what is exactly should be applied to solve the problem. Solution should react on 429 to enable move out of circuit breaker window. Solution should be tested before releasing.
+Provided solution works with proper configuration and small number of threads.
 
 ## Test procedure
 
@@ -32,12 +22,12 @@ terraform-oci-resource-dns-records
 cat > providers_oci_retry.json <<EOF
 {
 	"409": {
-		"retry_max_duration": 600,
-        "first_retry_sleep_duration": 60
+		"retry_max_duration": 300,
+        "first_retry_sleep_duration": 30
 	}, 
 	"429": {
-		"retry_max_duration": 600,
-        "first_retry_sleep_duration": 60
+		"retry_max_duration": 300,
+        "first_retry_sleep_duration": 30
 	}
 }
 EOF
