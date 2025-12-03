@@ -1,0 +1,47 @@
+
+--------------------------------
+Performing test test_1_vanilla (please wait...)
+
+
+Changes to Outputs:
+  + domains = [
+      + "0: cname1.acme.org",
+      + "1: conflict-type.acme.org",
+      + "2: default-type.acme.org",
+      + "3: empty.acme.org",
+      + "4: ipv6.acme.org",
+      + "5: mail1.acme.org",
+      + "6: max-ttl.acme.org",
+      + "7: min-ttl.acme.org",
+      + "8: minimal.acme.org",
+      + "9: mixed-fields.acme.org",
+      + "10: multi-a.acme.org",
+      + "11: multi-mixed.acme.org",
+      + "12: override-rrset-type.acme.org",
+      + "13: record-type-only.acme.org",
+      + "14: redundant-type.acme.org",
+      + "15: srv1.acme.org",
+      + "16: txt1.acme.org",
+      + "17: txt2.acme.org",
+    ]
+
+You can apply this plan to save these new output values to the Terraform
+state, without changing any real infrastructure.
+
+Error: error in reading the providers_oci_retry.json file for retries config. Error: open providers_oci_retry.json: no such file or directory
+
+  with module.dns_records.provider["registry.terraform.io/oracle/oci"],
+  on .module/providers.tf line 10, in provider "oci":
+  10: provider "oci" {
+
+
+--------------------------------
+Test status for test_name=test_1_vanilla
+
+operation=apply
+parallelism=20
+test_type=regular
+log file=logs/2025-12-01_15-52-41/test_test_1_vanilla.log
+status=1 FAILED ❌
+--------------------------------
+

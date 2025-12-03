@@ -1,0 +1,17 @@
+
+No changes. No objects need to be destroyed.
+
+Either you have not created any objects yet or the existing objects were
+already deleted outside of Terraform.
+
+Destroy complete! Resources: 0 destroyed.
+
+--------------------------------
+Preparation status for test_name=test_727_3threads_30sec_apply_4
+
+operation=destroy
+parallelism=1
+test_type=regular
+status=0 PASSED ✅
+--------------------------------
+

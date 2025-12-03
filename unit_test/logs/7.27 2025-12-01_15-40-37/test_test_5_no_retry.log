@@ -1,0 +1,935 @@
+
+--------------------------------
+Performing test test_5_no_retry (please wait...)
+
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.dns_records.oci_dns_rrset.no_0[0] will be created
+  + resource "oci_dns_rrset" "no_0" {
+      + compartment_id  = (known after apply)
+      + domain          = "cname1.acme.org"
+      + id              = (known after apply)
+      + rtype           = "CNAME"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "cname1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "target1.acme.corp."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "CNAME"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_1[0] will be created
+  + resource "oci_dns_rrset" "no_1" {
+      + compartment_id  = (known after apply)
+      + domain          = "conflict-type.acme.org"
+      + id              = (known after apply)
+      + rtype           = "CNAME"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "conflict-type.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "alias.acme.org."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "CNAME"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_10[0] will be created
+  + resource "oci_dns_rrset" "no_10" {
+      + compartment_id  = (known after apply)
+      + domain          = "multi-a.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "multi-a.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "192.0.2.1"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 60
+        }
+      + items {
+          + domain        = "multi-a.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "192.0.2.2"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 60
+        }
+      + items {
+          + domain        = "multi-a.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "192.0.2.3"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 60
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_11[0] will be created
+  + resource "oci_dns_rrset" "no_11" {
+      + compartment_id  = (known after apply)
+      + domain          = "multi-mixed.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "multi-mixed.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "192.0.2.10"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 600
+        }
+      + items {
+          + domain        = "multi-mixed.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "192.0.2.11"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 600
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_12[0] will be created
+  + resource "oci_dns_rrset" "no_12" {
+      + compartment_id  = (known after apply)
+      + domain          = "override-rrset-type.acme.org"
+      + id              = (known after apply)
+      + rtype           = "CNAME"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "override-rrset-type.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "mail.target.com."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "CNAME"
+          + ttl           = 3600
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_13[0] will be created
+  + resource "oci_dns_rrset" "no_13" {
+      + compartment_id  = (known after apply)
+      + domain          = "record-type-only.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "record-type-only.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.3"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_14[0] will be created
+  + resource "oci_dns_rrset" "no_14" {
+      + compartment_id  = (known after apply)
+      + domain          = "redundant-type.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "redundant-type.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.7"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_15[0] will be created
+  + resource "oci_dns_rrset" "no_15" {
+      + compartment_id  = (known after apply)
+      + domain          = "srv1.acme.org"
+      + id              = (known after apply)
+      + rtype           = "SRV"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "srv1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "10 20 80 server1.acme.org."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "SRV"
+          + ttl           = 400
+        }
+      + items {
+          + domain        = "srv1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "20 10 443 server2.acme.org."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "SRV"
+          + ttl           = 400
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_16[0] will be created
+  + resource "oci_dns_rrset" "no_16" {
+      + compartment_id  = (known after apply)
+      + domain          = "txt1.acme.org"
+      + id              = (known after apply)
+      + rtype           = "TXT"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "txt1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "\"some text with spaces and !@#$%^&*()_+\""
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "TXT"
+          + ttl           = 600
+        }
+      + items {
+          + domain        = "txt1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "\"v=spf1 include:acme.org ~all\""
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "TXT"
+          + ttl           = 600
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_17[0] will be created
+  + resource "oci_dns_rrset" "no_17" {
+      + compartment_id  = (known after apply)
+      + domain          = "txt2.acme.org"
+      + id              = (known after apply)
+      + rtype           = "TXT"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "txt2.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "\"example text value\""
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "TXT"
+          + ttl           = 7200
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_2[0] will be created
+  + resource "oci_dns_rrset" "no_2" {
+      + compartment_id  = (known after apply)
+      + domain          = "default-type.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "default-type.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.2"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_3[0] will be created
+  + resource "oci_dns_rrset" "no_3" {
+      + compartment_id  = (known after apply)
+      + domain          = "empty.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+    }
+
+  # module.dns_records.oci_dns_rrset.no_4[0] will be created
+  + resource "oci_dns_rrset" "no_4" {
+      + compartment_id  = (known after apply)
+      + domain          = "ipv6.acme.org"
+      + id              = (known after apply)
+      + rtype           = "AAAA"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "ipv6.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "2001:db8::1"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "AAAA"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_5[0] will be created
+  + resource "oci_dns_rrset" "no_5" {
+      + compartment_id  = (known after apply)
+      + domain          = "mail1.acme.org"
+      + id              = (known after apply)
+      + rtype           = "MX"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "mail1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "10 mail1.acme.org."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "MX"
+          + ttl           = 300
+        }
+      + items {
+          + domain        = "mail1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "20 mail2.acme.org."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "MX"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_6[0] will be created
+  + resource "oci_dns_rrset" "no_6" {
+      + compartment_id  = (known after apply)
+      + domain          = "max-ttl.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "max-ttl.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "198.51.100.2"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 604800
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_7[0] will be created
+  + resource "oci_dns_rrset" "no_7" {
+      + compartment_id  = (known after apply)
+      + domain          = "min-ttl.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "min-ttl.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "198.51.100.1"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 1
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_8[0] will be created
+  + resource "oci_dns_rrset" "no_8" {
+      + compartment_id  = (known after apply)
+      + domain          = "minimal.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "minimal.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.1"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_9[0] will be created
+  + resource "oci_dns_rrset" "no_9" {
+      + compartment_id  = (known after apply)
+      + domain          = "mixed-fields.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "mixed-fields.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.4"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 123
+        }
+      + items {
+          + domain        = "mixed-fields.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.5"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 123
+        }
+      + items {
+          + domain        = "mixed-fields.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.6"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 123
+        }
+    }
+
+Plan: 18 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + dns_record_details = {
+      + "cname1.acme.org"              = (known after apply)
+      + "conflict-type.acme.org"       = (known after apply)
+      + "default-type.acme.org"        = (known after apply)
+      + "empty.acme.org"               = (known after apply)
+      + "ipv6.acme.org"                = (known after apply)
+      + "mail1.acme.org"               = (known after apply)
+      + "max-ttl.acme.org"             = (known after apply)
+      + "min-ttl.acme.org"             = (known after apply)
+      + "minimal.acme.org"             = (known after apply)
+      + "mixed-fields.acme.org"        = (known after apply)
+      + "multi-a.acme.org"             = (known after apply)
+      + "multi-mixed.acme.org"         = (known after apply)
+      + "override-rrset-type.acme.org" = (known after apply)
+      + "record-type-only.acme.org"    = (known after apply)
+      + "redundant-type.acme.org"      = (known after apply)
+      + "srv1.acme.org"                = (known after apply)
+      + "txt1.acme.org"                = (known after apply)
+      + "txt2.acme.org"                = (known after apply)
+    }
+  + domains            = [
+      + "0: cname1.acme.org",
+      + "1: conflict-type.acme.org",
+      + "2: default-type.acme.org",
+      + "3: empty.acme.org",
+      + "4: ipv6.acme.org",
+      + "5: mail1.acme.org",
+      + "6: max-ttl.acme.org",
+      + "7: min-ttl.acme.org",
+      + "8: minimal.acme.org",
+      + "9: mixed-fields.acme.org",
+      + "10: multi-a.acme.org",
+      + "11: multi-mixed.acme.org",
+      + "12: override-rrset-type.acme.org",
+      + "13: record-type-only.acme.org",
+      + "14: redundant-type.acme.org",
+      + "15: srv1.acme.org",
+      + "16: txt1.acme.org",
+      + "17: txt2.acme.org",
+    ]
+module.dns_records.oci_dns_rrset.no_2[0]: Creating...
+module.dns_records.oci_dns_rrset.no_0[0]: Creating...
+module.dns_records.oci_dns_rrset.no_7[0]: Creating...
+module.dns_records.oci_dns_rrset.no_4[0]: Creating...
+module.dns_records.oci_dns_rrset.no_17[0]: Creating...
+module.dns_records.oci_dns_rrset.no_14[0]: Creating...
+module.dns_records.oci_dns_rrset.no_1[0]: Creating...
+module.dns_records.oci_dns_rrset.no_11[0]: Creating...
+module.dns_records.oci_dns_rrset.no_3[0]: Creating...
+module.dns_records.oci_dns_rrset.no_8[0]: Creating...
+module.dns_records.oci_dns_rrset.no_5[0]: Creating...
+module.dns_records.oci_dns_rrset.no_6[0]: Creating...
+module.dns_records.oci_dns_rrset.no_12[0]: Creating...
+module.dns_records.oci_dns_rrset.no_13[0]: Creating...
+module.dns_records.oci_dns_rrset.no_9[0]: Creating...
+module.dns_records.oci_dns_rrset.no_16[0]: Creating...
+module.dns_records.oci_dns_rrset.no_10[0]: Creating...
+module.dns_records.oci_dns_rrset.no_15[0]: Creating...
+module.dns_records.oci_dns_rrset.no_3[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_17[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt2.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_10[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_8[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/minimal.acme.org/rtype/A]
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/cname1.acme.org/CNAME 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - d568e630956ea0e0ba8e9e420f2372be/DBB684C982248E9275A92D695A524856/BC19717A0D5D27348BD8DAB49A22C3D3
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - e593d3a398ddde1bd4b952c5845e4f84/35BDED8EF16AC18375A92D695A5248EC/BF22FDFE8F04F7C3832FF14ABA8B8352
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 23dc4112eeadc8bdf4778429b2c53720/A6BEC43F0DE6E1B375A92D695A524896/26504A3F3FF0881295AC2F87B3DA79E9
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 41ecafdfaee9557cfc521128092b2511/197485835A75FA0B76A92D695A524885/30FA6629DBB91A60F0E6916B7A131590
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b529b0067162de811bd6afb54d459c68/7F1C21E8DBA99B9676A92D695A524834/20FD7799FAAB84C684505F8DF9449906
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_0[0],
+  on .module/main.tf line 9, in resource "oci_dns_rrset" "no_0":
+   9: resource "oci_dns_rrset" "no_0" {
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/conflict-type.acme.org/CNAME 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - d568e630956ea0e0ba8e9e420f2372be/DBB684C982248E9275A92D695A524856/BC19717A0D5D27348BD8DAB49A22C3D3
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - e593d3a398ddde1bd4b952c5845e4f84/35BDED8EF16AC18375A92D695A5248EC/BF22FDFE8F04F7C3832FF14ABA8B8352
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 23dc4112eeadc8bdf4778429b2c53720/A6BEC43F0DE6E1B375A92D695A524896/26504A3F3FF0881295AC2F87B3DA79E9
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 41ecafdfaee9557cfc521128092b2511/197485835A75FA0B76A92D695A524885/30FA6629DBB91A60F0E6916B7A131590
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b529b0067162de811bd6afb54d459c68/7F1C21E8DBA99B9676A92D695A524834/20FD7799FAAB84C684505F8DF9449906
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_1[0],
+  on .module/main.tf line 27, in resource "oci_dns_rrset" "no_1":
+  27: resource "oci_dns_rrset" "no_1" {
+
+
+Error: 429-TooManyRequests, Too many requests for the tenant
+Suggestion: Please re-apply your Terraform config and/or increase the retry timeout using this document: https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformtroubleshooting.htm#common_issues__automaticretries
+Documentation: https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/dns_rrset 
+API Reference: https://docs.oracle.com/iaas/api/#/en/dns/20180115/RRSet/UpdateRRSet 
+Request Target: PUT https://dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/default-type.acme.org/A 
+Provider version: 7.27.0, released on 2025-11-20. This provider is 1 Update(s) behind to current. 
+Service: Dns Rrset 
+Operation Name: UpdateRRSet 
+OPC request ID: 05a680b5f2991ceff0e493b729f26d03/0D200D3166188D1275A92D695A524806/3B07149958526FB1F45BCAAC37F7A022 
+
+
+  with module.dns_records.oci_dns_rrset.no_2[0],
+  on .module/main.tf line 47, in resource "oci_dns_rrset" "no_2":
+  47: resource "oci_dns_rrset" "no_2" {
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/ipv6.acme.org/AAAA 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - d568e630956ea0e0ba8e9e420f2372be/DBB684C982248E9275A92D695A524856/BC19717A0D5D27348BD8DAB49A22C3D3
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - e593d3a398ddde1bd4b952c5845e4f84/35BDED8EF16AC18375A92D695A5248EC/BF22FDFE8F04F7C3832FF14ABA8B8352
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 23dc4112eeadc8bdf4778429b2c53720/A6BEC43F0DE6E1B375A92D695A524896/26504A3F3FF0881295AC2F87B3DA79E9
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 41ecafdfaee9557cfc521128092b2511/197485835A75FA0B76A92D695A524885/30FA6629DBB91A60F0E6916B7A131590
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b529b0067162de811bd6afb54d459c68/7F1C21E8DBA99B9676A92D695A524834/20FD7799FAAB84C684505F8DF9449906
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_4[0],
+  on .module/main.tf line 87, in resource "oci_dns_rrset" "no_4":
+  87: resource "oci_dns_rrset" "no_4" {
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/mail1.acme.org/MX 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - d568e630956ea0e0ba8e9e420f2372be/DBB684C982248E9275A92D695A524856/BC19717A0D5D27348BD8DAB49A22C3D3
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - e593d3a398ddde1bd4b952c5845e4f84/35BDED8EF16AC18375A92D695A5248EC/BF22FDFE8F04F7C3832FF14ABA8B8352
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 23dc4112eeadc8bdf4778429b2c53720/A6BEC43F0DE6E1B375A92D695A524896/26504A3F3FF0881295AC2F87B3DA79E9
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 41ecafdfaee9557cfc521128092b2511/197485835A75FA0B76A92D695A524885/30FA6629DBB91A60F0E6916B7A131590
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b529b0067162de811bd6afb54d459c68/7F1C21E8DBA99B9676A92D695A524834/20FD7799FAAB84C684505F8DF9449906
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_5[0],
+  on .module/main.tf line 107, in resource "oci_dns_rrset" "no_5":
+ 107: resource "oci_dns_rrset" "no_5" {
+
+
+Error: 429-TooManyRequests, Too many requests for the tenant
+Suggestion: Please re-apply your Terraform config and/or increase the retry timeout using this document: https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformtroubleshooting.htm#common_issues__automaticretries
+Documentation: https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/dns_rrset 
+API Reference: https://docs.oracle.com/iaas/api/#/en/dns/20180115/RRSet/UpdateRRSet 
+Request Target: PUT https://dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/max-ttl.acme.org/A 
+Provider version: 7.27.0, released on 2025-11-20. This provider is 1 Update(s) behind to current. 
+Service: Dns Rrset 
+Operation Name: UpdateRRSet 
+OPC request ID: b529b0067162de811bd6afb54d459c68/7F1C21E8DBA99B9676A92D695A524834/20FD7799FAAB84C684505F8DF9449906 
+
+
+  with module.dns_records.oci_dns_rrset.no_6[0],
+  on .module/main.tf line 127, in resource "oci_dns_rrset" "no_6":
+ 127: resource "oci_dns_rrset" "no_6" {
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/min-ttl.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - d568e630956ea0e0ba8e9e420f2372be/DBB684C982248E9275A92D695A524856/BC19717A0D5D27348BD8DAB49A22C3D3
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - e593d3a398ddde1bd4b952c5845e4f84/35BDED8EF16AC18375A92D695A5248EC/BF22FDFE8F04F7C3832FF14ABA8B8352
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 23dc4112eeadc8bdf4778429b2c53720/A6BEC43F0DE6E1B375A92D695A524896/26504A3F3FF0881295AC2F87B3DA79E9
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 41ecafdfaee9557cfc521128092b2511/197485835A75FA0B76A92D695A524885/30FA6629DBB91A60F0E6916B7A131590
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b529b0067162de811bd6afb54d459c68/7F1C21E8DBA99B9676A92D695A524834/20FD7799FAAB84C684505F8DF9449906
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_7[0],
+  on .module/main.tf line 147, in resource "oci_dns_rrset" "no_7":
+ 147: resource "oci_dns_rrset" "no_7" {
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/mixed-fields.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - d568e630956ea0e0ba8e9e420f2372be/DBB684C982248E9275A92D695A524856/BC19717A0D5D27348BD8DAB49A22C3D3
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - e593d3a398ddde1bd4b952c5845e4f84/35BDED8EF16AC18375A92D695A5248EC/BF22FDFE8F04F7C3832FF14ABA8B8352
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 23dc4112eeadc8bdf4778429b2c53720/A6BEC43F0DE6E1B375A92D695A524896/26504A3F3FF0881295AC2F87B3DA79E9
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 41ecafdfaee9557cfc521128092b2511/197485835A75FA0B76A92D695A524885/30FA6629DBB91A60F0E6916B7A131590
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b529b0067162de811bd6afb54d459c68/7F1C21E8DBA99B9676A92D695A524834/20FD7799FAAB84C684505F8DF9449906
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_9[0],
+  on .module/main.tf line 187, in resource "oci_dns_rrset" "no_9":
+ 187: resource "oci_dns_rrset" "no_9" {
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/multi-mixed.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - d568e630956ea0e0ba8e9e420f2372be/DBB684C982248E9275A92D695A524856/BC19717A0D5D27348BD8DAB49A22C3D3
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - e593d3a398ddde1bd4b952c5845e4f84/35BDED8EF16AC18375A92D695A5248EC/BF22FDFE8F04F7C3832FF14ABA8B8352
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 23dc4112eeadc8bdf4778429b2c53720/A6BEC43F0DE6E1B375A92D695A524896/26504A3F3FF0881295AC2F87B3DA79E9
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 41ecafdfaee9557cfc521128092b2511/197485835A75FA0B76A92D695A524885/30FA6629DBB91A60F0E6916B7A131590
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b529b0067162de811bd6afb54d459c68/7F1C21E8DBA99B9676A92D695A524834/20FD7799FAAB84C684505F8DF9449906
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_11[0],
+  on .module/main.tf line 227, in resource "oci_dns_rrset" "no_11":
+ 227: resource "oci_dns_rrset" "no_11" {
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/override-rrset-type.acme.org/CNAME 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - d568e630956ea0e0ba8e9e420f2372be/DBB684C982248E9275A92D695A524856/BC19717A0D5D27348BD8DAB49A22C3D3
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - e593d3a398ddde1bd4b952c5845e4f84/35BDED8EF16AC18375A92D695A5248EC/BF22FDFE8F04F7C3832FF14ABA8B8352
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 23dc4112eeadc8bdf4778429b2c53720/A6BEC43F0DE6E1B375A92D695A524896/26504A3F3FF0881295AC2F87B3DA79E9
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 41ecafdfaee9557cfc521128092b2511/197485835A75FA0B76A92D695A524885/30FA6629DBB91A60F0E6916B7A131590
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b529b0067162de811bd6afb54d459c68/7F1C21E8DBA99B9676A92D695A524834/20FD7799FAAB84C684505F8DF9449906
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_12[0],
+  on .module/main.tf line 247, in resource "oci_dns_rrset" "no_12":
+ 247: resource "oci_dns_rrset" "no_12" {
+
+
+Error: 429-TooManyRequests, Too many requests for the tenant
+Suggestion: Please re-apply your Terraform config and/or increase the retry timeout using this document: https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformtroubleshooting.htm#common_issues__automaticretries
+Documentation: https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/dns_rrset 
+API Reference: https://docs.oracle.com/iaas/api/#/en/dns/20180115/RRSet/UpdateRRSet 
+Request Target: PUT https://dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/record-type-only.acme.org/A 
+Provider version: 7.27.0, released on 2025-11-20. This provider is 1 Update(s) behind to current. 
+Service: Dns Rrset 
+Operation Name: UpdateRRSet 
+OPC request ID: 1d8b6b4aa984b86d40123431e1d3242a/B3AE3089A2FD9A8675A92D695A524812/B45A3A616F91E56F36EF2B76492FA63E 
+
+
+  with module.dns_records.oci_dns_rrset.no_13[0],
+  on .module/main.tf line 267, in resource "oci_dns_rrset" "no_13":
+ 267: resource "oci_dns_rrset" "no_13" {
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/redundant-type.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - d568e630956ea0e0ba8e9e420f2372be/DBB684C982248E9275A92D695A524856/BC19717A0D5D27348BD8DAB49A22C3D3
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - e593d3a398ddde1bd4b952c5845e4f84/35BDED8EF16AC18375A92D695A5248EC/BF22FDFE8F04F7C3832FF14ABA8B8352
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 23dc4112eeadc8bdf4778429b2c53720/A6BEC43F0DE6E1B375A92D695A524896/26504A3F3FF0881295AC2F87B3DA79E9
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 41ecafdfaee9557cfc521128092b2511/197485835A75FA0B76A92D695A524885/30FA6629DBB91A60F0E6916B7A131590
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b529b0067162de811bd6afb54d459c68/7F1C21E8DBA99B9676A92D695A524834/20FD7799FAAB84C684505F8DF9449906
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_14[0],
+  on .module/main.tf line 287, in resource "oci_dns_rrset" "no_14":
+ 287: resource "oci_dns_rrset" "no_14" {
+
+
+Error: circuit breaker is open, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/srv1.acme.org/SRV 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - d568e630956ea0e0ba8e9e420f2372be/DBB684C982248E9275A92D695A524856/BC19717A0D5D27348BD8DAB49A22C3D3
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - e593d3a398ddde1bd4b952c5845e4f84/35BDED8EF16AC18375A92D695A5248EC/BF22FDFE8F04F7C3832FF14ABA8B8352
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 23dc4112eeadc8bdf4778429b2c53720/A6BEC43F0DE6E1B375A92D695A524896/26504A3F3FF0881295AC2F87B3DA79E9
+ErrorCode - 409 - IncorrectState
+ErrorMessage - Unable to save record changes as the zone was modified by another operation, please retry
+
+Opc-Req-id - 41ecafdfaee9557cfc521128092b2511/197485835A75FA0B76A92D695A524885/30FA6629DBB91A60F0E6916B7A131590
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - b529b0067162de811bd6afb54d459c68/7F1C21E8DBA99B9676A92D695A524834/20FD7799FAAB84C684505F8DF9449906
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_15[0],
+  on .module/main.tf line 307, in resource "oci_dns_rrset" "no_15":
+ 307: resource "oci_dns_rrset" "no_15" {
+
+
+Error: 429-TooManyRequests, Too many requests for the tenant
+Suggestion: Please re-apply your Terraform config and/or increase the retry timeout using this document: https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformtroubleshooting.htm#common_issues__automaticretries
+Documentation: https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/dns_rrset 
+API Reference: https://docs.oracle.com/iaas/api/#/en/dns/20180115/RRSet/UpdateRRSet 
+Request Target: PUT https://dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/txt1.acme.org/TXT 
+Provider version: 7.27.0, released on 2025-11-20. This provider is 1 Update(s) behind to current. 
+Service: Dns Rrset 
+Operation Name: UpdateRRSet 
+OPC request ID: 41ecafdfaee9557cfc521128092b2511/197485835A75FA0B76A92D695A524885/30FA6629DBB91A60F0E6916B7A131590 
+
+
+  with module.dns_records.oci_dns_rrset.no_16[0],
+  on .module/main.tf line 327, in resource "oci_dns_rrset" "no_16":
+ 327: resource "oci_dns_rrset" "no_16" {
+
+
+--------------------------------
+Test status for test_name=test_5_no_retry
+
+operation=apply
+parallelism=20
+test_type=negative
+log file=logs/2025-12-01_15-40-37/test_test_5_no_retry.log
+status=1 PASSED ✅ (expected failure in negative test)
+--------------------------------
+

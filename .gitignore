@@ -5,8 +5,6 @@ unit_test/.terraform/**/*
 unit_test/.terraform.lock.hcl
 unit_test/*.tfstate
 unit_test/*.tfstate.backup
-unit_test/*.log
-unit_test/logs/
 unit_test/.terraform.tfstate.lock.info
 unit_test/.state
 unit_test/.module

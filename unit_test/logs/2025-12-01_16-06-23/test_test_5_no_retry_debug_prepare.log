@@ -1,0 +1,319 @@
+
+Initializing the backend...
+Upgrading modules...
+- dns_records in .module
+
+Initializing provider plugins...
+- Finding oracle/oci versions matching "7.27.0"...
+- Using previously-installed oracle/oci v7.27.0
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+No changes. No objects need to be destroyed.
+
+Either you have not created any objects yet or the existing objects were
+already deleted outside of Terraform.
+
+Destroy complete! Resources: 0 destroyed.
+2025-12-01T16:08:43.612+0100 [INFO]  Terraform version: 1.5.7
+2025-12-01T16:08:43.612+0100 [DEBUG] using github.com/hashicorp/go-tfe v1.26.0
+2025-12-01T16:08:43.612+0100 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.2
+2025-12-01T16:08:43.612+0100 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.0
+2025-12-01T16:08:43.612+0100 [DEBUG] using github.com/zclconf/go-cty v1.12.2
+2025-12-01T16:08:43.612+0100 [INFO]  Go runtime version: go1.23.1
+2025-12-01T16:08:43.612+0100 [INFO]  CLI args: []string{"terraform", "init", "--upgrade", "-no-color"}
+2025-12-01T16:08:43.612+0100 [DEBUG] Attempting to open CLI config file: /Users/rstyczynski/.terraformrc
+2025-12-01T16:08:43.612+0100 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2025-12-01T16:08:43.612+0100 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-12-01T16:08:43.612+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/.terraform.d/plugins
+2025-12-01T16:08:43.612+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/Library/Application Support/io.terraform/plugins
+2025-12-01T16:08:43.612+0100 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-12-01T16:08:43.612+0100 [INFO]  CLI command args: []string{"init", "--upgrade", "-no-color"}
+
+Initializing the backend...
+2025-12-01T16:08:43.704+0100 [DEBUG] checking for provisioner in "."
+2025-12-01T16:08:43.705+0100 [DEBUG] checking for provisioner in "/opt/homebrew/bin"
+Upgrading modules...
+2025-12-01T16:08:43.706+0100 [DEBUG] Module installer: begin dns_records
+2025-12-01T16:08:43.707+0100 [DEBUG] Module installer: dns_records installed at .module
+- dns_records in .module
+
+Initializing provider plugins...
+- Finding oracle/oci versions matching "7.27.0"...
+2025-12-01T16:08:43.708+0100 [DEBUG] Service discovery for registry.terraform.io at https://registry.terraform.io/.well-known/terraform.json
+2025-12-01T16:08:43.730+0100 [DEBUG] GET https://registry.terraform.io/v1/providers/oracle/oci/versions
+- Using previously-installed oracle/oci v7.27.0
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+2025-12-01T16:08:43.867+0100 [INFO]  Terraform version: 1.5.7
+2025-12-01T16:08:43.868+0100 [DEBUG] using github.com/hashicorp/go-tfe v1.26.0
+2025-12-01T16:08:43.868+0100 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.2
+2025-12-01T16:08:43.868+0100 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.0
+2025-12-01T16:08:43.868+0100 [DEBUG] using github.com/zclconf/go-cty v1.12.2
+2025-12-01T16:08:43.868+0100 [INFO]  Go runtime version: go1.23.1
+2025-12-01T16:08:43.868+0100 [INFO]  CLI args: []string{"terraform", "destroy", "-no-color", "-parallelism=1", "-auto-approve"}
+2025-12-01T16:08:43.868+0100 [DEBUG] Attempting to open CLI config file: /Users/rstyczynski/.terraformrc
+2025-12-01T16:08:43.868+0100 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2025-12-01T16:08:43.868+0100 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-12-01T16:08:43.868+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/.terraform.d/plugins
+2025-12-01T16:08:43.868+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/Library/Application Support/io.terraform/plugins
+2025-12-01T16:08:43.868+0100 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-12-01T16:08:43.868+0100 [INFO]  CLI command args: []string{"destroy", "-no-color", "-parallelism=1", "-auto-approve"}
+2025-12-01T16:08:43.958+0100 [DEBUG] checking for provisioner in "."
+2025-12-01T16:08:43.959+0100 [DEBUG] checking for provisioner in "/opt/homebrew/bin"
+2025-12-01T16:08:43.960+0100 [INFO]  backend/local: starting Apply operation
+2025-12-01T16:08:43.964+0100 [DEBUG] created provider logger: level=debug
+2025-12-01T16:08:43.964+0100 [INFO]  provider: configuring client automatic mTLS
+2025-12-01T16:08:43.967+0100 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/oracle/oci/7.27.0/darwin_arm64/terraform-provider-oci_v7.27.0 args=[.terraform/providers/registry.terraform.io/oracle/oci/7.27.0/darwin_arm64/terraform-provider-oci_v7.27.0]
+2025-12-01T16:08:43.971+0100 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/oracle/oci/7.27.0/darwin_arm64/terraform-provider-oci_v7.27.0 pid=40264
+2025-12-01T16:08:43.971+0100 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/oracle/oci/7.27.0/darwin_arm64/terraform-provider-oci_v7.27.0
+2025-12-01T16:08:43.996+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: INFO 2025/12/01 16:08:43.996690 log.go:106: logger level set to:  3
+2025-12-01T16:08:43.996+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: INFO 2025/12/01 16:08:43.996783 eventual_consistency.go:76: (pid=40264, gid=1) OCI_GO_SDK_EC_CONFIG: Unknown ec mode '', assuming 'inprocess'
+2025-12-01T16:08:43.996+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: INFO 2025/12/01 16:08:43.996804 log.go:106: logger level set to:  3
+2025-12-01T16:08:44.004+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: DEBUG 2025/12/01 16:08:44.004586 common.go:572: No Developer Tool Config File provided.
+2025-12-01T16:08:44.024+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: 2025/12/01 16:08:44 [INFO] terraform-provider-oci 7.27.0
+2025-12-01T16:08:44.024+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: 2025/12/01 16:08:44 === Executable runs in Terraform plugin mode by default. For additional usage options, please run with the '-help' flag.
+2025-12-01T16:08:44.024+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: 2025/12/01 16:08:44 Initializing Mux server....
+2025-12-01T16:08:44.024+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: 2025/12/01 16:08:44 Starting Mux server....
+2025-12-01T16:08:44.025+0100 [INFO]  provider.terraform-provider-oci_v7.27.0: configuring server automatic mTLS: timestamp=2025-12-01T16:08:44.025+0100
+2025-12-01T16:08:44.028+0100 [DEBUG] provider: using plugin: version=5
+2025-12-01T16:08:44.028+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: plugin address: address=/var/folders/rt/g188dkwx2rl25f2xnjnqv8hr0000gn/T/plugin1128151606 network=unix timestamp=2025-12-01T16:08:44.028+0100
+2025-12-01T16:08:44.241+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: 2025/12/01 16:08:44 Started Mux server....
+2025-12-01T16:08:44.241+0100 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-12-01T16:08:44.245+0100 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/oracle/oci/7.27.0/darwin_arm64/terraform-provider-oci_v7.27.0 pid=40264
+2025-12-01T16:08:44.245+0100 [DEBUG] provider: plugin exited
+2025-12-01T16:08:44.245+0100 [DEBUG] Building and walking validate graph
+2025-12-01T16:08:44.245+0100 [DEBUG] adding implicit provider configuration provider["registry.terraform.io/oracle/oci"], implied first by module.dns_records.oci_dns_rrset.no_5
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_12" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_1" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_16" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_5" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_7" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_8" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_10" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_14" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_11" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_17" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_13" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_6" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_3" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_9" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_18" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_4" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_0" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_19" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_15" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_2" (*terraform.NodeValidatableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] pruning unused provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_14" references: [module.dns_records.oci_dns_rrset.no_13 module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_12" references: [module.dns_records.oci_dns_rrset.no_11 module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_15" references: [module.dns_records.oci_dns_rrset.no_14 module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_18" references: [module.dns_records.oci_dns_rrset.no_17 module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "var.zone_name_or_id" references: []
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_3" references: [module.dns_records.oci_dns_rrset.no_2 module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_9" references: [module.dns_records.oci_dns_rrset.no_8 module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_2" references: [module.dns_records.oci_dns_rrset.no_1 module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.output.domains (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_11" references: [module.dns_records.oci_dns_rrset.no_10 module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_1" references: [module.dns_records.oci_dns_rrset.no_0 module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.var.zone_name_or_id (expand)" references: [var.zone_name_or_id]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.local.rrsets (expand)" references: [module.dns_records.var.rrsets (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_5" references: [module.dns_records.oci_dns_rrset.no_4 module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_7" references: [module.dns_records.oci_dns_rrset.no_6 module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.local.zone_name_or_id (expand)" references: [module.dns_records.var.zone_name_or_id (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.local.domains (expand)" references: [module.dns_records.local.rrsets (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "output.dns_record_details (expand)" references: [module.dns_records.output.dns_record_details (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records (expand)" references: []
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_17" references: [module.dns_records.oci_dns_rrset.no_16 module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_16" references: [module.dns_records.oci_dns_rrset.no_15 module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.var.rrsets (expand)" references: [var.rrsets]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_8" references: [module.dns_records.oci_dns_rrset.no_7 module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.output.dns_record_details (expand)" references: [module.dns_records.local.domains (expand) module.dns_records.oci_dns_rrset.no_0 module.dns_records.oci_dns_rrset.no_1 module.dns_records.oci_dns_rrset.no_2 module.dns_records.oci_dns_rrset.no_3 module.dns_records.oci_dns_rrset.no_4 module.dns_records.oci_dns_rrset.no_5 module.dns_records.oci_dns_rrset.no_6 module.dns_records.oci_dns_rrset.no_7 module.dns_records.oci_dns_rrset.no_8 module.dns_records.oci_dns_rrset.no_9 module.dns_records.oci_dns_rrset.no_10 module.dns_records.oci_dns_rrset.no_11 module.dns_records.oci_dns_rrset.no_12 module.dns_records.oci_dns_rrset.no_13 module.dns_records.oci_dns_rrset.no_14 module.dns_records.oci_dns_rrset.no_15 module.dns_records.oci_dns_rrset.no_16 module.dns_records.oci_dns_rrset.no_17 module.dns_records.oci_dns_rrset.no_18 module.dns_records.oci_dns_rrset.no_19]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_4" references: [module.dns_records.oci_dns_rrset.no_3 module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.246+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_13" references: [module.dns_records.oci_dns_rrset.no_12 module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.247+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_19" references: [module.dns_records.oci_dns_rrset.no_18 module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.247+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_6" references: [module.dns_records.oci_dns_rrset.no_5 module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.247+0100 [DEBUG] ReferenceTransformer: "var.rrsets" references: []
+2025-12-01T16:08:44.247+0100 [DEBUG] ReferenceTransformer: "output.domains (expand)" references: [module.dns_records.output.domains (expand)]
+2025-12-01T16:08:44.247+0100 [DEBUG] ReferenceTransformer: "module.dns_records.provider[\"registry.terraform.io/oracle/oci\"]" references: []
+2025-12-01T16:08:44.247+0100 [DEBUG] ReferenceTransformer: "module.dns_records (close)" references: []
+2025-12-01T16:08:44.247+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_10" references: [module.dns_records.oci_dns_rrset.no_9 module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.247+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_0" references: [module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.zone_name_or_id (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand) module.dns_records.local.rrsets (expand) module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.248+0100 [DEBUG] Starting graph walk: walkValidate
+2025-12-01T16:08:44.248+0100 [DEBUG] created provider logger: level=debug
+2025-12-01T16:08:44.248+0100 [INFO]  provider: configuring client automatic mTLS
+2025-12-01T16:08:44.250+0100 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/oracle/oci/7.27.0/darwin_arm64/terraform-provider-oci_v7.27.0 args=[.terraform/providers/registry.terraform.io/oracle/oci/7.27.0/darwin_arm64/terraform-provider-oci_v7.27.0]
+2025-12-01T16:08:44.253+0100 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/oracle/oci/7.27.0/darwin_arm64/terraform-provider-oci_v7.27.0 pid=40271
+2025-12-01T16:08:44.253+0100 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/oracle/oci/7.27.0/darwin_arm64/terraform-provider-oci_v7.27.0
+2025-12-01T16:08:44.274+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: INFO 2025/12/01 16:08:44.274740 log.go:106: logger level set to:  3
+2025-12-01T16:08:44.274+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: INFO 2025/12/01 16:08:44.274844 eventual_consistency.go:76: (pid=40271, gid=1) OCI_GO_SDK_EC_CONFIG: Unknown ec mode '', assuming 'inprocess'
+2025-12-01T16:08:44.274+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: INFO 2025/12/01 16:08:44.274868 log.go:106: logger level set to:  3
+2025-12-01T16:08:44.281+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: DEBUG 2025/12/01 16:08:44.281167 common.go:572: No Developer Tool Config File provided.
+2025-12-01T16:08:44.301+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: 2025/12/01 16:08:44 [INFO] terraform-provider-oci 7.27.0
+2025-12-01T16:08:44.301+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: 2025/12/01 16:08:44 === Executable runs in Terraform plugin mode by default. For additional usage options, please run with the '-help' flag.
+2025-12-01T16:08:44.301+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: 2025/12/01 16:08:44 Initializing Mux server....
+2025-12-01T16:08:44.301+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: 2025/12/01 16:08:44 Starting Mux server....
+2025-12-01T16:08:44.301+0100 [INFO]  provider.terraform-provider-oci_v7.27.0: configuring server automatic mTLS: timestamp=2025-12-01T16:08:44.301+0100
+2025-12-01T16:08:44.305+0100 [DEBUG] provider: using plugin: version=5
+2025-12-01T16:08:44.305+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: plugin address: address=/var/folders/rt/g188dkwx2rl25f2xnjnqv8hr0000gn/T/plugin3546898423 network=unix timestamp=2025-12-01T16:08:44.304+0100
+2025-12-01T16:08:44.546+0100 [DEBUG] provider.terraform-provider-oci_v7.27.0: 2025/12/01 16:08:44 Started Mux server....
+2025-12-01T16:08:44.546+0100 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-12-01T16:08:44.550+0100 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/oracle/oci/7.27.0/darwin_arm64/terraform-provider-oci_v7.27.0 pid=40271
+2025-12-01T16:08:44.550+0100 [DEBUG] provider: plugin exited
+2025-12-01T16:08:44.550+0100 [INFO]  backend/local: apply calling Plan
+2025-12-01T16:08:44.550+0100 [DEBUG] Building and walking plan graph for DestroyMode
+2025-12-01T16:08:44.550+0100 [DEBUG] pruning unused module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.550+0100 [DEBUG] ReferenceTransformer: "module.dns_records.output.domains (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.550+0100 [DEBUG] ReferenceTransformer: "output.dns_record_details (expand)" references: []
+2025-12-01T16:08:44.550+0100 [DEBUG] ReferenceTransformer: "output.domains (expand)" references: []
+2025-12-01T16:08:44.550+0100 [DEBUG] ReferenceTransformer: "var.rrsets" references: []
+2025-12-01T16:08:44.550+0100 [DEBUG] ReferenceTransformer: "module.dns_records.var.rrsets (expand)" references: [var.rrsets]
+2025-12-01T16:08:44.550+0100 [DEBUG] ReferenceTransformer: "module.dns_records.local.zone_name_or_id (expand)" references: [module.dns_records.var.zone_name_or_id (expand)]
+2025-12-01T16:08:44.550+0100 [DEBUG] ReferenceTransformer: "module.dns_records.local.domains (expand)" references: [module.dns_records.local.rrsets (expand)]
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_0"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_1"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_2"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_3"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_4"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_5"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_6"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_7"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_8"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_9"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_10"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_11"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_12"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_13"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_14"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_15"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_16"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_17"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_18"
+2025-12-01T16:08:44.551+0100 [INFO]  ReferenceTransformer: reference not found: "oci_dns_rrset.no_19"
+2025-12-01T16:08:44.551+0100 [DEBUG] ReferenceTransformer: "module.dns_records.output.dns_record_details (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.551+0100 [DEBUG] ReferenceTransformer: "module.dns_records (close)" references: []
+2025-12-01T16:08:44.551+0100 [DEBUG] ReferenceTransformer: "var.zone_name_or_id" references: []
+2025-12-01T16:08:44.551+0100 [DEBUG] ReferenceTransformer: "module.dns_records.var.zone_name_or_id (expand)" references: [var.zone_name_or_id]
+2025-12-01T16:08:44.551+0100 [DEBUG] ReferenceTransformer: "module.dns_records.local.rrsets (expand)" references: [module.dns_records.var.rrsets (expand)]
+2025-12-01T16:08:44.551+0100 [DEBUG] ReferenceTransformer: "module.dns_records (expand)" references: []
+2025-12-01T16:08:44.551+0100 [DEBUG] pruneUnusedNodes: module.dns_records.local.zone_name_or_id (expand) is no longer needed, removing
+2025-12-01T16:08:44.551+0100 [DEBUG] pruneUnusedNodes: module.dns_records.output.dns_record_details (expand) is no longer needed, removing
+2025-12-01T16:08:44.551+0100 [DEBUG] pruneUnusedNodes: module.dns_records.output.domains (expand) is no longer needed, removing
+2025-12-01T16:08:44.551+0100 [DEBUG] pruneUnusedNodes: module.dns_records.local.domains (expand) is no longer needed, removing
+2025-12-01T16:08:44.551+0100 [DEBUG] pruneUnusedNodes: module.dns_records.local.rrsets (expand) is no longer needed, removing
+2025-12-01T16:08:44.551+0100 [DEBUG] pruneUnusedNodes: module.dns_records.var.zone_name_or_id (expand) is no longer needed, removing
+2025-12-01T16:08:44.551+0100 [DEBUG] pruneUnusedNodes: module.dns_records.var.rrsets (expand) is no longer needed, removing
+2025-12-01T16:08:44.551+0100 [DEBUG] pruneUnusedNodes: module.dns_records (expand) is no longer needed, removing
+2025-12-01T16:08:44.551+0100 [DEBUG] Starting graph walk: walkPlanDestroy
+2025-12-01T16:08:44.551+0100 [DEBUG] no planned changes, skipping apply graph check
+
+No changes. No objects need to be destroyed.
+
+Either you have not created any objects yet or the existing objects were
+already deleted outside of Terraform.
+2025-12-01T16:08:44.577+0100 [INFO]  backend/local: apply calling Apply
+2025-12-01T16:08:44.577+0100 [DEBUG] Building and walking apply graph for DestroyMode plan
+2025-12-01T16:08:44.577+0100 [DEBUG] adding implicit provider configuration provider["registry.terraform.io/oracle/oci"], implied first by module.dns_records.oci_dns_rrset.no_1 (expand)
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_16 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_5 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_1 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_3 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_8 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_18 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_10 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_15 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_9 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_11 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_0 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_2 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_7 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_13 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_12 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_14 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_19 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_4 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_17 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] ProviderTransformer: "module.dns_records.oci_dns_rrset.no_6 (expand)" (*terraform.nodeExpandApplyableResource) needs module.dns_records.provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.577+0100 [DEBUG] pruning unused provider["registry.terraform.io/oracle/oci"]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_5 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_17 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_1 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_3 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.local.zone_name_or_id (expand)" references: [module.dns_records.var.zone_name_or_id (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.local.rrsets (expand)" references: [module.dns_records.var.rrsets (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_2 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_16 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.provider[\"registry.terraform.io/oracle/oci\"]" references: []
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records (expand)" references: []
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.output.dns_record_details (expand)" references: [module.dns_records.local.domains (expand) module.dns_records.oci_dns_rrset.no_0 (expand) module.dns_records.oci_dns_rrset.no_1 (expand) module.dns_records.oci_dns_rrset.no_2 (expand) module.dns_records.oci_dns_rrset.no_3 (expand) module.dns_records.oci_dns_rrset.no_4 (expand) module.dns_records.oci_dns_rrset.no_5 (expand) module.dns_records.oci_dns_rrset.no_6 (expand) module.dns_records.oci_dns_rrset.no_7 (expand) module.dns_records.oci_dns_rrset.no_8 (expand) module.dns_records.oci_dns_rrset.no_9 (expand) module.dns_records.oci_dns_rrset.no_10 (expand) module.dns_records.oci_dns_rrset.no_11 (expand) module.dns_records.oci_dns_rrset.no_12 (expand) module.dns_records.oci_dns_rrset.no_13 (expand) module.dns_records.oci_dns_rrset.no_14 (expand) module.dns_records.oci_dns_rrset.no_15 (expand) module.dns_records.oci_dns_rrset.no_16 (expand) module.dns_records.oci_dns_rrset.no_17 (expand) module.dns_records.oci_dns_rrset.no_18 (expand) module.dns_records.oci_dns_rrset.no_19 (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "output.dns_record_details (expand)" references: []
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.output.domains (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_0 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records (close)" references: []
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_7 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_8 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_6 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "var.rrsets" references: []
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.var.zone_name_or_id (expand)" references: [var.zone_name_or_id]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_18 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_10 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_13 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "output.domains (expand)" references: []
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_19 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_15 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_4 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "var.zone_name_or_id" references: []
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.var.rrsets (expand)" references: [var.rrsets]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_12 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_14 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.local.domains (expand)" references: [module.dns_records.local.rrsets (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_9 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] ReferenceTransformer: "module.dns_records.oci_dns_rrset.no_11 (expand)" references: [module.dns_records.local.domains (expand)]
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.local.zone_name_or_id (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.output.dns_record_details (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.output.domains (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_0 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_8 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_6 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_13 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_4 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_12 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_14 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_19 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_15 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_9 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_11 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_1 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_3 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.var.zone_name_or_id (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_2 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_7 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_18 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_10 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_17 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_16 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.oci_dns_rrset.no_5 (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.provider["registry.terraform.io/oracle/oci"] is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.local.domains (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.local.rrsets (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records.var.rrsets (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] pruneUnusedNodes: module.dns_records (expand) is no longer needed, removing
+2025-12-01T16:08:44.578+0100 [DEBUG] Starting graph walk: walkDestroy
+
+Destroy complete! Resources: 0 destroyed.

@@ -1,0 +1,46 @@
+
+Initializing the backend...
+Upgrading modules...
+- dns_records in .module
+
+Error: Invalid required_providers object
+
+  on .module/providers.tf line 6, in terraform:
+   6:       retries_config_file = "providers_oci_retry.json"
+
+required_providers objects can only contain "version", "source" and
+"configuration_aliases" attributes. To configure a provider, use a "provider"
+block.
+
+
+Error: Invalid required_providers object
+
+  on .module/providers.tf line 6, in terraform:
+   6:       retries_config_file = "providers_oci_retry.json"
+
+required_providers objects can only contain "version", "source" and
+"configuration_aliases" attributes. To configure a provider, use a "provider"
+block.
+
+Initializing the backend...
+Upgrading modules...
+- dns_records in .module
+
+Error: Invalid required_providers object
+
+  on .module/providers.tf line 6, in terraform:
+   6:       retries_config_file = "providers_oci_retry.json"
+
+required_providers objects can only contain "version", "source" and
+"configuration_aliases" attributes. To configure a provider, use a "provider"
+block.
+
+
+Error: Invalid required_providers object
+
+  on .module/providers.tf line 6, in terraform:
+   6:       retries_config_file = "providers_oci_retry.json"
+
+required_providers objects can only contain "version", "source" and
+"configuration_aliases" attributes. To configure a provider, use a "provider"
+block.

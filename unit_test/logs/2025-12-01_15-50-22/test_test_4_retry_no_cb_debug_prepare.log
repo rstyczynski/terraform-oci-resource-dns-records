@@ -1,0 +1,116 @@
+2025-12-01T15:50:27.911+0100 [INFO]  Terraform version: 1.5.7
+2025-12-01T15:50:27.911+0100 [DEBUG] using github.com/hashicorp/go-tfe v1.26.0
+2025-12-01T15:50:27.911+0100 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.2
+2025-12-01T15:50:27.911+0100 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.0
+2025-12-01T15:50:27.911+0100 [DEBUG] using github.com/zclconf/go-cty v1.12.2
+2025-12-01T15:50:27.911+0100 [INFO]  Go runtime version: go1.23.1
+2025-12-01T15:50:27.911+0100 [INFO]  CLI args: []string{"terraform", "init", "--upgrade", "-no-color"}
+2025-12-01T15:50:27.911+0100 [DEBUG] Attempting to open CLI config file: /Users/rstyczynski/.terraformrc
+2025-12-01T15:50:27.911+0100 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2025-12-01T15:50:27.911+0100 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-12-01T15:50:27.911+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/.terraform.d/plugins
+2025-12-01T15:50:27.911+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/Library/Application Support/io.terraform/plugins
+2025-12-01T15:50:27.911+0100 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-12-01T15:50:27.911+0100 [INFO]  CLI command args: []string{"init", "--upgrade", "-no-color"}
+
+Initializing the backend...
+2025-12-01T15:50:28.003+0100 [DEBUG] checking for provisioner in "."
+2025-12-01T15:50:28.004+0100 [DEBUG] checking for provisioner in "/opt/homebrew/bin"
+Upgrading modules...
+2025-12-01T15:50:28.005+0100 [DEBUG] Module installer: begin dns_records
+2025-12-01T15:50:28.006+0100 [DEBUG] Module installer: dns_records installed at .module
+- dns_records in .module
+
+Error: Invalid required_providers object
+
+  on .module/providers.tf line 6, in terraform:
+   6:       retries_config_file = "providers_oci_retry.json"
+
+required_providers objects can only contain "version", "source" and
+"configuration_aliases" attributes. To configure a provider, use a "provider"
+block.
+
+2025-12-01T15:50:28.032+0100 [INFO]  Terraform version: 1.5.7
+2025-12-01T15:50:28.032+0100 [DEBUG] using github.com/hashicorp/go-tfe v1.26.0
+2025-12-01T15:50:28.032+0100 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.2
+2025-12-01T15:50:28.032+0100 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.0
+2025-12-01T15:50:28.032+0100 [DEBUG] using github.com/zclconf/go-cty v1.12.2
+2025-12-01T15:50:28.032+0100 [INFO]  Go runtime version: go1.23.1
+2025-12-01T15:50:28.032+0100 [INFO]  CLI args: []string{"terraform", "destroy", "-no-color", "-parallelism=1", "-auto-approve"}
+2025-12-01T15:50:28.032+0100 [DEBUG] Attempting to open CLI config file: /Users/rstyczynski/.terraformrc
+2025-12-01T15:50:28.032+0100 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2025-12-01T15:50:28.032+0100 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-12-01T15:50:28.032+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/.terraform.d/plugins
+2025-12-01T15:50:28.032+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/Library/Application Support/io.terraform/plugins
+2025-12-01T15:50:28.032+0100 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-12-01T15:50:28.032+0100 [INFO]  CLI command args: []string{"destroy", "-no-color", "-parallelism=1", "-auto-approve"}
+2025-12-01T15:50:28.124+0100 [DEBUG] checking for provisioner in "."
+2025-12-01T15:50:28.125+0100 [DEBUG] checking for provisioner in "/opt/homebrew/bin"
+2025-12-01T15:50:28.125+0100 [INFO]  backend/local: starting Apply operation
+
+Error: Invalid required_providers object
+
+  on .module/providers.tf line 6, in terraform:
+   6:       retries_config_file = "providers_oci_retry.json"
+
+required_providers objects can only contain "version", "source" and
+"configuration_aliases" attributes. To configure a provider, use a "provider"
+block.
+2025-12-01T15:50:28.387+0100 [INFO]  Terraform version: 1.5.7
+2025-12-01T15:50:28.387+0100 [DEBUG] using github.com/hashicorp/go-tfe v1.26.0
+2025-12-01T15:50:28.387+0100 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.2
+2025-12-01T15:50:28.387+0100 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.0
+2025-12-01T15:50:28.387+0100 [DEBUG] using github.com/zclconf/go-cty v1.12.2
+2025-12-01T15:50:28.387+0100 [INFO]  Go runtime version: go1.23.1
+2025-12-01T15:50:28.387+0100 [INFO]  CLI args: []string{"terraform", "init", "--upgrade", "-no-color"}
+2025-12-01T15:50:28.387+0100 [DEBUG] Attempting to open CLI config file: /Users/rstyczynski/.terraformrc
+2025-12-01T15:50:28.387+0100 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2025-12-01T15:50:28.387+0100 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-12-01T15:50:28.387+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/.terraform.d/plugins
+2025-12-01T15:50:28.387+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/Library/Application Support/io.terraform/plugins
+2025-12-01T15:50:28.387+0100 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-12-01T15:50:28.387+0100 [INFO]  CLI command args: []string{"init", "--upgrade", "-no-color"}
+
+Initializing the backend...
+2025-12-01T15:50:28.481+0100 [DEBUG] checking for provisioner in "."
+2025-12-01T15:50:28.482+0100 [DEBUG] checking for provisioner in "/opt/homebrew/bin"
+Upgrading modules...
+2025-12-01T15:50:28.482+0100 [DEBUG] Module installer: begin dns_records
+2025-12-01T15:50:28.483+0100 [DEBUG] Module installer: dns_records installed at .module
+- dns_records in .module
+
+Error: Invalid required_providers object
+
+  on .module/providers.tf line 6, in terraform:
+   6:       retries_config_file = "providers_oci_retry.json"
+
+required_providers objects can only contain "version", "source" and
+"configuration_aliases" attributes. To configure a provider, use a "provider"
+block.
+
+2025-12-01T15:50:28.507+0100 [INFO]  Terraform version: 1.5.7
+2025-12-01T15:50:28.507+0100 [DEBUG] using github.com/hashicorp/go-tfe v1.26.0
+2025-12-01T15:50:28.507+0100 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.2
+2025-12-01T15:50:28.507+0100 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.0
+2025-12-01T15:50:28.507+0100 [DEBUG] using github.com/zclconf/go-cty v1.12.2
+2025-12-01T15:50:28.507+0100 [INFO]  Go runtime version: go1.23.1
+2025-12-01T15:50:28.507+0100 [INFO]  CLI args: []string{"terraform", "destroy", "-no-color", "-parallelism=1", "-auto-approve"}
+2025-12-01T15:50:28.507+0100 [DEBUG] Attempting to open CLI config file: /Users/rstyczynski/.terraformrc
+2025-12-01T15:50:28.507+0100 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2025-12-01T15:50:28.507+0100 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-12-01T15:50:28.507+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/.terraform.d/plugins
+2025-12-01T15:50:28.507+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/Library/Application Support/io.terraform/plugins
+2025-12-01T15:50:28.507+0100 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-12-01T15:50:28.507+0100 [INFO]  CLI command args: []string{"destroy", "-no-color", "-parallelism=1", "-auto-approve"}
+2025-12-01T15:50:28.599+0100 [DEBUG] checking for provisioner in "."
+2025-12-01T15:50:28.600+0100 [DEBUG] checking for provisioner in "/opt/homebrew/bin"
+2025-12-01T15:50:28.600+0100 [INFO]  backend/local: starting Apply operation
+
+Error: Invalid required_providers object
+
+  on .module/providers.tf line 6, in terraform:
+   6:       retries_config_file = "providers_oci_retry.json"
+
+required_providers objects can only contain "version", "source" and
+"configuration_aliases" attributes. To configure a provider, use a "provider"
+block.

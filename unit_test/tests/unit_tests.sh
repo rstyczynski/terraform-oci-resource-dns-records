@@ -121,9 +121,11 @@ function check_errors() {
 
     if [ "$test_type" = "negative" ]; then
         if [ "$status" -eq 0 ]; then
+            test_result=1
             echo "status=$status FAILED ❌ (unexpected success in negative test)" | tee -a "$logfile"
             echo "info=Error was expected but operation succeeded." | tee -a "$logfile"
         else
+            test_result=0
             echo "status=$status PASSED ✅ (expected failure in negative test)" | tee -a "$logfile"
             if grep -q "409" "$logfile" 2>/dev/null; then
                 echo "info=409 Conflict detected! 🚨" | tee -a "$logfile"
@@ -133,8 +135,10 @@ function check_errors() {
         fi
     else
         if [ "$status" -eq 0 ]; then
+            test_result=0
             echo "status=$status PASSED ✅" | tee -a "$logfile"
         else
+            test_result=1
             echo "status=$status FAILED ❌" | tee -a "$logfile"
             if grep -q "409" "$logfile" 2>/dev/null; then
                 echo "info=409 Conflict detected! 🚨" | tee -a "$logfile"
@@ -145,6 +149,7 @@ function check_errors() {
     fi
     echo "--------------------------------" | tee -a "$logfile"
     echo "" | tee -a "$logfile"
+    return $test_result
 }
 
 function test_report() {

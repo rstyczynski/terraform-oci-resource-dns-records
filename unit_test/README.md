@@ -23,9 +23,7 @@ Parallel execution without depends_on causes race condition and conflict.
 ```bash
 . tests/unit_tests.sh
 test_prepare test_1 regular destroy
-
 test_apply 20 negative
-
 test_cleanup
 
 ```
@@ -37,9 +35,7 @@ Parallel execution without depends_on causes race condition and conflict.
 ```bash
 . tests/unit_tests.sh
 test_prepare test_2 regular apply 
-
 test_destroy 20 negative
-
 test_cleanup
 
 ```

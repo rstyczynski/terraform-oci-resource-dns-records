@@ -1,0 +1,41 @@
+
+--------------------------------
+Performing test test_5_no_retry_debug (please wait...)
+
+2025-12-01T16:26:59.404+0100 [INFO]  Terraform version: 1.5.7
+2025-12-01T16:26:59.404+0100 [DEBUG] using github.com/hashicorp/go-tfe v1.26.0
+2025-12-01T16:26:59.404+0100 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.2
+2025-12-01T16:26:59.404+0100 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.0
+2025-12-01T16:26:59.404+0100 [DEBUG] using github.com/zclconf/go-cty v1.12.2
+2025-12-01T16:26:59.404+0100 [INFO]  Go runtime version: go1.23.1
+2025-12-01T16:26:59.404+0100 [INFO]  CLI args: []string{"terraform", "apply", "-no-color", "-parallelism=20", "-auto-approve"}
+2025-12-01T16:26:59.404+0100 [DEBUG] Attempting to open CLI config file: /Users/rstyczynski/.terraformrc
+2025-12-01T16:26:59.404+0100 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2025-12-01T16:26:59.404+0100 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-12-01T16:26:59.404+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/.terraform.d/plugins
+2025-12-01T16:26:59.404+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/Library/Application Support/io.terraform/plugins
+2025-12-01T16:26:59.404+0100 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-12-01T16:26:59.404+0100 [INFO]  CLI command args: []string{"apply", "-no-color", "-parallelism=20", "-auto-approve"}
+2025-12-01T16:26:59.495+0100 [DEBUG] checking for provisioner in "."
+2025-12-01T16:26:59.496+0100 [DEBUG] checking for provisioner in "/opt/homebrew/bin"
+2025-12-01T16:26:59.497+0100 [INFO]  backend/local: starting Apply operation
+
+Error: Duplicate provider configuration
+
+  on .module/providers.tf line 10:
+  10: provider "oci" {
+
+A default (non-aliased) provider configuration for "oci" was already given at
+.module/main.tf:2,1-15. If multiple configurations are required, set the
+"alias" argument for alternative configurations.
+
+--------------------------------
+Test status for test_name=test_5_no_retry_debug
+
+operation=apply
+parallelism=20
+test_type=negative
+log file=logs/2025-12-01_16-24-31/test_test_5_no_retry_debug.log
+status=1 PASSED ✅ (expected failure in negative test)
+--------------------------------
+

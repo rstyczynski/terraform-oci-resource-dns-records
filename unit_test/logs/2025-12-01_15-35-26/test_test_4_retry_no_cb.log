@@ -1,0 +1,15 @@
+
+--------------------------------
+Performing test test_4_retry_no_cb (please wait...)
+
+
+--------------------------------
+Test status for test_name=test_4_retry_no_cb
+
+operation=apply
+parallelism=20
+test_type=regular
+log file=logs/2025-12-01_15-35-26/test_test_4_retry_no_cb.log
+status=141 FAILED ❌
+--------------------------------
+

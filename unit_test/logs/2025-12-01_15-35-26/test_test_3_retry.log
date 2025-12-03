@@ -1,0 +1,15 @@
+
+--------------------------------
+Performing test test_3_retry (please wait...)
+
+
+--------------------------------
+Test status for test_name=test_3_retry
+
+operation=apply
+parallelism=20
+test_type=regular
+log file=logs/2025-12-01_15-35-26/test_test_3_retry.log
+status=141 FAILED ❌
+--------------------------------
+

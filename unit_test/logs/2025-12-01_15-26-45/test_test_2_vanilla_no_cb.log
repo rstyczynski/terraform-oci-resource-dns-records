@@ -1,0 +1,25 @@
+
+--------------------------------
+Performing test test_2_vanilla_no_cb (please wait...)
+
+
+Error: Inconsistent dependency lock file
+
+The following dependency selections recorded in the lock file are
+inconsistent with the current configuration:
+  - provider registry.terraform.io/oracle/oci: locked version selection 7.7.0 doesn't match the updated version constraints ">= 7.27.0"
+
+To update the locked dependency selections to match a changed configuration,
+run:
+  terraform init -upgrade
+
+--------------------------------
+Test status for test_name=test_2_vanilla_no_cb
+
+operation=apply
+parallelism=20
+test_type=regular
+log file=logs/2025-12-01_15-26-45/test_test_2_vanilla_no_cb.log
+status=1 FAILED ❌
+--------------------------------
+

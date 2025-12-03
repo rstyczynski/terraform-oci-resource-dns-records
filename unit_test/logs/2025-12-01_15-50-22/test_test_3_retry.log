@@ -1,0 +1,24 @@
+
+--------------------------------
+Performing test test_3_retry (please wait...)
+
+
+Error: Invalid required_providers object
+
+  on .module/providers.tf line 6, in terraform:
+   6:       retries_config_file = "providers_oci_retry.json"
+
+required_providers objects can only contain "version", "source" and
+"configuration_aliases" attributes. To configure a provider, use a "provider"
+block.
+
+--------------------------------
+Test status for test_name=test_3_retry
+
+operation=apply
+parallelism=20
+test_type=regular
+log file=logs/2025-12-01_15-50-22/test_test_3_retry.log
+status=1 FAILED ❌
+--------------------------------
+

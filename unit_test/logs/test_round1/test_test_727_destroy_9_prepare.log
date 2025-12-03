@@ -1,0 +1,173 @@
+module.dns_records.oci_dns_rrset.no_16[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt1.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_3[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_0[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/cname1.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_1[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/conflict-type.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_4[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/ipv6.acme.org/rtype/AAAA]
+module.dns_records.oci_dns_rrset.no_2[0]: Refreshing state... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # module.dns_records.oci_dns_rrset.no_0[0] will be destroyed
+  - resource "oci_dns_rrset" "no_0" {
+      - domain          = "cname1.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/cname1.acme.org/rtype/CNAME" -> null
+      - rtype           = "CNAME" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "cname1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "target1.acme.corp." -> null
+          - record_hash   = "0f3e4233c500ef6d3464bb1117ba4ff6" -> null
+          - rrset_version = "11833" -> null
+          - rtype         = "CNAME" -> null
+          - ttl           = 300 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_1[0] will be destroyed
+  - resource "oci_dns_rrset" "no_1" {
+      - domain          = "conflict-type.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/conflict-type.acme.org/rtype/CNAME" -> null
+      - rtype           = "CNAME" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "conflict-type.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "alias.acme.org." -> null
+          - record_hash   = "a943206e6809c7923a13f4c954a5200d" -> null
+          - rrset_version = "11832" -> null
+          - rtype         = "CNAME" -> null
+          - ttl           = 300 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_16[0] will be destroyed
+  - resource "oci_dns_rrset" "no_16" {
+      - domain          = "txt1.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt1.acme.org/rtype/TXT" -> null
+      - rtype           = "TXT" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "txt1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "\"some text with spaces and !@#$%^&*()_+\"" -> null
+          - record_hash   = "64383b96ea47aa09e873bf8ea8f2e041" -> null
+          - rrset_version = "11829" -> null
+          - rtype         = "TXT" -> null
+          - ttl           = 600 -> null
+        }
+      - items {
+          - domain        = "txt1.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "\"v=spf1 include:acme.org ~all\"" -> null
+          - record_hash   = "0f172af552dc4226b01e8f78fa7ab126" -> null
+          - rrset_version = "11829" -> null
+          - rtype         = "TXT" -> null
+          - ttl           = 600 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_2[0] will be destroyed
+  - resource "oci_dns_rrset" "no_2" {
+      - domain          = "default-type.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A" -> null
+      - rtype           = "A" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "default-type.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "203.0.113.2" -> null
+          - record_hash   = "ab8d8d6bdf386cf202065ce564bbcd1c" -> null
+          - rrset_version = "11831" -> null
+          - rtype         = "A" -> null
+          - ttl           = 300 -> null
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_3[0] will be destroyed
+  - resource "oci_dns_rrset" "no_3" {
+      - domain          = "empty.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A" -> null
+      - rtype           = "A" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+    }
+
+  # module.dns_records.oci_dns_rrset.no_4[0] will be destroyed
+  - resource "oci_dns_rrset" "no_4" {
+      - domain          = "ipv6.acme.org" -> null
+      - id              = "zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/ipv6.acme.org/rtype/AAAA" -> null
+      - rtype           = "AAAA" -> null
+      - zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta" -> null
+
+      - items {
+          - domain        = "ipv6.acme.org" -> null
+          - is_protected  = false -> null
+          - rdata         = "2001:db8::1" -> null
+          - record_hash   = "7a36b0509ed6d790c93866228c2b9f05" -> null
+          - rrset_version = "11830" -> null
+          - rtype         = "AAAA" -> null
+          - ttl           = 300 -> null
+        }
+    }
+
+Plan: 0 to add, 0 to change, 6 to destroy.
+
+Changes to Outputs:
+  - domains = [
+      - "0: cname1.acme.org",
+      - "1: conflict-type.acme.org",
+      - "2: default-type.acme.org",
+      - "3: empty.acme.org",
+      - "4: ipv6.acme.org",
+      - "5: mail1.acme.org",
+      - "6: max-ttl.acme.org",
+      - "7: min-ttl.acme.org",
+      - "8: minimal.acme.org",
+      - "9: mixed-fields.acme.org",
+      - "10: multi-a.acme.org",
+      - "11: multi-mixed.acme.org",
+      - "12: override-rrset-type.acme.org",
+      - "13: record-type-only.acme.org",
+      - "14: redundant-type.acme.org",
+      - "15: srv1.acme.org",
+      - "16: txt1.acme.org",
+      - "17: txt2.acme.org",
+    ] -> null
+module.dns_records.oci_dns_rrset.no_3[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_3[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_0[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/cname1.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_0[0]: Destruction complete after 1s
+module.dns_records.oci_dns_rrset.no_4[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/ipv6.acme.org/rtype/AAAA]
+module.dns_records.oci_dns_rrset.no_4[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_2[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/default-type.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_2[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_1[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/conflict-type.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_1[0]: Destruction complete after 0s
+module.dns_records.oci_dns_rrset.no_16[0]: Destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt1.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_16[0]: Still destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaa...67xo6ta/domain/txt1.acme.org/rtype/TXT, 10s elapsed]
+module.dns_records.oci_dns_rrset.no_16[0]: Still destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaa...67xo6ta/domain/txt1.acme.org/rtype/TXT, 20s elapsed]
+module.dns_records.oci_dns_rrset.no_16[0]: Still destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaa...67xo6ta/domain/txt1.acme.org/rtype/TXT, 30s elapsed]
+module.dns_records.oci_dns_rrset.no_16[0]: Still destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaa...67xo6ta/domain/txt1.acme.org/rtype/TXT, 40s elapsed]
+module.dns_records.oci_dns_rrset.no_16[0]: Still destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaa...67xo6ta/domain/txt1.acme.org/rtype/TXT, 50s elapsed]
+module.dns_records.oci_dns_rrset.no_16[0]: Still destroying... [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaa...67xo6ta/domain/txt1.acme.org/rtype/TXT, 1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_16[0]: Destruction complete after 1m2s
+
+Destroy complete! Resources: 6 destroyed.
+
+--------------------------------
+Preparation status for test_name=test_727_destroy_9
+
+operation=destroy
+parallelism=1
+test_type=regular
+status=0 PASSED ✅
+--------------------------------
+

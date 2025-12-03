@@ -1,0 +1,48 @@
+
+Initializing the backend...
+Initializing modules...
+
+Initializing provider plugins...
+- Reusing previous version of oracle/oci from the dependency lock file
+
+Error: Failed to query available provider packages
+
+Could not retrieve the list of available versions for provider oracle/oci:
+locked provider registry.terraform.io/oracle/oci 7.7.0 does not match
+configured version constraint >= 7.27.0; must use terraform init -upgrade to
+allow selection of new versions
+
+
+Error: Inconsistent dependency lock file
+
+The following dependency selections recorded in the lock file are
+inconsistent with the current configuration:
+  - provider registry.terraform.io/oracle/oci: locked version selection 7.7.0 doesn't match the updated version constraints ">= 7.27.0"
+
+To update the locked dependency selections to match a changed configuration,
+run:
+  terraform init -upgrade
+
+Initializing the backend...
+Initializing modules...
+
+Initializing provider plugins...
+- Reusing previous version of oracle/oci from the dependency lock file
+
+Error: Failed to query available provider packages
+
+Could not retrieve the list of available versions for provider oracle/oci:
+locked provider registry.terraform.io/oracle/oci 7.7.0 does not match
+configured version constraint >= 7.27.0; must use terraform init -upgrade to
+allow selection of new versions
+
+
+Error: Inconsistent dependency lock file
+
+The following dependency selections recorded in the lock file are
+inconsistent with the current configuration:
+  - provider registry.terraform.io/oracle/oci: locked version selection 7.7.0 doesn't match the updated version constraints ">= 7.27.0"
+
+To update the locked dependency selections to match a changed configuration,
+run:
+  terraform init -upgrade

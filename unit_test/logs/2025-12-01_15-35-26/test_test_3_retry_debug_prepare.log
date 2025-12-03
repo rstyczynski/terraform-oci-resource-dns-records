@@ -1,0 +1,32 @@
+
+Initializing the backend...
+2025-12-01T15:36:49.984+0100 [INFO]  Terraform version: 1.5.7
+2025-12-01T15:36:49.984+0100 [DEBUG] using github.com/hashicorp/go-tfe v1.26.0
+2025-12-01T15:36:49.984+0100 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.2
+2025-12-01T15:36:49.984+0100 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.0
+2025-12-01T15:36:49.984+0100 [DEBUG] using github.com/zclconf/go-cty v1.12.2
+2025-12-01T15:36:49.984+0100 [INFO]  Go runtime version: go1.23.1
+2025-12-01T15:36:49.984+0100 [INFO]  CLI args: []string{"terraform", "init", "-no-color"}
+2025-12-01T15:36:49.984+0100 [DEBUG] Attempting to open CLI config file: /Users/rstyczynski/.terraformrc
+2025-12-01T15:36:49.984+0100 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2025-12-01T15:36:49.984+0100 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-12-01T15:36:49.984+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/.terraform.d/plugins
+2025-12-01T15:36:49.984+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/Library/Application Support/io.terraform/plugins
+2025-12-01T15:36:49.984+0100 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-12-01T15:36:49.985+0100 [INFO]  CLI command args: []string{"init", "-no-color"}
+
+Initializing the backend...
+2025-12-01T15:36:50.101+0100 [INFO]  Terraform version: 1.5.7
+2025-12-01T15:36:50.101+0100 [DEBUG] using github.com/hashicorp/go-tfe v1.26.0
+2025-12-01T15:36:50.101+0100 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.2
+2025-12-01T15:36:50.101+0100 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.0
+2025-12-01T15:36:50.101+0100 [DEBUG] using github.com/zclconf/go-cty v1.12.2
+2025-12-01T15:36:50.101+0100 [INFO]  Go runtime version: go1.23.1
+2025-12-01T15:36:50.101+0100 [INFO]  CLI args: []string{"terraform", "destroy", "-no-color", "-parallelism=1", "-auto-approve"}
+2025-12-01T15:36:50.101+0100 [DEBUG] Attempting to open CLI config file: /Users/rstyczynski/.terraformrc
+2025-12-01T15:36:50.101+0100 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2025-12-01T15:36:50.101+0100 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-12-01T15:36:50.101+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/.terraform.d/plugins
+2025-12-01T15:36:50.101+0100 [DEBUG] ignoring non-existing provider search directory /Users/rstyczynski/Library/Application Support/io.terraform/plugins
+2025-12-01T15:36:50.101+0100 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-12-01T15:36:50.101+0100 [INFO]  CLI command args: []string{"destroy", "-no-color", "-parallelism=1", "-auto-approve"}

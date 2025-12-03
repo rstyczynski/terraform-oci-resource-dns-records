@@ -3,9 +3,6 @@
 export TF_VAR_rrsets=$(sed 's/acme.org/acme.org/' data/dataset1.acme)
 export TF_VAR_zone_name_or_id="ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
 
-
-
-
 # test 1
 test_prepare test_1 regular destroy
 test_apply 20 negative

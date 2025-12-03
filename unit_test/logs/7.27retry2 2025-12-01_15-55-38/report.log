@@ -1,0 +1,21 @@
+TEST REPORT
+--------------------------------
+Terraform module: terraform-oci-resource-dns-records
+Test suite:       unit_test
+Test date:        2025-12-01_15-57-09
+
+name                           | status                                  
+-------------------------------+-----------------------------------------
+test_test_1_vanilla_debug      | 1 FAILED ❌                            
+test_test_1_vanilla            | 1 FAILED ❌                            
+test_test_2_vanilla_no_cb_debug | 0 PASSED ✅                            
+test_test_2_vanilla_no_cb      | 0 PASSED ✅                            
+test_test_3_retry_debug        | 1 FAILED ❌                            
+test_test_3_retry              | 1 FAILED ❌                            
+test_test_4_retry_no_cb_debug  | 1 FAILED ❌                            
+test_test_4_retry_no_cb        | 1 FAILED ❌                            
+test_test_5_no_retry_debug     | 1 PASSED ✅ (expected failure in negative test)
+test_test_5_no_retry           | 1 PASSED ✅ (expected failure in negative test)
+
+--------------------------------
+SOME TESTS FAILED (6 of 10) ❌

@@ -32,12 +32,12 @@ terraform-oci-resource-dns-records
 cat > providers_oci_retry.json <<EOF
 {
 	"409": {
-		"retry_max_duration": 1800,
-        "first_retry_sleep_duration": 120
+		"retry_max_duration": 600,
+        "first_retry_sleep_duration": 60
 	}, 
 	"429": {
-		"retry_max_duration": 1800,
-        "first_retry_sleep_duration": 45
+		"retry_max_duration": 600,
+        "first_retry_sleep_duration": 60
 	}
 }
 EOF
@@ -51,13 +51,17 @@ EOF
 
 5. perform test
 
-```
+```bash
 cd unit_test
 
 export TF_VAR_rrsets=$(sed 's/acme.org/acme.org/' data/dataset1.acme)
 export TF_VAR_zone_name_or_id="ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
 
 . tests/unit_tests.sh 
-test_prepare test_727_no.1 regular destroy
-test_apply 20
+for test_no in {1..10}; do
+  test_prepare test_727_3threads_30sec_apply_${test_no} regular destroy
+  test_apply 3
+  test_prepare test_727_3threads_30sec_destroy_${test_no} regular destroy
+  test_destroy 3
+done
 ```

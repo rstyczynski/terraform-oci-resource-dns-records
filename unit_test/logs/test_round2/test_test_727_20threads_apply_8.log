@@ -1,0 +1,702 @@
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.dns_records.oci_dns_rrset.no_0[0] will be created
+  + resource "oci_dns_rrset" "no_0" {
+      + compartment_id  = (known after apply)
+      + domain          = "cname1.acme.org"
+      + id              = (known after apply)
+      + rtype           = "CNAME"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "cname1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "target1.acme.corp."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "CNAME"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_1[0] will be created
+  + resource "oci_dns_rrset" "no_1" {
+      + compartment_id  = (known after apply)
+      + domain          = "conflict-type.acme.org"
+      + id              = (known after apply)
+      + rtype           = "CNAME"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "conflict-type.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "alias.acme.org."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "CNAME"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_10[0] will be created
+  + resource "oci_dns_rrset" "no_10" {
+      + compartment_id  = (known after apply)
+      + domain          = "multi-a.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "multi-a.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "192.0.2.1"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 60
+        }
+      + items {
+          + domain        = "multi-a.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "192.0.2.2"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 60
+        }
+      + items {
+          + domain        = "multi-a.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "192.0.2.3"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 60
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_11[0] will be created
+  + resource "oci_dns_rrset" "no_11" {
+      + compartment_id  = (known after apply)
+      + domain          = "multi-mixed.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "multi-mixed.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "192.0.2.10"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 600
+        }
+      + items {
+          + domain        = "multi-mixed.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "192.0.2.11"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 600
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_12[0] will be created
+  + resource "oci_dns_rrset" "no_12" {
+      + compartment_id  = (known after apply)
+      + domain          = "override-rrset-type.acme.org"
+      + id              = (known after apply)
+      + rtype           = "CNAME"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "override-rrset-type.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "mail.target.com."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "CNAME"
+          + ttl           = 3600
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_13[0] will be created
+  + resource "oci_dns_rrset" "no_13" {
+      + compartment_id  = (known after apply)
+      + domain          = "record-type-only.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "record-type-only.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.3"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_14[0] will be created
+  + resource "oci_dns_rrset" "no_14" {
+      + compartment_id  = (known after apply)
+      + domain          = "redundant-type.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "redundant-type.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.7"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_15[0] will be created
+  + resource "oci_dns_rrset" "no_15" {
+      + compartment_id  = (known after apply)
+      + domain          = "srv1.acme.org"
+      + id              = (known after apply)
+      + rtype           = "SRV"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "srv1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "10 20 80 server1.acme.org."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "SRV"
+          + ttl           = 400
+        }
+      + items {
+          + domain        = "srv1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "20 10 443 server2.acme.org."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "SRV"
+          + ttl           = 400
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_16[0] will be created
+  + resource "oci_dns_rrset" "no_16" {
+      + compartment_id  = (known after apply)
+      + domain          = "txt1.acme.org"
+      + id              = (known after apply)
+      + rtype           = "TXT"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "txt1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "\"some text with spaces and !@#$%^&*()_+\""
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "TXT"
+          + ttl           = 600
+        }
+      + items {
+          + domain        = "txt1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "\"v=spf1 include:acme.org ~all\""
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "TXT"
+          + ttl           = 600
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_17[0] will be created
+  + resource "oci_dns_rrset" "no_17" {
+      + compartment_id  = (known after apply)
+      + domain          = "txt2.acme.org"
+      + id              = (known after apply)
+      + rtype           = "TXT"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "txt2.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "\"example text value\""
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "TXT"
+          + ttl           = 7200
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_2[0] will be created
+  + resource "oci_dns_rrset" "no_2" {
+      + compartment_id  = (known after apply)
+      + domain          = "default-type.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "default-type.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.2"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_3[0] will be created
+  + resource "oci_dns_rrset" "no_3" {
+      + compartment_id  = (known after apply)
+      + domain          = "empty.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+    }
+
+  # module.dns_records.oci_dns_rrset.no_4[0] will be created
+  + resource "oci_dns_rrset" "no_4" {
+      + compartment_id  = (known after apply)
+      + domain          = "ipv6.acme.org"
+      + id              = (known after apply)
+      + rtype           = "AAAA"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "ipv6.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "2001:db8::1"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "AAAA"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_5[0] will be created
+  + resource "oci_dns_rrset" "no_5" {
+      + compartment_id  = (known after apply)
+      + domain          = "mail1.acme.org"
+      + id              = (known after apply)
+      + rtype           = "MX"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "mail1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "10 mail1.acme.org."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "MX"
+          + ttl           = 300
+        }
+      + items {
+          + domain        = "mail1.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "20 mail2.acme.org."
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "MX"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_6[0] will be created
+  + resource "oci_dns_rrset" "no_6" {
+      + compartment_id  = (known after apply)
+      + domain          = "max-ttl.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "max-ttl.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "198.51.100.2"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 604800
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_7[0] will be created
+  + resource "oci_dns_rrset" "no_7" {
+      + compartment_id  = (known after apply)
+      + domain          = "min-ttl.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "min-ttl.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "198.51.100.1"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 1
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_8[0] will be created
+  + resource "oci_dns_rrset" "no_8" {
+      + compartment_id  = (known after apply)
+      + domain          = "minimal.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "minimal.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.1"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 300
+        }
+    }
+
+  # module.dns_records.oci_dns_rrset.no_9[0] will be created
+  + resource "oci_dns_rrset" "no_9" {
+      + compartment_id  = (known after apply)
+      + domain          = "mixed-fields.acme.org"
+      + id              = (known after apply)
+      + rtype           = "A"
+      + zone_name_or_id = "ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta"
+
+      + items {
+          + domain        = "mixed-fields.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.4"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 123
+        }
+      + items {
+          + domain        = "mixed-fields.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.5"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 123
+        }
+      + items {
+          + domain        = "mixed-fields.acme.org"
+          + is_protected  = (known after apply)
+          + rdata         = "203.0.113.6"
+          + record_hash   = (known after apply)
+          + rrset_version = (known after apply)
+          + rtype         = "A"
+          + ttl           = 123
+        }
+    }
+
+Plan: 18 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + dns_record_details = {
+      + "cname1.acme.org"              = (known after apply)
+      + "conflict-type.acme.org"       = (known after apply)
+      + "default-type.acme.org"        = (known after apply)
+      + "empty.acme.org"               = (known after apply)
+      + "ipv6.acme.org"                = (known after apply)
+      + "mail1.acme.org"               = (known after apply)
+      + "max-ttl.acme.org"             = (known after apply)
+      + "min-ttl.acme.org"             = (known after apply)
+      + "minimal.acme.org"             = (known after apply)
+      + "mixed-fields.acme.org"        = (known after apply)
+      + "multi-a.acme.org"             = (known after apply)
+      + "multi-mixed.acme.org"         = (known after apply)
+      + "override-rrset-type.acme.org" = (known after apply)
+      + "record-type-only.acme.org"    = (known after apply)
+      + "redundant-type.acme.org"      = (known after apply)
+      + "srv1.acme.org"                = (known after apply)
+      + "txt1.acme.org"                = (known after apply)
+      + "txt2.acme.org"                = (known after apply)
+    }
+  + domains            = [
+      + "0: cname1.acme.org",
+      + "1: conflict-type.acme.org",
+      + "2: default-type.acme.org",
+      + "3: empty.acme.org",
+      + "4: ipv6.acme.org",
+      + "5: mail1.acme.org",
+      + "6: max-ttl.acme.org",
+      + "7: min-ttl.acme.org",
+      + "8: minimal.acme.org",
+      + "9: mixed-fields.acme.org",
+      + "10: multi-a.acme.org",
+      + "11: multi-mixed.acme.org",
+      + "12: override-rrset-type.acme.org",
+      + "13: record-type-only.acme.org",
+      + "14: redundant-type.acme.org",
+      + "15: srv1.acme.org",
+      + "16: txt1.acme.org",
+      + "17: txt2.acme.org",
+    ]
+module.dns_records.oci_dns_rrset.no_16[0]: Creating...
+module.dns_records.oci_dns_rrset.no_13[0]: Creating...
+module.dns_records.oci_dns_rrset.no_8[0]: Creating...
+module.dns_records.oci_dns_rrset.no_1[0]: Creating...
+module.dns_records.oci_dns_rrset.no_6[0]: Creating...
+module.dns_records.oci_dns_rrset.no_7[0]: Creating...
+module.dns_records.oci_dns_rrset.no_15[0]: Creating...
+module.dns_records.oci_dns_rrset.no_11[0]: Creating...
+module.dns_records.oci_dns_rrset.no_9[0]: Creating...
+module.dns_records.oci_dns_rrset.no_2[0]: Creating...
+module.dns_records.oci_dns_rrset.no_3[0]: Creating...
+module.dns_records.oci_dns_rrset.no_0[0]: Creating...
+module.dns_records.oci_dns_rrset.no_14[0]: Creating...
+module.dns_records.oci_dns_rrset.no_10[0]: Creating...
+module.dns_records.oci_dns_rrset.no_4[0]: Creating...
+module.dns_records.oci_dns_rrset.no_17[0]: Creating...
+module.dns_records.oci_dns_rrset.no_12[0]: Creating...
+module.dns_records.oci_dns_rrset.no_5[0]: Creating...
+module.dns_records.oci_dns_rrset.no_16[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt1.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_5[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mail1.acme.org/rtype/MX]
+module.dns_records.oci_dns_rrset.no_14[0]: Creation complete after 1s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/redundant-type.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_13[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_8[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_7[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_1[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_6[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_15[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_11[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_9[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_2[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_3[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_4[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_10[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_17[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_12[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_0[0]: Still creating... [10s elapsed]
+module.dns_records.oci_dns_rrset.no_8[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_15[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_13[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_1[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_7[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_6[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_11[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_2[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_3[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_4[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_9[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_10[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_17[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_12[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_0[0]: Still creating... [20s elapsed]
+module.dns_records.oci_dns_rrset.no_7[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_11[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_8[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_15[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_13[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_1[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_6[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_9[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_17[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_10[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_4[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_3[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_2[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_0[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_12[0]: Still creating... [30s elapsed]
+module.dns_records.oci_dns_rrset.no_1[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_7[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_11[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_8[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_10[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_15[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_13[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_6[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_9[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_17[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_3[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_4[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_2[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_12[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_0[0]: Still creating... [40s elapsed]
+module.dns_records.oci_dns_rrset.no_12[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_6[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_0[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_10[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_9[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_1[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_2[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_7[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_11[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_8[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_15[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_13[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_4[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_17[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_3[0]: Still creating... [50s elapsed]
+module.dns_records.oci_dns_rrset.no_4[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_9[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_6[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_3[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_2[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_17[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_1[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_12[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_0[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_10[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_11[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_7[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_13[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_8[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_15[0]: Still creating... [1m0s elapsed]
+module.dns_records.oci_dns_rrset.no_6[0]: Creation complete after 1m2s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/max-ttl.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_9[0]: Creation complete after 1m2s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/mixed-fields.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_3[0]: Creation complete after 1m2s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/empty.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_10[0]: Creation complete after 1m2s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-a.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_11[0]: Creation complete after 1m2s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/multi-mixed.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_0[0]: Creation complete after 1m4s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/cname1.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_8[0]: Creation complete after 1m4s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/minimal.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_13[0]: Creation complete after 1m6s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/record-type-only.acme.org/rtype/A]
+module.dns_records.oci_dns_rrset.no_1[0]: Creation complete after 1m6s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/conflict-type.acme.org/rtype/CNAME]
+module.dns_records.oci_dns_rrset.no_15[0]: Creation complete after 1m6s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/srv1.acme.org/rtype/SRV]
+module.dns_records.oci_dns_rrset.no_17[0]: Creation complete after 1m8s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/txt2.acme.org/rtype/TXT]
+module.dns_records.oci_dns_rrset.no_7[0]: Creation complete after 1m9s [id=zoneNameOrId/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/domain/min-ttl.acme.org/rtype/A]
+
+Error: too many requests, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/default-type.acme.org/A 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - half-open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 08dd019836eb5178bbfdcb08a679698f/F452719EFFE75FBD280530695A524884/905A485CE784B31AF06035C5F053813E
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - d74e17ee2957cc1fbfe3c4c66e504536/4E86A7BFE982EE6B280530695A52483C/B25C3CD9F2D179FD1F13ACEAE163BBD6
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 6e759cf6ba2de7a776b81d3cdc43f1ca/9678B33A80267005280530695A524880/4639F4045927D853ED66468A98764399
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 8aa2e33e41e339ae5e7c245b3b36641a/B75CF645E587981E280530695A52489C/3604F7FD83409E6EC098633E1146B316
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 695eb8cdd29867d24f519e8c23086fd4/E0B88B7669084425280530695A5248B3/1836C0F7C13C589D1849D6C527866D5D
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_2[0],
+  on .module/main.tf line 46, in resource "oci_dns_rrset" "no_2":
+  46: resource "oci_dns_rrset" "no_2" {
+
+
+Error: too many requests, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/ipv6.acme.org/AAAA 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - half-open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 08dd019836eb5178bbfdcb08a679698f/F452719EFFE75FBD280530695A524884/905A485CE784B31AF06035C5F053813E
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - d74e17ee2957cc1fbfe3c4c66e504536/4E86A7BFE982EE6B280530695A52483C/B25C3CD9F2D179FD1F13ACEAE163BBD6
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 6e759cf6ba2de7a776b81d3cdc43f1ca/9678B33A80267005280530695A524880/4639F4045927D853ED66468A98764399
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 8aa2e33e41e339ae5e7c245b3b36641a/B75CF645E587981E280530695A52489C/3604F7FD83409E6EC098633E1146B316
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 695eb8cdd29867d24f519e8c23086fd4/E0B88B7669084425280530695A5248B3/1836C0F7C13C589D1849D6C527866D5D
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_4[0],
+  on .module/main.tf line 86, in resource "oci_dns_rrset" "no_4":
+  86: resource "oci_dns_rrset" "no_4" {
+
+
+Error: too many requests, so this request was not sent to the Dns service.
+
+ The circuit breaker was opened because the Dns service failed too many times recently. Because the circuit breaker has been opened, requests within a 30.00 second window of when the circuit breaker opened will not be sent to the Dns service.
+
+URL which circuit breaker prevented request to - dns.eu-zurich-1.oci.oraclecloud.com/20180115/zones/ocid1.dns-zone.oc1..aaaaaaaarh7borfqosuhymrv6pjh2m7nqhj27ctaqgtyctee2zpyc67xo6ta/records/override-rrset-type.acme.org/CNAME 
+ Circuit Breaker Info 
+ Name - DefaultCircuitBreaker 
+ State - half-open 
+
+ Errors from Dns service which opened the circuit breaker:
+
+Opc-Req-id - 08dd019836eb5178bbfdcb08a679698f/F452719EFFE75FBD280530695A524884/905A485CE784B31AF06035C5F053813E
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - d74e17ee2957cc1fbfe3c4c66e504536/4E86A7BFE982EE6B280530695A52483C/B25C3CD9F2D179FD1F13ACEAE163BBD6
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 6e759cf6ba2de7a776b81d3cdc43f1ca/9678B33A80267005280530695A524880/4639F4045927D853ED66468A98764399
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 8aa2e33e41e339ae5e7c245b3b36641a/B75CF645E587981E280530695A52489C/3604F7FD83409E6EC098633E1146B316
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+Opc-Req-id - 695eb8cdd29867d24f519e8c23086fd4/E0B88B7669084425280530695A5248B3/1836C0F7C13C589D1849D6C527866D5D
+ErrorCode - 429 - TooManyRequests
+ErrorMessage - Too many requests for the tenant
+
+
+
+  with module.dns_records.oci_dns_rrset.no_12[0],
+  on .module/main.tf line 246, in resource "oci_dns_rrset" "no_12":
+ 246: resource "oci_dns_rrset" "no_12" {
+
+
+--------------------------------
+Test status for test_name=test_727_20threads_apply_8
+
+operation=apply
+parallelism=20
+test_type=regular
+status=1 FAILED ❌
+info=409 Conflict detected! 🚨
+--------------------------------
+
